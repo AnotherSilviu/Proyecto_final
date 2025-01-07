@@ -56,13 +56,13 @@ header {
     color: #fff;
     font-size: 16px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif; /* Fuente para navegación */
+    font-family: 'Montserrat', sans-serif; 
     text-transform: uppercase;
     transition: color 0.3s;
 }
 
 .barra-navegacion ul li a:hover {
-    color: #ffd700; /* Resalta en amarillo dorado */
+    color: #ffd700; 
 }
 main {
     padding: 20px;
@@ -203,4 +203,31 @@ footer button {
 
 footer button:hover {
     cursor: pointer;
+}
+
+/*CSS del mapa de mierda*/
+.mapa-de-mierda {
+    width: 418.45123px; /* Ancho del área donde quieres mostrar la imagen */
+    height: 468.63733px; /* Altura del área donde quieres mostrar la imagen */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.mapa-de-mierda svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* Estilos de los paths (líneas del mapa) */
+.mapa-de-mierda path {
+    stroke: #945b11; /* Color de las líneas */
+    stroke-width: 1px; /* Ancho de las líneas */
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* Efecto hover, aunque el hijo de puto no funciona*/
+.mapa-de-mierda path:hover {
+    fill: #444444ce; /* Color cuando pasas el ratón */
+    opacity: 0.7; /* Leve transparencia */
 }
