@@ -1,233 +1,213 @@
-
 /* Estilo para la página completa */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color:burlywood;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: burlywood;
 }
 
 header {
-    background-image: url(imagenes/logo-fondo.png);
-    margin-bottom: 20px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px; 
-    width: 100%;
-    border-bottom: 4px solid #e0e0e0; /* Línea decorativa */
+  background-image: url(imagenes/logo-fondo.png);
+  margin-bottom: 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  border-bottom: 4px solid #e0e0e0; /* Línea decorativa */
 }
 .imagen-superior {
-    position: absolute; /* Posiciona la imagen PNG encima del fondo */
-    top: 50%;           
-    left: 50%;          
-    transform: translate(-50%, -50%); /* Centra la imagen */
-    width: 40vw;       
-    height: auto;     
-    z-index: 2; /* Encima del fondo */
-  }
-  .barra-navegacion {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
-    padding: 10px 0;
-    text-align: center;
+  position: absolute; /* Posiciona la imagen PNG encima del fondo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la imagen */
+  width: 40vw;
+  height: auto;
+  z-index: 2; /* Encima del fondo */
+}
+.barra-navegacion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
+  padding: 10px 0;
+  text-align: center;
 }
 
 .barra-navegacion ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .barra-navegacion ul li a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif; 
-    text-transform: uppercase;
-    transition: color 0.3s;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s;
 }
 
 .barra-navegacion ul li a:hover {
-    color: #ffd700; 
+  color: #ffd700;
 }
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 10px auto;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 main h3 {
-    font-size: large;
-    margin-bottom: 20px;
+  font-size: large;
+  margin-bottom: 20px;
 }
 
 main p {
-    font-size: medium;
-    margin-bottom: 20px;
+  font-size: medium;
+  margin-bottom: 20px;
 }
 
 .provincias {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 article {
-    width: 80%;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
+  width: 80%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 article:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
-/* Disposición y diseño de las provincias */
-.caja-gu {
-    background-color: #ffcc00;
-    grid-column: 2;
-    grid-row: 1;
+/* Disposición y diseño del mapa de provincias */
+.mapa-de-mierda {
+  width: 90%;
+  max-width: 418px;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /*Esto es lo del hover*/
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.mapa-de-mierda path {
+  stroke: #945b11; /* Color de las líneas */
+  stroke-width: 1px; /* Ancho de las líneas */
+}
+.mapa-de-mierda path:hover {
+  filter: brightness(0.5);
 }
 
-.caja-cu {
-    background-color: #ff6600;
-    grid-column: 2;
-    grid-row: 2;
+.mapa-de-mierda path:hover::after {
+  display: block; /* Muestra el tooltip al hacer hover */
 }
-
-.caja-al {
-    background-color: #33cc33;
-    grid-column: 2;
-    grid-row: 3;
+.mapa-de-mierda svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
-.caja-to {
-    background-color: #3366cc;
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.caja-cr {
-    background-color: #ff3399;
-    grid-column: 1;
-    grid-row: 3;
-}
-
-/* Sección sin definir */
-section {
-    text-align: center;
-    padding: 20px;
-    background-color: #e0e0e0;
-    margin: 20px 0;
-    font-size: 1;
-    font-weight: bold;
-}
-
+.tooltip {
+    position: absolute; /* Necesario para que siga al ratón */
+    display: none; /* Oculto por defecto */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de letra */
+    pointer-events: none; /* No bloquea la interacción del ratón */
+    white-space: nowrap; /* Evita saltos de línea */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+  }
+  
 footer {
-    background-color: #2d2d2d;
-    color: white;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    text-align: center;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 footer h3 {
-    margin-bottom: 15px;
-    font-size: 1;
+  margin-bottom: 15px;
+  font-size: 1;
 }
 
-.derechos, .redes, .contacto {
-    flex: 1;
-    margin: 10px;
+.derechos,
+.redes,
+.contacto {
+  flex: 1;
+  margin: 10px;
 }
 
 .derechos p {
-    font-size: 1;
-    line-height: 1.5;
+  font-size: 1;
+  line-height: 1.5;
 }
 
 footer .redes a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
 }
 
 footer .redes a:hover {
-    color: blue;
+  color: blue;
 }
 
 footer .contacto input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    background-color: #444;
-    color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: #444;
+  color: white;
 }
 
 footer button {
-    font-family: 'Roboto' sans-serif;
-    margin-top: 5px;
-    padding: 3px;
-    border-radius: 4px;
-    background-color: white;
-    color: #444;
-    box-shadow: none;
+  font-family: "Roboto" sans-serif;
+  margin-top: 5px;
+  padding: 3px;
+  border-radius: 4px;
+  background-color: white;
+  color: #444;
+  box-shadow: none;
 }
 
 footer button:hover {
-    cursor: pointer;
-}
-
-/*CSS del mapa de mierda*/
-.mapa-de-mierda {
-    width: 418.45123px; /* Ancho del área donde quieres mostrar la imagen */
-    height: 468.63733px; /* Altura del área donde quieres mostrar la imagen */
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-.mapa-de-mierda svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-/* Estilos de los paths (líneas del mapa) */
-.mapa-de-mierda path {
-    stroke: #945b11; /* Color de las líneas */
-    stroke-width: 1px; /* Ancho de las líneas */
-    transition: all 0.3s ease; 
-    position: relative;
-}
-
-/* Efecto hover, aunque el hijo de puto no funciona*/
-.mapa-de-mierda path:hover {
-    fill: #444444ce; /* Color cuando pasas el ratón */
-    opacity: 0.7; /* Leve transparencia */
+  cursor: pointer;
 }
