@@ -123,8 +123,8 @@ article:hover {
   position: relative;
 }
 .mapa-de-mierda path {
-  stroke: #945b11; /* Color de las líneas */
-  stroke-width: 1px; /* Ancho de las líneas */
+  stroke: rgb(167, 132, 87); /* Color de las líneas */
+  stroke-width: 2px; /* Ancho de las líneas */
 }
 .mapa-de-mierda path:hover {
   filter: brightness(0.5);
@@ -190,26 +190,21 @@ footer .redes a:hover {
   color: blue;
 }
 
-footer .contacto input {
+footer .contacto {
   width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
   margin-top: 10px;
-  background-color: #444;
-  color: white;
 }
 
-footer button {
-  font-family: "Roboto" sans-serif;
-  margin-top: 5px;
-  padding: 3px;
-  border-radius: 4px;
-  background-color: white;
-  color: #444;
-  box-shadow: none;
+#input-buscar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
 }
 
-footer button:hover {
+.boton-buscar {
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #2d2d2d;
+  border-radius: 5px;
   cursor: pointer;
 }
