@@ -137,18 +137,18 @@ article:hover {
   height: auto;
 }
 .tooltip {
-    position: absolute; /* Necesario para que siga al ratón */
-    display: none; /* Oculto por defecto */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
-    padding: 5px 10px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de letra */
-    pointer-events: none; /* No bloquea la interacción del ratón */
-    white-space: nowrap; /* Evita saltos de línea */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-  }
-  
+  position: absolute; /* Necesario para que siga al ratón */
+  display: none; /* Oculto por defecto */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 8px 16px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de letra */
+  pointer-events: none; /* No bloquea la interacción del ratón */
+  white-space: nowrap; /* Evita saltos de línea */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
 footer {
   background-color: #2d2d2d;
   color: white;
