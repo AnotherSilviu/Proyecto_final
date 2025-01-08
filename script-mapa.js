@@ -1,3 +1,4 @@
+//
 const paths = document.querySelectorAll("path");
 const tooltip = document.querySelector(".tooltip");
 

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: burlywood;
 }
 
@@ -40,6 +40,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
   padding: 10px 0;
   text-align: center;
+  z-index: 999;
 }
 
 .barra-navegacion ul {
@@ -63,6 +64,7 @@ header {
 .barra-navegacion ul li a:hover {
   color: #ffd700;
 }
+
 main {
   padding: 20px;
   max-width: 1200px;
@@ -141,9 +143,9 @@ article:hover {
   display: none; /* Oculto por defecto */
   background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
   color: #fff; /* Texto blanco */
-  padding: 8px 16px; /* Espaciado interno */
+  padding: 5px 10px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de letra */
+  font-size: 14px; /* Tamaño de letra */
   pointer-events: none; /* No bloquea la interacción del ratón */
   white-space: nowrap; /* Evita saltos de línea */
   z-index: 1000; /* Asegura que esté encima de otros elementos */
