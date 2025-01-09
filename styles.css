@@ -54,15 +54,16 @@ header {
 
 .barra-navegacion ul li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 14.5px;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   transition: color 0.3s;
+  
 }
 
 .barra-navegacion ul li a:hover {
-  color: #ffd700;
+  color: #f3952a;
 }
 
 main {
@@ -123,13 +124,12 @@ article:hover {
   position: relative;
 }
 .mapa-de-mierda path {
-  stroke: rgb(167, 132, 87); /* Color de las líneas */
-  stroke-width: 2px; /* Ancho de las líneas */
+  stroke: rgb(121, 74, 13); /* Color de las líneas */
+  stroke-width: 2.3px; /* Ancho de las líneas */
 }
 .mapa-de-mierda path:hover {
   filter: brightness(0.5);
 }
-
 .mapa-de-mierda path:hover::after {
   display: block; /* Muestra el tooltip al hacer hover */
 }
@@ -207,4 +207,49 @@ footer .contacto {
   color: #2d2d2d;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/*Slider de imágenes*/
+.titulo-slider{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+.slider-frame{
+  width: auto; /*Coger el mismo tamaño de altura de las imagenes en el slider*/
+  height: auto; /*Coger el mismo tamaño de altura de las imagenes en el slider*/
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+
+  animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%;
+}
+
+.slider-frame img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  75% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  95% {margin-left: -300%;}
 }
