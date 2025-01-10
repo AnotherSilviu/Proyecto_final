@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Poppins', sans-serif; 
   background-color: burlywood;
 }
 
@@ -210,46 +210,69 @@ footer .contacto {
 }
 
 /*Slider de imágenes*/
-.titulo-slider{
+.titulo-slider {
   text-align: center;
-  margin-top: 50px;
-  font-size: 2rem;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif; 
+  margin-bottom: 15px;
+  letter-spacing: 1px; 
 }
 
-.slider-frame{
-  width: auto; /*Coger el mismo tamaño de altura de las imagenes en el slider*/
-  height: auto; /*Coger el mismo tamaño de altura de las imagenes en el slider*/
-  margin: 50px auto 0;
+.slider-frame {
+  width: 100vw; 
+  height: calc(100vw * 0.3125); 
+  margin: 0 auto; 
   overflow: hidden;
+  position: relative;
 }
 
 .slider-frame ul {
   display: flex;
+  margin: 0;
   padding: 0;
-  width: 400%;
-
-  animation: slide 15s infinite alternate ease-in-out;
+  width: calc(100vw * 10); 
+  height: 100%; 
+  animation: slide 50s infinite ease-in-out; 
+  list-style: none;
 }
 
 .slider-frame li {
-  list-style: none;
-  width: 100%;
+  flex: 0 0 100vw; 
+  height: 100%; 
 }
 
 .slider-frame img {
-  width: 100%;
+  display: block;
+  width: 100vw; 
+  height: 100%;
+  object-fit: cover;
 }
 
 @keyframes slide {
-  0% {margin-left: 0%;}
-  20% {margin-left: 0%;}
+  0% { transform: translateX(0); }               /* Primera imagen */
+  10% { transform: translateX(0); }
 
-  25% {margin-left: -100%;}
-  45% {margin-left: -100%;}
+  20% { transform: translateX(-100vw); }      /* Segunda imagen */
+  30% { transform: translateX(-100vw); }
 
-  50% {margin-left: -200%;}
-  75% {margin-left: -200%;}
+  40% { transform: translateX(-200vw); }      /* Tercera imagen */
+  50% { transform: translateX(-200vw); }
 
-  75% {margin-left: -300%;}
-  95% {margin-left: -300%;}
+  60% { transform: translateX(-300vw); }      /* Cuarta imagen */
+  70% { transform: translateX(-300vw); }
+
+  80% { transform: translateX(-400vw); }      /* Quinta imagen */
+  90% { transform: translateX(-400vw); }
+  
+  100% { transform: translateX(-500vw); }     /* Duplicada (Primera imagen) */
+  110% { transform: translateX(-500vw); }
+  
+  120% { transform: translateX(-600vw); }    /* Segunda vez, vuelve a la primera imagen */
+  130% { transform: translateX(-600vw); }
+  
+  140% { transform: translateX(-700vw); }    /* Y así sucesivamente... */
+  150% { transform: translateX(-700vw); }
+
+  200% { transform: translateX(0); }             /* Reinicio al principio (ciclo continuo) */
 }
