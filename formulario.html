@@ -4,26 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="stylesForm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <h2>FORMULARIO DE CONTACTO</h2>
     <form action="destino.html">
-        <fieldset>
+        <fieldset class="datos">
             <legend>DATOS PERSONALES</legend>
 
             <label for="Name">Nombre</label>
-            <input type="text" id="nombre" name="Name">
+            <input type="text" id="nombre" name="Name" required>
             <label for="Name">Apellidos</label>
             <input type="text" id="apellidos" name="Name">
 
-            <label for="edad">Edad</label>
+            <label for="edad" aria-required="">Edad</label>
             <input type="radio" id="edad" name="Edad">Menor de 18 años
             <input type="radio" id="edad" name="Edad">Entre 18 y 65 años
             <input type="radio" id="edad" name="Edad">Mayor de 65 años
 
+            <label for="number">Teléfono</label>
+            <input type="number" id="tfno" name="Teléfono" required>
             <label for="Name">Correo electrónico</label>
-            <input type="text" id="email" name="Email" placeholder="Ejemplo: carlos_2104@gmail.com">
+            <input type="text" id="email" name="Email" maxlength="40" size="40" placeholder="Ejemplo: carlos_2104@gmail.com" required>
         </fieldset>
+
+        <fieldset class="consulta">
+            <legend>TU CONSULTA</legend>
+
+            <label for="select">Asunto</label>
+            <select required>
+                <option></option>
+                <option>Viaje de ocio</option>
+                <option>Viaje de negoocios</option>
+                <option>Colaboraciones</option>
+                <option>Alojamientos</option>
+                <option>Otros</option>
+            </select>
+
+            <label for="text">Mensaje</label>
+            <textarea name="Mensaje" rows="5" cols="50" placeholder="Escribe algo..." required></textarea>
+
+            <label for="checkbox">He leído y acepto la política de privacidad.</label>
+            <input type="checkbox" name="checkbox" required>
+        </fieldset>
+
+        <button id="boton-limpiar" type="reset">Limpiar</button>
+        <button id="boton-enviar" href="destino.html">Enviar</button>
     </form>
+    
 </body>
 </html>
