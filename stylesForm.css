@@ -1,0 +1,144 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Título del formulario */ /*No se como ponerlo arriba del todo*/
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-top: 30px; 
+    width: 100%;
+  }
+  
+  /* Formulario */
+  form {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px; 
+  }
+  
+  fieldset {
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  legend {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2d2d2d;
+    padding: 0 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto al enfocar */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #f3952a;
+    box-shadow: 0 0 5px rgba(243, 149, 42, 0.5);
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  /* Botones */
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #f3952a;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  #boton-limpiar {
+    background-color: #bbb;
+    margin-right: 10px;
+  }
+  
+  #boton-limpiar:hover {
+    background-color: #999;
+  }
+  
+  .boton-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    .boton-container {
+      flex-direction: column; /* Apila los botones en pantallas pequeñas */
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }

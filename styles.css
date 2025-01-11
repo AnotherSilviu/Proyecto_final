@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family:'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   background-color: burlywood;
 }
 
@@ -29,7 +29,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra la imagen */
-  width: 40vw;
+  width: 45vw;
   height: auto;
   z-index: 2; /* Encima del fondo */
 }
@@ -56,10 +56,9 @@ header {
   color: #fff;
   font-size: 14.5px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   transition: color 0.3s;
-  
 }
 
 .barra-navegacion ul li a:hover {
@@ -210,19 +209,36 @@ footer .contacto {
 }
 
 /*Slider de imágenes*/
+.formato-slider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
 .titulo-slider {
   text-align: center;
   margin-top: 20px;
-  font-size: 30px;
-  font-family: 'Poppins', sans-serif; 
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 15px;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
 }
-
+.parrafo-slider {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
 .slider-frame {
-  width: 100vw; 
-  height: calc(100vw * 0.3125); 
-  margin: 0 auto; 
+  width: 100vw;
+  height: calc(100vw * 0.3125);
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
@@ -231,48 +247,82 @@ footer .contacto {
   display: flex;
   margin: 0;
   padding: 0;
-  width: calc(100vw * 10); 
-  height: 100%; 
-  animation: slide 50s infinite ease-in-out; 
+  width: calc(100vw * 10);
+  height: 100%;
+  animation: slide 50s infinite ease-in-out;
   list-style: none;
 }
 
 .slider-frame li {
-  flex: 0 0 100vw; 
-  height: 100%; 
+  flex: 0 0 100vw;
+  height: 100%;
 }
 
 .slider-frame img {
   display: block;
-  width: 100vw; 
+  width: 100vw;
   height: 100%;
   object-fit: cover;
 }
 
 @keyframes slide {
-  0% { transform: translateX(0); }               /* Primera imagen */
-  10% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  } /* Primera imagen */
+  10% {
+    transform: translateX(0);
+  }
 
-  20% { transform: translateX(-100vw); }      /* Segunda imagen */
-  30% { transform: translateX(-100vw); }
+  20% {
+    transform: translateX(-100vw);
+  } /* Segunda imagen */
+  30% {
+    transform: translateX(-100vw);
+  }
 
-  40% { transform: translateX(-200vw); }      /* Tercera imagen */
-  50% { transform: translateX(-200vw); }
+  40% {
+    transform: translateX(-200vw);
+  } /* Tercera imagen */
+  50% {
+    transform: translateX(-200vw);
+  }
 
-  60% { transform: translateX(-300vw); }      /* Cuarta imagen */
-  70% { transform: translateX(-300vw); }
+  60% {
+    transform: translateX(-300vw);
+  } /* Cuarta imagen */
+  70% {
+    transform: translateX(-300vw);
+  }
 
-  80% { transform: translateX(-400vw); }      /* Quinta imagen */
-  90% { transform: translateX(-400vw); }
-  
-  100% { transform: translateX(-500vw); }     /* Duplicada (Primera imagen) */
-  110% { transform: translateX(-500vw); }
-  
-  120% { transform: translateX(-600vw); }    /* Segunda vez, vuelve a la primera imagen */
-  130% { transform: translateX(-600vw); }
-  
-  140% { transform: translateX(-700vw); }    /* Y así sucesivamente... */
-  150% { transform: translateX(-700vw); }
+  80% {
+    transform: translateX(-400vw);
+  } /* Quinta imagen */
+  90% {
+    transform: translateX(-400vw);
+  }
 
-  200% { transform: translateX(0); }             /* Reinicio al principio (ciclo continuo) */
+  100% {
+    transform: translateX(-500vw);
+  } /* Duplicada (Primera imagen) */
+  110% {
+    transform: translateX(-500vw);
+  }
+
+  120% {
+    transform: translateX(-600vw);
+  } /* Segunda vez, vuelve a la primera imagen */
+  130% {
+    transform: translateX(-600vw);
+  }
+
+  140% {
+    transform: translateX(-700vw);
+  } /* Y así sucesivamente... */
+  150% {
+    transform: translateX(-700vw);
+  }
+
+  200% {
+    transform: translateX(0);
+  } /* Reinicio al principio (ciclo continuo) */
 }
