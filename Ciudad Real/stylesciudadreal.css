@@ -84,16 +84,50 @@ main p {
   margin-bottom: 20px;
   text-align: justify;
 }
-.secciones-lista {
+
+.seccion {
+  display: flex; /* Configura flexbox para los elementos internos */
+  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between; /* Asegura que el contenido interno esté distribuido */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Espaciado entre los elementos */
+}
+.secciones {
   display: flex; /* Activa el modelo flexbox */
-  justify-content: space-between; /* Espacio uniforme entre columnas */
+  flex-direction: column;
   list-style: none; /* Quita los puntos de la lista */
   padding: 0; /* Elimina el padding del ul */
   margin: 20px 0; /* Espaciado superior e inferior */
   gap: 20px; /* Espacio entre los elementos */
 }
+#historia,
+#parques-naturales {
+  display: flex;
+  flex-direction: left;
+  gap: 20px;
+}
+#historia h2,
+#parques-naturales h2 {
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
+  text-align: left;
+  margin-left: 20px;
+}
 
-.secciones-lista li {
+#historia p,
+#parques-naturales p {
+  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
+  text-align: justify;
+}
+#parques-naturales li,
+#gastronomia li{
   flex: 1;
   text-align: center;
   padding: 20px;
@@ -101,15 +135,88 @@ main p {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+#parques-naturales img {
+  width: 40%; /* Tamaño de la imagen */
+  border-radius: 8px;
+  margin: 0 20px;
+}
+#gastronomia {
+  display: flex;
+  flex-direction: row-reverse;
+  /* flex-wrap: wrap; aunque no funciona*/
+  gap: 20px;
 }
 
-.secciones-lista li h3 {
-  font-size: large;
+#gastronomia h2 {
+  font-size: x-large;
   font-family: "Poppins", sans-serif;
   color: #2d2d2d;
   margin-bottom: 10px;
+  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
+  text-align: right;
+  margin-right: 20px;
 }
 
+#gastronomia p{
+  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
+  text-align: justify;
+  margin-left: 80px;
+}
+
+#calendario {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+#mes-actual {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#navegacion-meses {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#navegacion-meses button {
+  padding: 5px 10px;
+  background-color: #2d2d2d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#navegacion-meses button:hover {
+  background-color: #444;
+}
+#contenido-calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+  gap: 5px;
+}
+
+#contenido-calendario div {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#contenido-calendario .highlight {
+  background-color: #ffd700;
+  font-weight: bold;
+}
 footer {
   background-color: #2d2d2d;
   color: white;

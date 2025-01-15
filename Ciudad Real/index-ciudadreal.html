@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <img src="imagenes/logo.png" alt="Imagen PNG" class="imagen-superior" />
+      <a href="../bienvenida.html"><img src="imagenes/logo.png" alt="Imagen PNG" class="imagen-superior" /></a>
       <nav class="barra-navegacion">
         <ul>
           <li>
@@ -36,6 +36,7 @@
       </nav>
     </header>
     <main>
+      <section id="intro">
       <h3>Descubre Ciudad Real</h3>
       <p>
         <em
@@ -44,11 +45,76 @@
           manchega.</em
         >
       </p>
-      <ul class="secciones-lista">
-        <li><h3>Curiosidades</h3></li>
-        <li><h3>Seña de identidad</h3></li>
-        <li><h3>Lugar más destacado</h3></li>
-      </ul>
+    </section>
+    <ul class="secciones">
+      <li id="historia" class="seccion">
+        <h2>Historia y Cultura</h2>
+        <p>
+          Ciudad Real tiene una historia fascinante que data de la Edad Media.
+          Fundada por Alfonso X, esta provincia ha sido testigo de eventos clave
+          de la historia española. También es conocida por su conexión con
+          Miguel de Cervantes y su inmortal obra, <strong>Don Quijote de la Mancha</strong>.
+        </p>
+      </li>
+      <li id="gastronomia" class="seccion">
+        <h2>Gastronomía</h2>
+        <p>
+          Descubre los sabores de Ciudad Real, desde el emblemático queso manchego hasta el pisto manchego.
+          ¡Un deleite para el paladar!
+        </p>
+        <ul>
+          <li><strong>Queso Manchego:</strong> Uno de los quesos más famosos del mundo.</li>
+          <li><strong>Pisto Manchego:</strong> Un guiso tradicional de verduras.</li>
+          <li><strong>Vino de Valdepeñas:</strong> Reconocido internacionalmente por su calidad.</li>
+        </ul>
+      </li>
+      <li id="parques-naturales" class="seccion">
+        <h2>Parques Naturales</h2>
+        <div class="parque">
+          <h3>Las Tablas de Daimiel</h3>
+          <p>Un humedal único, ideal para la observación de aves y rutas en la naturaleza.</p>
+          <img src="imagenes/tablas_daimiel.jpg" alt="Tablas de Daimiel" />
+        </div>
+        <div class="parque">
+          <h3>Parque Nacional de Cabañeros</h3>
+          <p>Conocido como el "Serengueti español", alberga numerosas especies protegidas.</p>
+          <img src="imagenes/cabaneros.jpg" alt="Parque de Cabañeros" />
+        </div>
+      </li>
+    </ul>
+
+    <!-- FIESTAS Y TRADICIONES -->
+    <section id="fiestas">
+      <h2>Fiestas y Tradiciones</h2>
+      <p>Ciudad Real celebra festividades únicas que reflejan su rica cultura.</p>
+      <ul>
+        <div id="calendario">
+          <h3>Calendario de Fiestas</h3>
+          <h3 id="mes-actual"></h3>
+            <div id="navegacion-meses">
+            <button id="prev-mes">&lt; Anterior</button>
+            <button id="next-mes">Siguiente &gt;</button>
+    </div>
+          <div id="contenido-calendario"></div>
+        </div>
+    </section>
+
+    <!-- GALERÍA MULTIMEDIA -->
+    <section id="galeria">
+      <h2>Galería Multimedia</h2>
+      <div class="galeria-imagenes">
+        <img src="imagenes/molinos.jpg" alt="Molinos de viento" />
+        <img src="imagenes/plaza_mayor.jpg" alt="Plaza Mayor de Ciudad Real" />
+        <img src="imagenes/catedral.jpg" alt="Catedral de Ciudad Real" />
+      </div>
+    </section>
+
+    <!-- MAPA INTERACTIVO -->
+    <section id="mapa">
+      <h2>Explora Ciudad Real</h2>
+      <p>Haz clic en los puntos del mapa para descubrir lugares turísticos.</p>
+      <img src="imagenes/mapa_interactivo.jpg" alt="Mapa interactivo de Ciudad Real" />
+    </section>
     </main>
     <footer>
       <div class="derechos">
@@ -83,6 +149,6 @@
         </form>
       </div>
     </footer>
-    <script src="script-mapa.js"></script>
+    <script src="calendario.js"></script>
   </body>
 </html>
