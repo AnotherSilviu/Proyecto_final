@@ -24,7 +24,7 @@
             <a href=""><strong>BLOG</strong></a>
           </li>
           <li>
-            <a href=""><strong>LUGARES MÁS VISITADOS</strong></a>
+            <a href=""><strong>CLM POR PUEBLOS</strong></a>
           </li>
           <li>
             <a href=""><strong>LA TIERRA DEL QUIJOTE</strong></a>
@@ -56,18 +56,30 @@
           Miguel de Cervantes y su inmortal obra, <strong>Don Quijote de la Mancha</strong>.
         </p>
       </li>
-      <li id="gastronomia" class="seccion">
-        <h2>Gastronomía</h2>
-        <p>
-          Descubre los sabores de Ciudad Real, desde el emblemático queso manchego hasta el pisto manchego.
-          ¡Un deleite para el paladar!
-        </p>
-        <ul>
-          <li><strong>Queso Manchego:</strong> Uno de los quesos más famosos del mundo.</li>
-          <li><strong>Pisto Manchego:</strong> Un guiso tradicional de verduras.</li>
-          <li><strong>Vino de Valdepeñas:</strong> Reconocido internacionalmente por su calidad.</li>
-        </ul>
-      </li>
+      <!--  MONUMENTOS (MOVER DEBAJO DE HISTORIA Y CULTURA) -->
+    <section id="monumentos">
+      <h2>Monumentos</h2>
+      <p>Los monumentos más destacados de la provincia</p>
+      <div class="monumentos-imagenes">
+        <img src="imagenes/molinos.jpg" alt="Molinos de viento" />
+        <img src="imagenes/plaza_mayor.jpg" alt="Plaza Mayor de Ciudad Real" />
+        <img src="imagenes/catedral.jpg" alt="Catedral de Ciudad Real" />
+      </div>
+    </section>
+    <!--  GASTRONOMIA -->
+    <li id="gastronomia" class="seccion">
+      <h2>Gastronomía</h2>
+      <p>
+        Descubre los sabores de Ciudad Real, desde el emblemático queso manchego hasta el pisto manchego.
+        ¡Un deleite para el paladar!
+      </p>
+      <ul>
+        <li><strong>Queso Manchego:</strong> Uno de los quesos más famosos del mundo.</li>
+        <li><strong>Pisto Manchego:</strong> Un guiso tradicional de verduras.</li>
+        <li><strong>Vino de Valdepeñas:</strong> Reconocido internacionalmente por su calidad.</li>
+      </ul>
+    </li>
+    <!-- PARQUES NATURALES -->
       <li id="parques-naturales" class="seccion">
         <h2>Parques Naturales</h2>
         <div class="parque">
@@ -82,39 +94,30 @@
         </div>
       </li>
     </ul>
-
-    <!-- FIESTAS Y TRADICIONES -->
-    <section id="fiestas">
-      <h2>Fiestas y Tradiciones</h2>
-      <p>Ciudad Real celebra festividades únicas que reflejan su rica cultura.</p>
-      <ul>
-        <div id="calendario">
-          <h3>Calendario de Fiestas</h3>
-          <h3 id="mes-actual"></h3>
-            <div id="navegacion-meses">
-            <button id="prev-mes">&lt; Anterior</button>
-            <button id="next-mes">Siguiente &gt;</button>
-    </div>
-          <div id="contenido-calendario"></div>
-        </div>
-    </section>
-
-    <!-- GALERÍA MULTIMEDIA -->
-    <section id="galeria">
-      <h2>Galería Multimedia</h2>
-      <div class="galeria-imagenes">
-        <img src="imagenes/molinos.jpg" alt="Molinos de viento" />
-        <img src="imagenes/plaza_mayor.jpg" alt="Plaza Mayor de Ciudad Real" />
-        <img src="imagenes/catedral.jpg" alt="Catedral de Ciudad Real" />
+    <!--  RUTAS TURISTICAS -->
+    <section id="rutas-turisticas" class="seccion">
+      <h2>Rutas Turisticas</h2>
+      <p>A través de estas rutas conoceremos Ciudad Real y sus alrededores, combinando cultura, historia y naturaleza para una experiencia única:</p>
+      <div class="rutas-turisticas-container">
+        <ul>
+          <li><h3><strong>Ruta Monumental por Ciudad Real</strong></h3>
+            <p>Explora los principales monumentos históricos y culturales de la ciudad.
+              Puntos destacados:</p>
+              <ul class="ruta-monumental-ciudad">
+                <li>📍Puerta de Toledo</li>
+                <li>📍Catedral de Santa María</li>
+                <li>📍Iglesia de San Pedro</li>
+                <li>📍Museo del Quijote</li>
+                <li>📍Plaza Mayor</li>
+              </ul>
+          </li>
+        </ul>
       </div>
     </section>
-
-    <!-- MAPA INTERACTIVO -->
-    <section id="mapa">
-      <h2>Explora Ciudad Real</h2>
-      <p>Haz clic en los puntos del mapa para descubrir lugares turísticos.</p>
-      <img src="imagenes/mapa_interactivo.jpg" alt="Mapa interactivo de Ciudad Real" />
-    </section>
+    <!--  GUIA PRACTICA PARA VISITANTES -->
+      <!--  Y AQUI UN LI DE DONDE COMER Y DONDE DORMIR -->
+    
+    
     </main>
     <footer>
       <div class="derechos">
@@ -149,6 +152,6 @@
         </form>
       </div>
     </footer>
-    <script src="calendario.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: burlywood;
+  }
+  
+  header {
+    background-image: url(imagenes/logo-fondo.jpg);
+    margin-bottom: 20px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+  }
+  .imagen-superior {
+    position: absolute; /* Posiciona la imagen PNG encima del fondo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    width: 45vw;
+    height: auto;
+    z-index: 2; /* Encima del fondo */
+  }
+  .barra-navegacion {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .barra-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .barra-navegacion ul li a {
+    color: #fff;
+    font-size: 14.5px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .barra-navegacion ul li a:hover {
+    color: #f3952a;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  main h3 {
+    font-size: large;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  main p {
+    font-size: medium;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  #calendario {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  #mes-actual {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #navegacion-meses {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #navegacion-meses button {
+    padding: 5px 10px;
+    background-color: #2d2d2d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #navegacion-meses button:hover {
+    background-color: #444;
+  }
+  #contenido-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas para los días de la semana */
+    gap: 5px;
+  }
+  
+  #contenido-calendario div {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  #contenido-calendario .highlight {
+    background-color: #ffd700;
+    font-weight: bold;
+  }
+  footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  footer h3 {
+    margin-bottom: 15px;
+    font-size: 1;
+  }
+  
+  .derechos,
+  .redes,
+  .contacto {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .derechos p {
+    font-size: 1;
+    line-height: 1.5;
+  }
+  
+  footer .redes a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  footer .redes a:hover {
+    color: blue;
+  }
+  
+  footer .contacto {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  #input-buscar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .boton-buscar {
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #2d2d2d;
+    border-radius: 5px;
+    cursor: pointer;
+  }
