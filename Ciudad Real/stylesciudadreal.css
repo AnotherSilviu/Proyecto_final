@@ -199,20 +199,27 @@ main p {
   display: flex;
 }
 .monumentos-imagenes {
-  display: flex; /* Activa el modelo flexbox para las secciones */
-  justify-content: space-between; /* Espacio igual entre las secciones */
-  gap: 20px; /* Espaciado entre las secciones guía */
-  flex-wrap: wrap; /* Permite que las secciones pasen a una nueva fila si no caben */
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  box-sizing: border-box; /* Evita que el padding cree scroll horizontal */
+  display: flex; 
+  justify-content: space-evenly;
+  gap: 20px; 
+  flex-wrap: wrap; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+.imagen-monumento {
+  text-align: center; 
+  width: 30%; 
 }
 .monumentos-imagenes h3{
-  font-size: 13px;
+  font-size: 14px; 
+  margin-bottom: 10px;
+  text-align: center;
 }
 .monumentos-imagenes img{
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  width: 20%; /* Ajusta el tamaño de las imágenes */
-  border-radius: 8px;
+  width: 100%; 
+  max-width: 250px; 
+  height: auto; 
+  border-radius: 8px; 
 }
 
 #rutas-turisticas p{
@@ -446,6 +453,8 @@ footer .contacto {
   padding: 10px;
   background-color: #f4f4f4;
   color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }

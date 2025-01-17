@@ -204,8 +204,10 @@ footer .contacto {
   padding: 10px;
   background-color: #f4f4f4;
   color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   cursor: pointer;
+  border: none
 }
 
 /*Slider de imágenes*/
