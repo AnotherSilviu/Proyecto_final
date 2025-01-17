@@ -28,7 +28,7 @@ const festividades = {
     // Limpiar contenido previo del contenedor
     container.innerHTML = '';
   
-    // Crear días vacíos al inicio del calendario (para alinear correctamente)
+    // Crear días vacíos al inicio del calendario para alinearlo correctamente
     for (let i = 0; i < firstDay; i++) {
       const emptyDiv = document.createElement('div');
       emptyDiv.classList.add('empty');
@@ -41,12 +41,12 @@ const festividades = {
       const dayDiv = document.createElement('div');
       dayDiv.textContent = day;
   
-      // Si el día es una festividad, resáltalo y muestra un tooltip
+      // Si el día es una fiesta, resaltar
       if (festividades[currentDate]) {
         dayDiv.classList.add('highlight');
         dayDiv.title = festividades[currentDate];
   
-        // Añadir evento de clic para mostrar la festividad
+        // Añadir evento de clic para mostrar la fiesta
         dayDiv.addEventListener('click', () => {
           alert(`El ${day} de ${meses[mesActual]} es: ${festividades[currentDate]}`);
         });
