@@ -122,19 +122,27 @@
     gap: 5px;
   }
   
-  #contenido-calendario div {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+  .highlight {
+    color: white; /* Asegura que el texto sea visible sobre el fondo */
+    font-weight: bold;
     text-align: center;
-    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
   }
   
-  #contenido-calendario .highlight {
-    background-color: #ffd700;
-    font-weight: bold;
+  .empty {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+  
+  #contenido-calendario div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
   }
   footer {
     background-color: #2d2d2d;

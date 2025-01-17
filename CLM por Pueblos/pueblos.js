@@ -1,4 +1,5 @@
 function verMas() {
+
   const botonVerMas = document.getElementById("botonVerMas");
   const contenido = document.getElementById("oculto-alcaraz");
   if (contenido.style.display === "none") {
@@ -9,3 +10,4 @@ function verMas() {
     botonVerMas.textContent = "Ver más";
   }
 }
+
