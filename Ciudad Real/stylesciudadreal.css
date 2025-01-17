@@ -74,7 +74,7 @@ main {
 }
 
 main h3 {
-  font-size: large;
+  font-size: x-large;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -95,7 +95,9 @@ main p {
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   gap: 20px; /* Espaciado entre los elementos */
+  margin-bottom: 20px;
 }
+
 .secciones {
   display: flex; /* Activa el modelo flexbox */
   flex-direction: column;
@@ -105,29 +107,81 @@ main p {
   gap: 20px; /* Espacio entre los elementos */
 }
 #historia,
-#parques-naturales {
+#parques-naturales,
+#gastronomia,
+#monumentos,
+#rutas-turisticas {
   display: flex;
-  flex-direction: left;
   gap: 20px;
 }
+
+#historia,
+#parques-naturales {
+  flex-direction: left;
+}
+
+#gastronomia {
+  flex-direction: row-reverse;
+}
+
+#monumentos,
+#rutas-turisticas {
+  flex-direction: column;
+  align-items: center;
+}
+
 #historia h2,
-#parques-naturales h2 {
+#parques-naturales h2,
+#gastronomia h2,
+#monumentos h2,
+#rutas-turisticas h2{
   font-size: x-large;
   font-family: "Poppins", sans-serif;
   color: #2d2d2d;
   margin-bottom: 10px;
-  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
+  width: 60%;
+
+}
+
+#historia h2,
+#parques-naturales h2 {
   text-align: left;
   margin-left: 20px;
 }
 
-#historia p,
-#parques-naturales p {
-  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
-  text-align: justify;
+#gastronomia h2 {
+  text-align: right;
+  margin-right: 20px;
 }
 
-#gastronomia li{
+#monumentos h2,
+#rutas-turisticas h2 {
+  text-align: center;
+}
+
+#historia p,
+#parques-naturales p,
+#gastronomia p,
+#monumentos p {
+  width: 60%;
+}
+
+#historia p,
+#parques-naturales p {
+  text-align: justify;
+  margin-left: 80px;
+}
+
+#gastronomia p{
+  text-align: justify;
+  margin-left: 80px;
+}
+#monumentos p {
+  text-align: center;
+}
+
+#parques-naturales li, 
+#gastronomia li {
   flex: 1;
   text-align: center;
   padding: 20px;
@@ -137,16 +191,6 @@ main p {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   list-style: none;
 }
-#parques-naturales li{
-flex: 1;
-text-align: center;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 8px;
-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-list-style: none;
-}
 
 #parques-naturales img {
   width: 40%; /* Tamaño de la imagen */
@@ -154,56 +198,200 @@ list-style: none;
   margin: 0 20px;
   display: flex;
 }
-#gastronomia {
-  display: flex;
-  flex-direction: row-reverse;
-  /* flex-wrap: wrap; aunque no funciona*/
-  gap: 20px;
+.monumentos-imagenes {
+  display: flex; /* Activa el modelo flexbox para las secciones */
+  justify-content: space-between; /* Espacio igual entre las secciones */
+  gap: 20px; /* Espaciado entre las secciones guía */
+  flex-wrap: wrap; /* Permite que las secciones pasen a una nueva fila si no caben */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  box-sizing: border-box; /* Evita que el padding cree scroll horizontal */
 }
-
-#gastronomia h2 {
-  font-size: x-large;
-  font-family: "Poppins", sans-serif;
-  color: #2d2d2d;
-  margin-bottom: 10px;
-  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
-  text-align: right;
-  margin-right: 20px;
+.monumentos-imagenes h3{
+  font-size: 13px;
 }
-
-#gastronomia p{
-  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
-  text-align: justify;
-  margin-left: 80px;
-}
-#monumentos,
-#rutas-turisticas {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-#monumentos h2,
-#rutas-turisticas h2 {
-  font-size: x-large;
-  font-family: "Poppins", sans-serif;
-  color: #2d2d2d;
-  margin-bottom: 10px;
-  text-align: center;
-}
-#monumentos p {
-  width: 60%; /* Ajusta el texto para que ocupe el espacio restante */
-  text-align: center;
-}
-#monumentos-imagenes {
-  display: flex;
-  flex-direction: row; /* Organiza las imágenes de izquierda a derecha */
-  gap: 20px; /* Espacio entre las imágenes */
+.monumentos-imagenes img{
   justify-content: center; /* Centra las imágenes horizontalmente */
-  width: 200px; /* Ajusta el tamaño de las imágenes */
+  width: 20%; /* Ajusta el tamaño de las imágenes */
   border-radius: 8px;
 }
+
+#rutas-turisticas p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#rutas-turisticas ul{
+  display: flex; /* Convierte las listas en flexbox */
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margen por defecto */
+  list-style: none; 
+}
+
+#rutas-turisticas li {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+/* Sección principal */
+
+.linea-ruta-monumental {
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Alinea los elementos con espacio proporcional */
+  align-items: stretch; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre las rutas */
+  flex-wrap: nowrap; /* Evita que los elementos pasen a otra línea */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  box-sizing: border-box; /* Asegura que el padding no cree scroll horizontal */
+}
+
+/* Estilo para cada ruta en la línea */
+.linea-ruta-monumental li {
+  flex: 1; /* Permite que cada ruta ocupe el mismo espacio */
+  text-align: center; /* Centra el texto dentro de cada elemento */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Aseguramos que los títulos y párrafos estén centrados */
+.linea-ruta-monumental h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.linea-ruta-monumental p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Para las sublistas (puntos destacados de cada ruta) */
+.ruta-monumental-ciudad{
+  display: flex;
+  flex-direction: column !important; 
+  gap: 10px; /* Espaciado entre cada punto */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Elimina los estilos predeterminados de lista */
+}
+
+.ruta-monumental-ciudad li {
+  text-align: left !important; /* Alinea el texto de los puntos a la izquierda */
+  list-style-type: none; /* Elimina los puntos predeterminados */
+  width: 100%;
+}
+
+#guia-visitante {
+  display: flex; /* Configura flexbox para los elementos internos */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Asegura que el contenido interno esté distribuido */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Espaciado entre los elementos */
+}
+
+/* Estilo para el título principal */
+#guia-visitante h2 {
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilo para los párrafos */
+#guia-visitante p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-secciones {
+  display: flex; /* Activa el modelo flexbox para las secciones */
+  justify-content: space-between; /* Espacio igual entre las secciones */
+  gap: 20px; /* Espaciado entre las secciones guía */
+  flex-wrap: wrap; /* Permite que las secciones pasen a una nueva fila si no caben */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  box-sizing: border-box; /* Evita que el padding cree scroll horizontal */
+}
+
+/* Estilo para cada sección (clima, seguridad, transporte, etc.) */
+.seccion-guia {
+  flex: 1; /* Hace que todas las secciones ocupen el mismo espacio */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   
+}
+
+.seccion-guia h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seccion-guia ul {
+  padding: 10px;
+  margin: 5px;
+}
+
+.seccion-guia ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilo para la sección de información adicional */
+#informacion-adicional {
+  display: flex;
+  justify-content: center; /* Centra los iconos en la pantalla */
+  padding: 20px;
+  margin-top: 30px; /* Distancia del contenido del resto de la página */
+}
+
+/* Contenedor de los iconos */
+.iconos {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los iconos */
+  width: 50%; /* Ocupa la mitad del ancho */
+}
+
+/* Estilo para cada icono */
+.icono {
+  text-align: center;
+  flex: 1; /* Cada icono ocupa el mismo espacio */
+  padding: 10px;
+}
+
+/* Estilo de las imágenes de los iconos */
+.icono-imagen {
+  width: 70px; /* Tamaño ajustable */
+  height: 70px; /* Tamaño ajustable */
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto */
+.icono p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 footer {
   background-color: #2d2d2d;
   color: white;
