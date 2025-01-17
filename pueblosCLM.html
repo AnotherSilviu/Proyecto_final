@@ -38,7 +38,8 @@
 
       <main>
         <section id="intro">
-            <h3>CLM por Pueblos</h3>
+            <h3>"La Mancha manchega"</h3>
+            <img src="" alt=""> <!-- a ver si encuentro una que me guste -->
             <p>
               <em
                 >La Historia, cultura o gastronomía de Castilla-La Mancha 
@@ -49,11 +50,20 @@
             </p>
           </section>
 
-          <section class="albacete">ALBACETE</section>
-          <section class="ciudad real">CIUDAD REAL</section>
-          <section class="cuenca">CUENCA</section>
-          <section class="guadalajara">GUADALAJARA</section>
-          <section class="toledo">TOLEDO</section>
+          <section class="albacete"> <!-- Empiezan las secciones de provincias -->
+            <h2>ALBACETE</h2>
+          <h3>Los pueblos escondidos...</h3>
+
+          <article> <!-- Pueblos de Albacete -->
+            <h3>ALCARAZ</h3>
+            <img src="imagenesPueblos/alcaraz.jpg" alt="Alcaraz" id="fotoAlcaraz">
+            <button onclick="verMas()" id="botonVerMas">Ver más</button>
+            <div id="oculto-alcaraz">
+              
+            </div>
+          </article>
+
+          </section>
       </main>
 
       <footer>
@@ -71,13 +81,19 @@
           <a
             href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
             target="_blank"
-            >FACEBOOK</a
-          >
-          <a href="https://x.com/turismoclm" target="_blank">X</a>
+            ><img
+              src="imagenes/facebook.png"
+              alt="logo-facebook"
+              width="30"
+              height="30"
+          /></a>
+          <a href="https://x.com/turismoclm" target="_blank">
+            <img src="imagenes/x.webp" alt="logo-x" width="40" height="40" />
+          </a>
           <a
             href="https://www.instagram.com/turismocastillalamancha/?hl=es"
             target="_blank"
-            >INSTAGRAM</a
+            ><img src="imagenes/instagram.png" alt="logo-instagram" width="30"></a
           >
         </div>
   
@@ -89,6 +105,8 @@
           </form>
         </div>
       </footer>
+
+      <script src="pueblos.js"></script>
     
 </body>
 </html>
