@@ -95,20 +95,53 @@
 
   #villas-historicas {
     display: flex;
-    flex-direction: column;
+    flex-direction:column(2);
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
   }
 
-  .villas-container {
-    display: flex;
+  .villas-texto {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 
-  #villas-historicas img {
+  .villas-texto h2 {
+    font-size:xx-large;
+    color: #2d2d2d;
+  }
+
+  .villas-texto p {
+    color:#2d2d2d;
+  }
+
+  .villas-texto img {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 400px;
+    max-height: 250px;
+    border-radius: 3px;
+  }
+
+  .villas-imagenes {
+    width: 50%;
+    display: grid;
+  }
+
+  .villas-imagenes img {
     display: flex;
-    max-width: 200px;
-    max-height: 100px;
+    max-width: 300px;
+    max-height: 150px;
+    border-radius: 3px;
+  }
+
+  .villas-imagenes img,
+  .villas-imagenes h3,
+  .villas-imagenes p {
+    padding: 5px;
   }
 
   /* Estilo de todo el footer */
