@@ -80,20 +80,24 @@
   }
   
   #intro h3 {
-    font-size: large;
+    font-size: x-large;
     margin-bottom: 20px;
     text-align: center;
+    color: #2d2d2d;
   }
   
   #intro p {
     font-size: medium;
     margin-bottom: 20px;
     text-align: justify;
+    color: #2d2d2d;
   }
 
   /* Secciones */
 
-  #villas-historicas {
+  /* Villas históricas */
+
+  .villas-historicas {
     display: flex;
     flex-direction:column(2);
     border: 1px solid #ddd;
@@ -102,23 +106,23 @@
     padding: 5px;
   }
 
-  .villas-texto {
+  #villas-texto {
     width: 50%;
     align-items: center;
     justify-content: center;
     margin: auto;
   }
 
-  .villas-texto h2 {
-    font-size:xx-large;
+  #villas-texto h2 {
+    font-size:x-large;
     color: #2d2d2d;
   }
 
-  .villas-texto p {
+  #villas-texto p {
     color:#2d2d2d;
   }
 
-  .villas-texto img {
+  #villas-texto img {
     margin: auto;
     margin-top: 50px;
     max-width: 400px;
@@ -126,22 +130,161 @@
     border-radius: 3px;
   }
 
-  .villas-imagenes {
+  #villas-imagenes {
     width: 50%;
     display: grid;
   }
 
-  .villas-imagenes img {
+  #villas-imagenes img {
     display: flex;
-    max-width: 300px;
-    max-height: 150px;
+    max-width: 250px;
+    max-height: 100px;
     border-radius: 3px;
   }
 
-  .villas-imagenes img,
-  .villas-imagenes h3,
-  .villas-imagenes p {
+  #villas-imagenes img,
+  #villas-imagenes h3,
+  #villas-imagenes p {
     padding: 5px;
+  }
+
+  /* Castillos */
+
+  .castillos {
+    display: flex;
+    flex-direction:column(2);
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px #2d2d2d;
+    padding: 5px;
+    margin-top: 30px;
+    color: #f4f4f4;
+  }
+
+  #castillos-imagenes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #castillos-imagenes img {
+    max-width: 500px;
+    max-height: 300px;
+    border-radius: 3px;
+  }
+
+  #castillos-texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #castillos-texto h2 {
+    font-size:x-large;
+    color: #f4f4f4;
+  }
+
+  /* Gastronomía */
+
+  .gastronomia {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    color: #2d2d2d;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .gastronomia h2 {
+    font-size:x-large;
+  }
+
+  .gastronomia p {
+    font-size: large;
+  }
+
+  .gastronomia hr {
+    background-color: #2d2d2d;
+    height: 2.5px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 8px;
+    margin-top: 8px;
+
+  }
+
+  #gastronomia-imagenes {
+    display: flex;
+    flex-direction: column(2);
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  #gastronomia-imagenes img {
+    max-width: 50%;
+    max-height: 400px;
+  }
+
+  #platosP {
+    margin-top: 3px;
+    font-size: medium;
+  }
+
+  #gastronomia-figure {
+    display: flex;
+    flex-direction: column(3);
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 15px;
+  }
+
+  #gastronomia-figure img {
+    width: 150px;
+    height: 100px;
+    border: 3px solid #2d2d2d;
+    border-radius: 50%;
+  }
+
+  /* Cine */
+
+  .cine {
+    display: flex;
+    flex-direction:column;
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px #2d2d2d;
+    padding: 5px;
+    margin-top: 30px;
+    color: #f4f4f4;
+    padding: 10px;
+  }
+
+  .cine h2 {
+    font-size:x-large;
+  }
+
+  .cine p {
+    font-size: large;
+  }
+
+  .cine iframe {
+    display: flex;
+    max-width: 560px;
+    max-height: 315px;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 10px;
   }
 
   /* Estilo de todo el footer */
