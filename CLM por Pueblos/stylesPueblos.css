@@ -254,11 +254,49 @@
     border-radius: 50%;
   }
 
+  /* Naturaleza */
+
+  .naturaleza {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    color: #2d2d2d;
+    text-align:start;
+    padding: 5px;
+  }
+
+  .naturaleza h2 {
+    font-size:x-large;
+  }
+
+  .naturaleza p {
+    font-size: large;
+  }
+
+  #naturaleza-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  #naturaleza-imagenes img {
+    width: 80%;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: auto;
+  }
+
   /* Cine */
 
   .cine {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     background-color: #2d2d2d;
     border: 1px solid #2d2d2d;
     border-radius: 8px;
@@ -285,6 +323,51 @@
     border-radius: 3px;
     margin: auto;
     margin-top: 10px;
+  }
+
+  /* Extra */
+
+  .extra {
+    display: flex;
+    flex-direction: column(2);
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 30px;
+    padding: 5px;
+  }
+
+  #pueblos-negros {
+    background-color: black;
+    color: #f4f4f4;
+    text-align: center;
+    border-radius: 70%;
+    margin: auto;
+    width: 180px;
+    height: 100%;
+    align-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #pueblos-negros a {
+    cursor: pointer;
+    color: #f4f4f4;
+    text-decoration: none;
+  }
+
+  #pueblos-negros a:hover {
+    text-decoration: underline;
+  }
+
+  #quijote {
+    margin: auto;
+  }
+
+  #quijote-img {
+    border: 1px solid black;
+    border-radius: 70%;
+    width: 180px;
+    height: 100%;
+    margin: auto;
   }
 
   /* Estilo de todo el footer */
