@@ -122,7 +122,7 @@
     color:#2d2d2d;
   }
 
-  #villas-texto img {
+  #villas-texto figure img {
     margin: auto;
     margin-top: 50px;
     max-width: 400px;
@@ -133,12 +133,15 @@
   #villas-imagenes {
     width: 50%;
     display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(3);
+    gap: 5px;
   }
 
   #villas-imagenes img {
     display: flex;
-    max-width: 250px;
-    max-height: 100px;
+    width: 200px;
+    height: 80%;
     border-radius: 3px;
   }
 
@@ -146,6 +149,43 @@
   #villas-imagenes h3,
   #villas-imagenes p {
     padding: 5px;
+  }
+
+  /* Cultura */
+
+  .cultura {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-align: center;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .cultura img {
+    width: 450px;
+    height: 200px;
+    margin: auto;
+  }
+
+  .cultura h2 {
+    font-size:x-large;
+    color: #2d2d2d;
+  }
+
+  .cultura h3 {
+    color:#2d2d2d;
+  }
+
+  #cultura-lista {
+    text-align: start;
+  }
+
+  #cultura-lista li {
+    margin-left: 25px;
   }
 
   /* Castillos */
