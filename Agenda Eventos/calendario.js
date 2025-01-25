@@ -4,7 +4,87 @@ const festividadesCR = {
   fechas: {
     "2025-01-17": "San Antón en Alcázar de San Juan",
     "2025-01-20": "San Sebastián en Alcázar de San Juan",
-    "2025-03-09": "Domingo de Piñata en Ciudad Real",
+
+    //Carnaval
+    "2025-02-22": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-02-23": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-02-24": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-02-25": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-02-26": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-02-27": [
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-02-28": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+    ],
+    "2025-03-01": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-02": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-03": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-04": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "La Borrica de Torrenueva (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-05": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Herencia (Fiesta de Interés Turístico Nacional)",
+      "Carnavales de Malagón (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-06": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-07": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-08": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-03-09": [
+      "Carnavales de Almadén (Fiesta de Interés Turístico Regional)",
+      "Carnavales de Miguelturra (Fiesta de Interés Turístico Nacional)",
+      "Domingo de Piñata en Ciudad Real",
+    ],
+    
+    
+
     "2025-04-17": "Caracol de los Armaos en Almagro",
     "2025-04-18": "Juego de Las Caras en Calzada de Calatrava",
     "2025-04-19": "Delfile de Armaos en Bolaños de Calatrava",
@@ -24,6 +104,19 @@ const festividadesCR = {
     "2025-09-08": "Feria y Fiestas en Alcázar de San Juan",
     "2025-09-09": "Feria y Fiestas en Alcázar de San Juan",
     "2025-08-14": "Feria de Ciudad Real",
+    //En Alcazar de San Juan el Carnaval es en Diciembre
+    "2025-12-25": [
+      "Carnavales de Alcazar de San Juan (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-12-26": [
+      "Carnavales de Alcazar de San Juan (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-12-27": [
+      "Carnavales de Alcazar de San Juan (Fiesta de Interés Turístico Nacional)",
+    ],
+    "2025-12-28": [
+      "Carnavales de Alcazar de San Juan (Fiesta de Interés Turístico Nacional)",
+    ],
   },
 };
 const festividadesToledo = {
@@ -39,25 +132,33 @@ const festividadesAlbacete = {
   },
 };
 const festividadesCuenca = {
-  color: "palevioletred",
+  color: "rgb(196, 74, 74)",
   fechas: {
     "2025-01-01": "Año Nuevo",
   },
 };
 const festividadesGuadalajara = {
-  color: "sandybrown",
+  color: "steelblue",
   fechas: {
     "2025-01-01": "Año Nuevo",
   },
 };
 const festividadesCLM = {
-  color: "cornflowerblue",
+  color: "darkorange",
   fechas: {
     "2025-01-01": "Año Nuevo",
-    "2025-04-17": "Semana Santa",
-    "2025-04-18": "Semana Santa",
+    "2025-01-06": "Epifania del Señor en Castilla-La Mancha",
+    "2025-04-17": "Jueves Santo",
+    "2025-04-18": "Viernes Santo",
+    "2025-05-01": "Día del Trabajador",
     "2025-05-31": "Día de la Región de Castilla-La Mancha",
-    "2025-06-19": "Corpus Christi",
+    "2025-06-19": "Corpus Christi en Castilla-La Mancha",
+    "2025-08-15": "Asunción de la Virgen en Castilla-La Mancha",
+    "2025-10-12": "Fiesta Nacional de España",
+    "2025-11-01": "Todos los Santos",
+    "2025-12-06": "Día de la Constitución Española",
+    "2025-12-08": "Inmaculada Concepción",
+    "2025-12-25": "Navidad",
   },
 };
 
@@ -123,7 +224,14 @@ function generarCalendario() {
     // Si el día es una fiesta, resaltar
     if (todasFestividades[currentDate]) {
       dayDiv.classList.add("highlight");
-      dayDiv.title = todasFestividades[currentDate];
+
+      //Obtener las festividades del dia
+      const festividades = Array.isArray(todasFestividades[currentDate])
+        ? todasFestividades[currentDate]
+        : [todasFestividades[currentDate]];
+
+      // Mostrar todas las festividades en el título
+      dayDiv.title = festividades.join("\n");
 
       // Color de la festividad de CR
       if (festividadesCR.fechas[currentDate]) {
@@ -153,7 +261,9 @@ function generarCalendario() {
       // Añadir evento de clic para mostrar la fiesta
       dayDiv.addEventListener("click", () => {
         alert(
-          `El ${day} de ${meses[mesActual]} es: ${todasFestividades[currentDate]}`
+          `El ${day} de ${
+            meses[mesActual]
+          } tiene las siguientes festividades:\n- ${festividades.join("\n- ")}`
         );
       });
     }
