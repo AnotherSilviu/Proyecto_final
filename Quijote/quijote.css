@@ -1,0 +1,216 @@
+/* Estilo para la página completa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: burlywood;
+  }
+  
+  header {
+    background-image: url(imagenes/logo-fondo.jpg);
+    margin-bottom: 20px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+  }
+  .imagen-superior {
+    position: absolute; /* Posiciona la imagen PNG encima del fondo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    width: 45vw;
+    height: auto;
+    z-index: 2; /* Encima del fondo */
+  }
+
+  /* Estilo de la barra de navegación */
+
+  .barra-navegacion {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .barra-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .barra-navegacion ul li a {
+    color: #fff;
+    font-size: 14.5px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .barra-navegacion ul li a:hover {
+    color: #f3952a;
+  }
+
+  /* Fuente Great Vibes */
+
+  .great-vibes-regular {
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Estilo para el container de las secciones */
+  
+  main {
+    display: grid;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  main h1 {
+    display: flex;
+    text-align: center;
+    color: #2d2d2d;
+    font-family: "Great Vibes", serif;
+    font-weight: lighter;
+    font-size: 70px;
+  }
+
+  /* Introducción */
+
+  #intro {
+    display: flex;
+    flex-direction:column(2);
+    padding: 5px;
+    color: #2d2d2d;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #intro-imagen {
+    width: 50%;
+  }
+
+  #intro img {
+    width: 350px;
+    height: 80%;
+    border-radius: 100%;
+  }
+
+  #intro-texto {
+    width: 50%;
+  }
+
+  /* Autor */
+
+  .autor {
+    display: flex;
+    flex-direction:column(3);
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #2d2d2d;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #autor-texto {
+    width: 60%;
+  }
+
+  #autor-imagen {
+    width: 20%;
+  }
+
+  #autor-imagen img {
+    width: 200px;
+    height: 50%;
+    border-radius: 50%;
+  }
+
+  /* Estilo de todo el footer */
+
+  footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  footer h3 {
+    margin-bottom: 15px;
+    font-size: 1;
+  }
+  
+  .derechos,
+  .redes,
+  .contacto {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .derechos p {
+    font-size: 1;
+    line-height: 1.5;
+  }
+  
+  footer .redes a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  footer .redes a:hover {
+    color: blue;
+  }
+  
+  footer .contacto {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  #input-buscar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .boton-buscar {
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #2d2d2d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

@@ -70,7 +70,8 @@
   /* Estilo para el container de las secciones */
 
   main {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     max-width: 1200px;
     margin: 10px auto;
@@ -106,11 +107,28 @@
     padding: 5px;
   }
 
+  #villas-imagenes {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(3);
+    gap: 5px;
+  }
+
+  #villas-imagenes img {
+    width: 200px;
+    height: 70%;
+    border-radius: 3px;
+  }
+
   #villas-texto {
     width: 50%;
     align-items: center;
     justify-content: center;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
   #villas-texto h2 {
@@ -122,33 +140,12 @@
     color:#2d2d2d;
   }
 
-  #villas-texto figure img {
+  #villas-texto img {
     margin: auto;
     margin-top: 50px;
     max-width: 400px;
     max-height: 250px;
     border-radius: 3px;
-  }
-
-  #villas-imagenes {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(2);
-    grid-template-rows: repeat(3);
-    gap: 5px;
-  }
-
-  #villas-imagenes img {
-    display: flex;
-    width: 200px;
-    height: 80%;
-    border-radius: 3px;
-  }
-
-  #villas-imagenes img,
-  #villas-imagenes h3,
-  #villas-imagenes p {
-    padding: 5px;
   }
 
   /* Cultura */
