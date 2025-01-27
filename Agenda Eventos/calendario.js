@@ -211,6 +211,11 @@ const festividadesToledo = {
     "2025-06-21": "Danzantes y Pecados de Camuñas (Fiesta de Interés Turístico Regional y Bien de Interés Cultura Inmaterial",
     "2025-06-22": "Danzantes y Pecados de Camuñas (Fiesta de Interés Turístico Regional y Bien de Interés Cultura Inmaterial",
 
+    //Agosto
+    "2025-08-11": "Consuegra Medieval (Fiesta de Interés Turístico Regional)",
+    "2025-08-12": "Consuegra Medieval (Fiesta de Interés Turístico Regional)",
+    "2025-08-13": "Consuegra Medieval (Fiesta de Interés Turístico Regional)",
+
     //Septiembre
     "2025-09-01": "Fiestas en honor del Cirsto de la Salud de La Puebla de Almoradiel (Fiesta de Interés Turístico Regional)",
     "2025-09-21": "Procesión del Santísimo de la Sala de Bargas (Fiesta de Interés Turístico Regional)",
