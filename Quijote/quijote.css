@@ -11,7 +11,7 @@
   }
   
   header {
-    background-image: url(imagenes/logo-fondo.jpg);
+    background-image: url(/Quijote/imagenesQuijote/logo-fondo.webp);
     margin-bottom: 20px;
     position: relative;
     background-size: cover;

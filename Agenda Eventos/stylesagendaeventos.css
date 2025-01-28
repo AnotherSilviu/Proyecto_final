@@ -19,23 +19,26 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 35vh;
   width: 100%;
 }
+
 .imagen-superior {
   position: absolute; /* Posiciona la imagen PNG encima del fondo */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra la imagen */
-  width: 45vw;
+  width: 40vw;
   height: auto;
   z-index: 2; /* Encima del fondo */
 }
+
+/*Barra de Navegación*/
 .barra-navegacion {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding: 10px 0;
   text-align: center;
   z-index: 999;

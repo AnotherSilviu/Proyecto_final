@@ -22,7 +22,6 @@ header {
   justify-content: center;
   height: 300px;
   width: 100%;
-  border-bottom: 4px solid #e0e0e0; /* Línea decorativa */
 }
 .imagen-superior {
   position: absolute; /* Posiciona la imagen PNG encima del fondo */
@@ -35,7 +34,7 @@ header {
 }
 .barra-navegacion {
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
   padding: 10px 0;
@@ -149,7 +148,13 @@ article:hover {
   white-space: nowrap; /* Evita saltos de línea */
   z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
-
+hr {
+  border: 0;              
+  height: 2px;              
+  background-color: #2d2d2d; 
+  margin: 20px 0;       
+  margin-bottom: 40px;
+}
 footer {
   background-color: #2d2d2d;
   color: white;
@@ -209,13 +214,7 @@ footer .contacto {
   cursor: pointer;
   border: none
 }
-hr {
-    border: 0;              
-    height: 2px;              
-    background-color: #2d2d2d; 
-    margin: 20px 0;       
-    margin-bottom: 40px;
-}
+
 /*Slider de imágenes*/
 .titulo-slider {
   text-align: center;
