@@ -22,6 +22,7 @@ header {
   justify-content: center;
   height: 50vh;
   width: 100%;
+  border-bottom: 4px solid #e0e0e0; /* Línea decorativa */
 }
 .imagen-superior {
   position: absolute; /* Posiciona la imagen PNG encima del fondo */
