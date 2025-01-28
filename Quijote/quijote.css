@@ -138,6 +138,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    width: 100%;
   }
 
   #autor-texto {
@@ -190,6 +191,53 @@
     margin-top: 20px;
     text-align: center;
     color: #2d2d2d;
+  }
+
+  /* Etapas de la ruta */
+
+  .etapas {
+    display: flex;
+    flex-direction:column(2);
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px #2d2d2d;
+    padding: 5px;
+    margin-top: 30px;
+    color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  #etapas-mapa {
+    width: 50%;
+    display: flex;
+  }
+
+  #etapas-mapa iframe {
+    border-radius: 5px;
+  }
+
+  #etapas-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 50%;
+  }
+
+  #etapas-texto h3 {
+    font-size: x-large;
+  }
+
+  #etapas-texto img {
+    width: 250px;
+    height: 100px;
+    margin: auto;
   }
 
   /* Estilo de todo el footer */
