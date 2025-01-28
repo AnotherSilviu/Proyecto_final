@@ -209,20 +209,14 @@ footer .contacto {
   cursor: pointer;
   border: none
 }
-
-/*Slider de imágenes*/
-.formato-slider {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
+hr {
+    border: 0;              
+    height: 2px;              
+    background-color: #2d2d2d; 
+    margin: 20px 0;       
+    margin-bottom: 40px;
 }
+/*Slider de imágenes*/
 .titulo-slider {
   text-align: center;
   margin-top: 20px;
@@ -238,7 +232,6 @@ footer .contacto {
   font-family: "Poppins", sans-serif;
 }
 .slider-frame {
-  width: 100vw;
   height: calc(100vw * 0.3125);
   margin: 0 auto;
   overflow: hidden;
