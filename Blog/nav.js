@@ -1,6 +1,17 @@
 function openNav() {
-    document.getElementById("mobile-menu").style.width = "100%";
+    console.log("Abrir menú");
+    let menu = document.getElementById("mobile-menu");
+    menu.style.display = "block";
+    setTimeout(() => {
+        menu.style.width = "100%";
+    }, 10);
 }
+
 function closeNav() {
-    document.getElementById("mobile-menu").style.width = "0%";
+    console.log("Cerrar menú");
+    let menu = document.getElementById("mobile-menu");
+    menu.style.width = "0%";
+    setTimeout(() => {
+        menu.style.display = "none";
+    }, 300);
 }
