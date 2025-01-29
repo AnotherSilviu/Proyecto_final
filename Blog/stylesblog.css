@@ -90,10 +90,11 @@ header {
   border-radius: 5px;
   font-weight: bold; 
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 #boton-formulario:hover,
-.menu {
+.menu:hover {
   background-color: #e67e22;
   color: #fff; 
 }
@@ -113,6 +114,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: all 0.3s ease 0s;
+  display: none; 
 }
 
 .barra-navegacion .overlay .overlay-content{
@@ -142,6 +144,9 @@ header {
   top: 20px;
   right: 45px;
   font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 main {
@@ -281,12 +286,13 @@ footer .contacto {
   cursor: pointer;
   border: none
 }
-@media screen and (max-height: 800px)  {
-  .barra-navegacion ul li a, #boton-formulario{
-    display: none;
+@media screen and (max-width: 768px) {
+  .barra-navegacion ul {
+      display: none; /* Oculta el menú normal */
   }
+
   .menu {
-    display: inherit;
+      display: block; /* Asegurar que el botón de menú aparezca */
   }
 }
 @media screen and (max-height:450px){
