@@ -10,8 +10,9 @@ body {
   background-color: burlywood;
 }
 
+/*Estilos para el encabezado*/
 header {
-  background-image: url(imagenes/logo-fondo.jfif);
+  background-image: url(imagenes/logo-fondo.jpg);
   margin-bottom: 20px;
   position: relative;
   background-size: cover;
@@ -36,6 +37,8 @@ header {
   z-index: 2;
   /* Encima del fondo */
 }
+
+/*Barra de navegación logo*/
 #logo img{
   width: auto;
   height: 50px;
@@ -45,6 +48,7 @@ header {
   transform: scale(1.2);
 }
 
+/*Barra de navegación*/
 .barra-navegacion {
   display: flex;
   justify-content: space-between; 
@@ -78,7 +82,7 @@ header {
   color: #f3952a;
 }
 
-.menu{
+.menu{ /*Botón encondido cuando la página es "tamaño escritorio"*/
   display: none;
 }
 
@@ -135,7 +139,7 @@ header {
 }
 
 .barra-navegacion .overlay a:hover,
-.barra-navegacion.overlay a:focus {
+.barra-navegacion .overlay a:focus {
   color: #f3952a;
 }
 
@@ -149,6 +153,7 @@ header {
   cursor: pointer;
 }
 
+/*Estilos cuerpo de web*/
 main {
   padding: 20px;
   max-width: 1200px;
@@ -165,11 +170,12 @@ main h3 {
 }
 
 main p {
-  font-size: medium;
+  font-size:large; 
   margin-bottom: 20px;
   text-align: center;
 }
 
+/*Estilo contenido de la web*/
 .secciones {
   background: #fff;
   border: 1px solid #ddd;
@@ -179,6 +185,7 @@ main p {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/*Estilo de cada seccion*/
 .seccion {
   display: flex;
   align-items: center;
@@ -205,13 +212,13 @@ main p {
 }
 
 .contenido h2 {
-  font-size: 1.5rem;
+  font-size: 16px;
   margin-bottom: 10px;
   color: #333;
 }
 
 .contenido p {
-  font-size: 1rem;
+  font-size: 14px;
   color: #555;
   margin: 0 0 10px;
   text-align: left;
@@ -227,6 +234,7 @@ main p {
   text-decoration: underline;
 }
 
+/*Footer*/
 footer {
   background-color: #2d2d2d;
   color: white;
@@ -286,7 +294,9 @@ footer .contacto {
   cursor: pointer;
   border: none
 }
-@media screen and (max-width: 768px) {
+
+/*Pagina web responsive (para el menu)*/
+@media screen and (max-width: 860px) {
   .barra-navegacion ul {
       display: none; /* Oculta el menú normal */
   }

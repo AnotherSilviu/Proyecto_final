@@ -10,6 +10,7 @@ body {
   background-color: burlywood;
 }
 
+/*Estilos para el encabezado*/
 header {
   background-image: url(imagenes/logo-fondo.jpg);
   margin-bottom: 20px;
@@ -22,7 +23,6 @@ header {
   justify-content: center;
   height: 50vh;
   width: 100%;
-  border-bottom: 4px solid #e0e0e0; /* Línea decorativa */
 }
 .imagen-superior {
   position: absolute; /* Posiciona la imagen PNG encima del fondo */
@@ -33,20 +33,34 @@ header {
   height: auto;
   z-index: 2; /* Encima del fondo */
 }
+
+/*Barra de navegación logo*/
+#logo img{
+  width: auto;
+  height: 50px;
+  cursor: pointer;
+}
+#logo img:hover{
+  transform: scale(1.2);
+}
+
+/*Barra de navegación*/
 .barra-navegacion {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
-  padding: 10px 0;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
+  padding: 0 20px;
 }
 
 .barra-navegacion ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 30px;
   padding: 0;
   margin: 0;
@@ -55,7 +69,6 @@ header {
 .barra-navegacion ul li a {
   color: #fff;
   font-size: 14.5px;
-  text-decoration: none;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   transition: color 0.3s;
@@ -65,6 +78,79 @@ header {
   color: #f3952a;
 }
 
+
+.menu{ /*Botón encondido cuando la página es "tamaño escritorio"*/
+  display: none;
+}
+
+#boton-formulario,
+.menu {
+  padding: 8px 15px; 
+  background-color: #f3952a; 
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold; 
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#boton-formulario:hover,
+.menu:hover {
+  background-color: #e67e22;
+  color: #fff; 
+}
+
+/*Nav JS*/
+.barra-navegacion a {
+  text-decoration: none;
+}
+
+.barra-navegacion .overlay{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  display: none; 
+}
+
+.barra-navegacion .overlay .overlay-content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-navegacion .overlay a{
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: white;
+}
+
+.barra-navegacion .overlay a:hover,
+.barra-navegacion .overlay a:focus {
+  color: #f3952a;
+}
+
+.barra-navegacion .overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Estilos cuerpo de web*/
 main {
   padding: 20px;
   max-width: 1200px;
@@ -86,6 +172,17 @@ main p {
   text-align: justify;
 }
 
+/*Estilo contenido de la web*/
+.secciones {
+  display: flex; 
+  flex-direction: column;
+  list-style: none;
+  padding: 0; 
+  margin: 20px 0; 
+  gap: 20px; 
+}
+
+/*Estilo de cada seccion*/
 .seccion {
   display: flex; /* Configura flexbox para los elementos internos */
   align-items: center; /* Alinea verticalmente */
@@ -99,14 +196,6 @@ main p {
   margin-bottom: 20px;
 }
 
-.secciones {
-  display: flex; /* Activa el modelo flexbox */
-  flex-direction: column;
-  list-style: none; /* Quita los puntos de la lista */
-  padding: 0; /* Elimina el padding del ul */
-  margin: 20px 0; /* Espaciado superior e inferior */
-  gap: 20px; /* Espacio entre los elementos */
-}
 #historia,
 #parques-naturales,
 #gastronomia,
@@ -287,7 +376,6 @@ main p {
   box-sizing: border-box;
 }
 
-/* Aseguramos que los títulos y párrafos estén centrados */
 .linea-ruta-monumental h3 {
   font-size: 20px;
   margin: 0 0 10px 0;
@@ -304,28 +392,28 @@ main p {
 .ruta-monumental-ciudad {
   display: flex;
   flex-direction: column !important;
-  gap: 10px; /* Espaciado entre cada punto */
+  gap: 10px; 
   padding: 0;
   margin: 0;
-  list-style: none; /* Elimina los estilos predeterminados de lista */
+  list-style: none; 
 }
 
 .ruta-monumental-ciudad li {
-  text-align: left !important; /* Alinea el texto de los puntos a la izquierda */
-  list-style-type: none; /* Elimina los puntos predeterminados */
+  text-align: left !important; 
+  list-style-type: none;
   width: 100%;
 }
 
 #guia-visitante {
-  display: flex; /* Configura flexbox para los elementos internos */
+  display: flex; 
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Asegura que el contenido interno esté distribuido */
+  justify-content: space-between; 
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  gap: 20px; /* Espaciado entre los elementos */
+  gap: 20px; 
 }
 
 /* Estilo para el título principal */
@@ -383,29 +471,29 @@ main p {
 /* Estilo para la sección de información adicional */
 #informacion-adicional {
   display: flex;
-  justify-content: center; /* Centra los iconos en la pantalla */
+  justify-content: center;
   padding: 20px;
-  margin-top: 30px; /* Distancia del contenido del resto de la página */
+  margin-top: 30px;
 }
 
 /* Contenedor de los iconos */
 .iconos {
   display: flex;
-  justify-content: space-between; /* Espacio entre los iconos */
-  width: 50%; /* Ocupa la mitad del ancho */
+  justify-content: space-between; 
+  width: 50%; 
 }
 
 /* Estilo para cada icono */
 .icono {
   text-align: center;
-  flex: 1; /* Cada icono ocupa el mismo espacio */
+  flex: 1;
   padding: 10px;
 }
 
 /* Estilo de las imágenes de los iconos */
 .icono-imagen {
-  width: 70px; /* Tamaño ajustable */
-  height: 70px; /* Tamaño ajustable */
+  width: 70px; 
+  height: 70px; 
   margin-bottom: 10px;
 }
 
@@ -416,6 +504,7 @@ main p {
   text-align: center;
 }
 
+/*Footer*/
 footer {
   background-color: #2d2d2d;
   color: white;
@@ -475,4 +564,26 @@ footer .contacto {
   border-radius: 5px;
   cursor: pointer;
   border: none;
+}
+
+/*Pagina web responsive (para el menu)*/
+@media screen and (max-width: 860px) {
+  .barra-navegacion ul {
+      display: none; /* Oculta el menú normal */
+  }
+
+  .menu {
+      display: block; /* Asegurar que el botón de menú aparezca */
+  }
+}
+@media screen and (max-height:450px){
+  .barra-navegacion .overlay a{
+    font-size: 20px;
+  }
+
+  .barra-navegacion .overlay .close{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }

@@ -21,6 +21,9 @@
           class="imagen-superior"
       /></a>
       <nav class="barra-navegacion">
+        <div id="logo">
+          <a href="../bienvenida.html"><img src="../imagenes/logo-barra-navegacion.png" alt="logo pagina web"></a>
+        </div>
         <ul>
           <li>
             <a href="agenda_eventos.html"><strong>AGENDA DE EVENTOS</strong></a>
@@ -39,11 +42,26 @@
             >
           </li>
           <li>
-            <a href="../formulario.html" target="_blank"
+            <a href="../formulario.html" target="_blank" id="boton-formulario"
               ><strong>CONTACTO</strong></a
             >
           </li>
         </ul>
+
+          <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"><strong>MENÚ</strong></a>
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="javascript:void(0)" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE
+              EVENTOS</strong></a>
+          <a href="blog.html"><strong>BLOG</strong></a>
+          <a href="../CLM por Pueblos/pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
+          <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
+          <a href="../formulario.html"><strong>CONTACTO</strong></a>
+        </div>
+      </div>
+
       </nav>
     </header>
     <main>
@@ -111,5 +129,6 @@
       </div>
     </footer>
     <script src="calendario.js"></script>
+    <script src="../Blog/nav.js"></script>
   </body>
 </html>
