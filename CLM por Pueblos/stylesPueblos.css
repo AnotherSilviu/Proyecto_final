@@ -188,6 +188,7 @@
   /* Castillos */
 
   .castillos {
+    width: 100%;
     display: flex;
     flex-direction:column(2);
     background-color: #2d2d2d;
@@ -199,30 +200,53 @@
     color: #f4f4f4;
   }
 
-  #castillos-imagenes {
-    width: 50%;
+  .castillos-container {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    margin: auto;
   }
 
-  #castillos-imagenes img {
-    max-width: 500px;
-    max-height: 300px;
+  .castillos figure {
+    display: flex;
+    flex-direction: column(2);
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .castillos figcaption {
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .castillos figure img {
+    max-width: 450px;
+    max-height: 100%;
     border-radius: 3px;
   }
-
-  #castillos-texto {
-    width: 50%;
+  
+  /* Navegación del Slider */
+  
+  .navegacion-slider {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
   }
 
-  #castillos-texto h2 {
-    font-size:x-large;
+  .navegacion-slider button {
+    background-color: #2d2d2d;
     color: #f4f4f4;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .navegacion-slider button > span {
+    font-size: 30px;
   }
 
   /* Gastronomía */
