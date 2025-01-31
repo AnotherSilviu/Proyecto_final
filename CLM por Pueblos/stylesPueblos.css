@@ -289,7 +289,6 @@
   }
 
   .castillos figure {
-    display: flex;
     flex-direction: column(2);
     min-width: 100%;
     box-sizing: border-box;
@@ -298,9 +297,11 @@
   .castillos figcaption {
     font-size: x-large;
     font-weight: bold;
+    margin: auto;
   }
 
   .castillos figure img {
+    display: flex;
     max-width: 450px;
     max-height: 100%;
     border-radius: 3px;
@@ -312,23 +313,25 @@
     display: flex;
     justify-content: space-between;
     width: calc(100% - 40px);
-    margin: 0 20px;
-    position: absolute;
-    top: 50px;
-    transform: translateY(-50%);
+    margin: auto;
   }
 
+  /* top: 50px;
+    transform: translateY(-50%); */
+
   .navegacion-slider button {
-    background-color: #2d2d2d;
+    background-color: rgba(125, 117, 117, 0.415);
     color: #f4f4f4;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
   }
   
   .navegacion-slider button > span {
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
   }
 
   /* Gastronomía */
