@@ -280,30 +280,40 @@
     padding: 5px;
     margin-top: 30px;
     color: #f4f4f4;
+    position: relative;
   }
 
   .castillos-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
   .castillos figure {
+    display: flex;
     flex-direction: column(2);
-    min-width: 100%;
+    max-width: 70%;
     box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 30px;
   }
 
   .castillos figcaption {
-    font-size: x-large;
+    display: flex;
+    font-size: xx-large;
     font-weight: bold;
     margin: auto;
   }
 
   .castillos figure img {
     display: flex;
-    max-width: 450px;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 400px;
     border-radius: 3px;
   }
   
@@ -312,12 +322,17 @@
   .navegacion-slider {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 40px);
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
     margin: auto;
+    top: 50%;
+    left: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
   }
-
-  /* top: 50px;
-    transform: translateY(-50%); */
 
   .navegacion-slider button {
     background-color: rgba(125, 117, 117, 0.415);
@@ -326,6 +341,9 @@
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    pointer-events: auto;
+    margin: 0;
+    max-width: 40px;
   }
   
   .navegacion-slider button > span {
@@ -387,6 +405,7 @@
   #gastronomia-figure {
     display: flex;
     flex-direction: column(3);
+    flex-wrap: unset;
     justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
@@ -463,8 +482,8 @@
 
   .cine iframe {
     display: flex;
-    max-width: 560px;
-    max-height: 315px;
+    width: 80%;
+    height: 500px;
     border: 2px solid white;
     border-radius: 3px;
     margin: auto;
