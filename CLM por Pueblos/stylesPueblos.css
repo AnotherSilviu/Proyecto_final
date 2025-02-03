@@ -460,8 +460,8 @@
 
   .cine iframe {
     display: flex;
-    max-width: 560px;
-    max-height: 315px;
+    width: 70%;
+    height: auto;
     border: 2px solid white;
     border-radius: 3px;
     margin: auto;
