@@ -404,7 +404,6 @@
 
   #gastronomia-figure {
     display: flex;
-    flex-direction: column(3);
     flex-wrap: unset;
     justify-content: space-between;
     padding-left: 100px;
@@ -607,7 +606,7 @@
       display: block; /* Asegurar que el botón de menú aparezca */
   }
 }
-@media screen and (max-height:450px){
+@media screen and (max-width:450px){
   .barra-navegacion .overlay a{
     font-size: 20px;
   }
@@ -616,5 +615,9 @@
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+
+  #gastronomia-figure {
+    flex-direction: column;
   }
 }
