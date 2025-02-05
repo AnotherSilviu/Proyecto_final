@@ -22,7 +22,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 300px;
-  width: 100%;
+  width: auto;
 }
 
 .imagen-superior {
@@ -245,7 +245,7 @@ main p {
   justify-content: space-between;
 }
 #albacete-square::marker {
-  color: greenyellow;
+  color: #8ec63f;
 }
 #ciudadreal-square::marker {
   color: darksalmon;
@@ -281,32 +281,35 @@ main p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   width: 300px;
-  text-align: initial;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 1000;
-  display: none;*/
+  display: none;
+  text-align: end;
 }
-
-/* Botón de cerrar */
+/* Texto Alert */
+#alertMessage{
+  text-align: left;
+}
+/*----*/
+/*-------------Botón de cerrar--------------*/
 .custom-alert button {
-  background: #fca355;
+  background: #f3952a;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
- 
 }
 .custom-alert button:hover {
   background: #e67e22;
 }
-
+/*-------------------------------------------*/
 
 /*Footer*/
 footer {
