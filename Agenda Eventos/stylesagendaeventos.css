@@ -284,21 +284,23 @@ main p {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   width: 300px;
-  text-align: left;
+  text-align: initial;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 1000;
+  display: none;*/
 }
 
 /* Botón de cerrar */
 .custom-alert button {
-  background: rgb(185, 148, 100);
+  background: #fca355;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
+  font-weight: bold;
  
 }
 .custom-alert button:hover {
