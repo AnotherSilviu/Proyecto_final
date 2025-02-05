@@ -21,7 +21,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 300px;
   width: 100%;
 }
 .imagen-superior {

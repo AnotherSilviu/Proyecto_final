@@ -325,7 +325,7 @@ const festividadesToledo = {
   },
 };
 const festividadesAlbacete = {
-  color: "greenyellow",
+  color: "#8ec63f",
   fechas: {
     //Febrero
     "2025-02-03":
