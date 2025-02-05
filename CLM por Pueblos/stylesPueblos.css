@@ -281,6 +281,7 @@
     margin-top: 30px;
     color: #f4f4f4;
     position: relative;
+    overflow: hidden;
   }
 
   .castillos-container {
@@ -292,10 +293,10 @@
     position: relative;
   }
 
-  .castillos figure {
+  .castillos-item {
     display: flex;
     flex-direction: column(2);
-    max-width: 70%;
+    min-width: 100%;
     box-sizing: border-box;
     align-items: center;
     text-align: center;
@@ -312,8 +313,8 @@
 
   .castillos figure img {
     display: flex;
-    max-width: 70%;
-    max-height: 400px;
+    max-width: 200px;
+    max-height: 60%;
     border-radius: 3px;
   }
   
