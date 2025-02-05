@@ -11,7 +11,7 @@
   }
   
   header {
-    background-image: url(/Quijote/imagenesQuijote/logo-fondo.webp);
+    background-image: url(../Quijote/imagenesQuijote/logo-fondo.webp);
     margin-bottom: 20px;
     position: relative;
     background-size: cover;
@@ -33,39 +33,119 @@
     z-index: 2; /* Encima del fondo */
   }
 
-  /* Estilo de la barra de navegación */
+   /*Barra de navegación logo*/
+#logo img{
+  width: auto;
+  height: 50px;
+  cursor: pointer;
+}
+#logo img:hover{
+  transform: scale(1.2);
+}
 
-  .barra-navegacion {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparencia moderna */
-    padding: 10px 0;
-    text-align: center;
-    z-index: 999;
-  }
-  
-  .barra-navegacion ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .barra-navegacion ul li a {
-    color: #fff;
-    font-size: 14.5px;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-  
-  .barra-navegacion ul li a:hover {
-    color: #f3952a;
-  }
+.barra-navegacion {
+  display: flex;
+justify-content: space-between; 
+align-items: center; 
+position: absolute;
+top: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+padding: 0 20px;
+}
+
+.barra-navegacion ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.barra-navegacion ul li a {
+  color: #fff;
+  font-size: 14.5px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.barra-navegacion ul li a:hover {
+  color: #f3952a;
+}
+
+.menu{ /*Botón encondido cuando la página es "tamaño escritorio"*/
+  display: none;
+}
+
+#boton-formulario,
+.menu {
+  padding: 8px 15px; 
+  background-color: #f3952a; 
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold; 
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#boton-formulario:hover,
+.menu:hover {
+  background-color: #e67e22;
+  color: #fff; 
+}
+
+/*Nav JS*/
+.barra-navegacion a {
+  text-decoration: none;
+}
+
+.barra-navegacion .overlay{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  display: none; 
+}
+
+.barra-navegacion .overlay .overlay-content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-navegacion .overlay a{
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: white;
+}
+
+.barra-navegacion .overlay a:hover,
+.barra-navegacion .overlay a:focus {
+  color: #f3952a;
+}
+
+.barra-navegacion .overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
 
   /* Fuente Great Vibes */
 
@@ -301,3 +381,25 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+    /*Pagina web responsive (para el menu)*/
+@media screen and (max-width: 860px) {
+  .barra-navegacion ul {
+      display: none; /* Oculta el menú normal */
+  }
+
+  .menu {
+      display: block; /* Asegurar que el botón de menú aparezca */
+  }
+}
+@media screen and (max-width: 450px){
+  .barra-navegacion .overlay a{
+    font-size: 20px;
+  }
+
+  .barra-navegacion .overlay .close{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+} 
