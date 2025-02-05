@@ -606,7 +606,7 @@
     flex-direction: column;
   }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width: 450px){
   .barra-navegacion .overlay a{
     font-size: 20px;
   }
@@ -615,5 +615,9 @@
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+@media screen and (max-width: 550px){
+  #gastronomia-figure {
+    flex-direction: column;
   }
 }

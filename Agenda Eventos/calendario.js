@@ -820,7 +820,7 @@ function generarCalendario() {
         }
 
         // Mostrar todas las festividades en un único alert
-        alert(
+        mostrarAlerta(
           `El ${day} de ${
             meses[mesActual]
           } tiene las siguientes festividades:\n- ${todasFestividadesDia.join(
@@ -832,6 +832,19 @@ function generarCalendario() {
 
     container.appendChild(dayDiv);
   }
+}
+
+ // Función para mostrar una alerta personalizada
+ function mostrarAlerta(mensaje) {
+  document.getElementById("alertMessage").innerText = mensaje; // Cambia el mensaje
+  document.getElementById("customAlert").style.display = "block"; // Muestra la alerta
+  document.getElementById("customOverlay").style.display = "block"; 
+}
+
+// Función para cerrar la alerta
+function cerrarAlerta() {
+  document.getElementById("customAlert").style.display = "none"; // Oculta la alerta
+  document.getElementById("customOverlay").style.display = "none";
 }
 
 // Función para cambiar el mes
