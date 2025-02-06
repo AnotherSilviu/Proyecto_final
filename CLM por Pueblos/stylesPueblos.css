@@ -271,13 +271,14 @@
 
   .castillos {
     width: 100%;
+    height: 200px;
     display: flex;
     flex-direction:column(2);
     background-color: #2d2d2d;
     border: 1px solid #2d2d2d;
     border-radius: 8px;
     box-shadow: 0px 4px 6px #2d2d2d;
-    padding: 5px;
+    padding: 20px 5px;
     margin-top: 30px;
     color: #f4f4f4;
     position: relative;
@@ -286,6 +287,7 @@
 
   .castillos-container {
     display: flex;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
     margin: auto;
     justify-content: center;
@@ -301,7 +303,6 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    gap: 30px;
   }
 
   .castillos figcaption {
@@ -312,7 +313,6 @@
   }
 
   .castillos figure img {
-    display: flex;
     max-width: 200px;
     max-height: 60%;
     border-radius: 3px;
@@ -446,12 +446,44 @@
     margin-top: 20px;
   }
 
-  #naturaleza-imagenes img {
-    width: 80%;
+  .box-nat {
+    position: relative;
+  }
+
+  .img-naturaleza {
+    width: 100%;
     height: 180px;
     border-radius: 5px;
     object-fit: cover;
     margin: auto;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+
+  .naturaleza-texto {
+    display: none;
+    background-color: rgba(45, 45, 45, 0.7);
+    position: absolute;
+    color: #f4f4f4;
+    padding: 5px;
+    font-size: medium;
+    text-align: center;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);  /* Centrado horizontalmente */
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .img-naturaleza:hover {
+    cursor: pointer;
+    background-color: #2d2d2d;
+  }
+
+  .img-naturaleza:hover + .naturaleza-texto {
+    display: block;
   }
 
   /* Cine */
@@ -621,4 +653,5 @@
   #gastronomia-figure {
     flex-direction: column;
   }
+}
 }

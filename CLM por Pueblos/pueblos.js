@@ -5,19 +5,20 @@ const figureCastillos = document.querySelectorAll('.castillos-item');
 
 // Función para mover el slider
 function navegar(direccion) {
-    const ancho = figureCastillos[0].offsetWidth;  // Ancho de un item
+    // Coge el ancho del figure
+    const ancho = figureCastillos[0].offsetWidth;
 
-    // Actualizamos el índice en función de la dirección
+    // Actualiza el índice en función de la dirección
     currentIndex += direccion;
 
-    // Si el índice se sale de los límites (menos de 0 o más que el número de items), lo ajustamos
+    // Ajusta el índice
     if (currentIndex < 0) {
-        currentIndex = figureCastillos.length - 1;  // Vamos al último item
+        currentIndex = figureCastillos.length - 1;  // Va al último item
     } else if (currentIndex >= figureCastillos.length) {
-        currentIndex = 0;  // Volvemos al primer item
+        currentIndex = 0;  // Vuelve al primer item
     }
 
-    // Movemos el contenedor de imágenes
+    // Mover el contenedor
     containerCastillos.style.transform = `translateX(-${currentIndex * ancho}px)`;
 }
 
@@ -30,3 +31,17 @@ botonAnterior.addEventListener('click', () => {
 botonSiguiente.addEventListener('click', () => {
     navegar(1);
 });
+
+// NATURALEZA
+
+const imagenNat = document.querySelectorAll("img-naturaleza");
+const textoNat = document.querySelectorAll("naturaleza-texto");
+
+imagenNat.addEventListener("mouseenter", () => {
+  textoNat.style.display = "block"; // Muestra el texto al hacer hover
+});
+
+imagenNat.addEventListener("mouseleave", () => {
+  textoNat.style.display = "none"; // Oculta el texto
+});
+
