@@ -1,0 +1,4 @@
+const APIKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmdG9ldWhwdWRpaGVlZGFpcmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg5MjkyMjMsImV4cCI6MjA1NDUwNTIyM30._XpVGv5X7XtSN603HQtzjDRhqK32MNguT3cdp_4QxVc"
+const BASE_URL = "https://fftoeuhpudiheedairhl.supabase.co"
+
+export { APIKEY, BASE_URL }

@@ -1,0 +1,121 @@
+/* Estilo general de la página */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Contenedor principal del formulario */
+  .login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del encabezado */
+  .login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .login-header p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Estilos de los campos de entrada */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #f3952a;
+    outline: none;
+  }
+  
+  /* Estilos de las opciones (checkbox y olvido contraseña) */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .options a {
+    font-size: 12px;
+    color: #777;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    color: #f3952a;
+  }
+  
+  /* Estilos del botón de inicio de sesión */
+  .submit-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .submit-group button {
+    padding: 12px;
+    background-color: #f3952a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-group button:hover {
+    background-color: #e67e22;
+  }
+  
+  .submit-group p {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+  }
+  
+  .submit-group p a {
+    color: #f3952a;
+    text-decoration: none;
+  }
+  
+  .submit-group p a:hover {
+    text-decoration: underline;
+  }

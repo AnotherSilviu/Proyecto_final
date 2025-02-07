@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Usuario</title>
+    <link rel="icon" href="../imagenes/quijote.png" />
+    <link rel="stylesheet" href="./CSS/dashboard.css" />
+    <!--Fuente descargada-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="barra-navegacion">
+      <!-- Encabezado -->
+      <header class="panel-superior">
+        <div class="barra-superior">
+          <img src="../imagenes/logo-barra-navegacion.png" id="logo" alt="logo-barra-navegacion">
+          <h2>Panel de Usuario</h2>
+        </div>
+        <div class="info-user">
+          <span>Bienvenido, <strong>X</strong></span>
+          <button class="logout-btn" id="logout">Cerrar Sesión</button>
+        </div>
+      </header>
+    </div>
+      <!-- Barra lateral -->
+    <div class="contenedor-web">
+      <aside class="barra-lateral">
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Mi Perfil</a></li>
+            <li><a href="#">Mis Entradas de Blog</a></li>
+            <li><a href="#">Mis Comentarios</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="contenedor-principal">
+        <section class="seccion-perfil">
+          <h3>Mi Perfil</h3>
+          <p><strong>Correo Electrónico:</strong> X</p>
+          <p><strong>Última actividad:</strong> Hace 2 días</p>
+        </section>
+
+        <section class="acciones-rapidas">
+          <h3>Acciones Rápidas</h3>
+          <button class="btn-accion">Ver Mis Entradas de Blog</button>
+          <button class="btn-accion">Actualizar Perfil</button>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="js/retricted.js"></script>
+    <script type="module" src="JS/product.js"></script>
+  </body>
+</html>
