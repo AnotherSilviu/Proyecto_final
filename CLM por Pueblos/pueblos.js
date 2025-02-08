@@ -6,15 +6,15 @@ const figureCastillos = document.querySelectorAll('.castillos-item');
 // Función para mover el slider
 function navegar(direccion) {
     // Coge el ancho del figure
-    const ancho = figureCastillos[0].offsetWidth;
+    const ancho = containerCastillos[0].offsetWidth;
 
     // Actualiza el índice en función de la dirección
     currentIndex += direccion;
 
     // Ajusta el índice
     if (currentIndex < 0) {
-        currentIndex = figureCastillos.length - 1;  // Va al último item
-    } else if (currentIndex >= figureCastillos.length) {
+        currentIndex = containerCastillos.length - 1;  // Va al último item
+    } else if (currentIndex >= containerCastillos.length) {
         currentIndex = 0;  // Vuelve al primer item
     }
 
@@ -37,11 +37,13 @@ botonSiguiente.addEventListener('click', () => {
 const imagenNat = document.querySelectorAll("img-naturaleza");
 const textoNat = document.querySelectorAll("naturaleza-texto");
 
-imagenNat.addEventListener("mouseenter", () => {
-  textoNat.style.display = "block"; // Muestra el texto al hacer hover
-});
+imagenNat.forEach((imagen, index) => {
+    imagen.addEventListener("mouseenter", () => {
+        textoNat[index].style.display = "block"; // Muestra el texto
+    });
 
-imagenNat.addEventListener("mouseleave", () => {
-  textoNat.style.display = "none"; // Oculta el texto
+    imagen.addEventListener("mouseleave", () => {
+        textoNat[index].style.display = "none"; // Oculta el texto
+    });
 });
 

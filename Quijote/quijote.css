@@ -277,7 +277,7 @@ padding: 0 20px;
 
   .etapas {
     display: flex;
-    flex-direction:column(2);
+    flex-direction: column(2);
     background-color: #2d2d2d;
     border: 1px solid #2d2d2d;
     border-radius: 8px;
@@ -287,7 +287,7 @@ padding: 0 20px;
     color: #f4f4f4;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     overflow-x: auto;
   }

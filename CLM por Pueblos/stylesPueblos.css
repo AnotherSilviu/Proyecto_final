@@ -287,12 +287,13 @@
 
   .castillos-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     transition: transform 0.5s ease-in-out;
     margin: auto;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
   }
 
   .castillos-item {
@@ -517,51 +518,6 @@
     border-radius: 3px;
     margin: auto;
     margin-top: 10px;
-  }
-
-  /* Extra */
-
-  .extra {
-    display: flex;
-    flex-direction: column(2);
-    justify-content: space-between;
-    margin-top: 60px;
-    gap: 30px;
-    padding: 5px;
-  }
-
-  #pueblos-negros {
-    background-color: black;
-    color: #f4f4f4;
-    text-align: center;
-    border-radius: 70%;
-    margin: auto;
-    width: 180px;
-    height: 90px;
-    align-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-
-  #pueblos-negros a {
-    cursor: pointer;
-    color: #f4f4f4;
-    text-decoration: none;
-  }
-
-  #pueblos-negros a:hover {
-    text-decoration: underline;
-  }
-
-  #quijote {
-    margin: auto;
-  }
-
-  #quijote-img {
-    border: 1px solid black;
-    border-radius: 70%;
-    width: 180px;
-    height: 100%;
-    margin: auto;
   }
 
   /* Estilo de todo el footer */
