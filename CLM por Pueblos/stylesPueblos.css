@@ -182,51 +182,22 @@
 
   .villas-historicas {
     display: flex;
-    flex-direction:column(2);
+    flex-direction:column;
     border: 1px solid #ddd;
+    color: #2d2d2d;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 5px;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: space-between;
+    gap: 15px;
   }
 
-  #villas-imagenes {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(2);
-    grid-template-rows: repeat(3);
-    gap: 5px;
-  }
-
-  #villas-imagenes img {
-    width: 200px;
-    height: 70%;
-    border-radius: 3px;
-  }
-
-  #villas-texto {
-    width: 50%;
-    align-items: center;
-    justify-content: center;
+  .villas-historicas img {
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  #villas-texto h2 {
-    font-size:x-large;
-    color: #2d2d2d;
-  }
-
-  #villas-texto p {
-    color:#2d2d2d;
-  }
-
-  #villas-texto img {
-    margin: auto;
-    margin-top: 50px;
-    max-width: 400px;
-    max-height: 250px;
+    width: 450px;
+    max-height: 60%;
     border-radius: 3px;
   }
 
