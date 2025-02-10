@@ -86,9 +86,22 @@
 
       <!-- VILLAS HISTÓRICAS -->
       <section class="villas-historicas">
-        <!-- ¡POR ARREGLAR! -->
-        <div id="villas-imagenes">
-          <figure>
+        <h2>VILLAS HISTÓRICAS</h2>
+          <p>
+            Allí donde el arte ocupa un lugar en siglos y siglos de Historia...
+          </p>
+          <figure id="figure-villas">
+            <img src="imagenesPueblos/alcalaJucar.png" alt="Alcalá del Júcar" />
+            <figcaption>
+              <h3>Alcalá del Júcar (Albacete)</h3>
+          <p>
+            La capital del turismo de Castilla-La Mancha, un pequeño pueblo donde la
+            naturaleza, la historia y el arte se dan la mano.
+          </p>
+            </figcaption>
+          </figure>
+
+          <!-- <figure>
             <img src="imagenesPueblos/alcaraz.jpg" alt="Alcaraz" />
             <figcaption>
               <strong>Alcaraz: </strong>una maravillosa villa renacentista.
@@ -133,22 +146,7 @@
             <figcaption>
               <strong>Uclés: </strong>un monasterio referente en la región.
             </figcaption>
-          </figure>
-        </div>
-
-        <div id="villas-texto">
-          <h2>VILLAS HISTÓRICAS</h2>
-          <p>
-            Allí donde el arte ocupa un lugar en siglos y siglos de Historia...
-          </p>
-          <img src="imagenesPueblos/alcalaJucar.png" alt="Alcalá del Júcar" />
-          <h3>Alcalá del Júcar (Albacete)</h3>
-          <p>
-            La capital del turismo de Castilla-La Mancha, declarado Conjunto
-            Histórico-Artístico desde 1982, un pequeño pueblo donde la
-            naturaleza, la historia y el arte se dan la mano.
-          </p>
-        </div>
+          </figure> -->
       </section>
 
       <!-- CULTURA -->
@@ -196,60 +194,33 @@
       </section>
 
       <!-- CASTILLOS -->
+      <h2 id="castillos-h2">LA MANCHA, TIERRA DE CASTILLOS</h2>
       <section class="castillos">
-        <div class="castillos-container">
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloAlarcon.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Alarcón (Cuenca)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloAlmansa.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Almansa (Albacete)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloBelmonte.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Belmonte (Albacete)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloChinchilla.webp" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Chinchilla (Albacete)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloGuadamur.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Guadamur (Toledo)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloMaqueda.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Maqueda (Toledo)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloMolina.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Molina de Aragón (Guadalajara)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloOropesa.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Oropesa (Toledo)</figcaption>
-          </figure>
-
-          <figure class="castillos-item">
-            <img src="imagenesPueblos/castilloTorija.jpg" alt="Castillo de Alarcón">
-            <figcaption>Castillo de Torija (Guadalajara)</figcaption>
-          </figure>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img src="imagenesPueblos/castilloAlarcon.jpg" id="img1" alt="Castillo de Alarcón">
+                <img src="imagenesPueblos/castilloAlmansa.jpg" id="img2" alt="Castillo de Almansa">
+                <img src="imagenesPueblos/castilloBelmonte.jpg" id="img3" alt="Castillo de Belmonte">
+                <img src="imagenesPueblos/castilloChinchilla.webp" id="img4" alt="Castillo de Chinchilla">
+                <img src="imagenesPueblos/castilloGuadamur.jpg" id="img5" alt="Castillo de Guadamur">
+                <img src="imagenesPueblos/castilloMaqueda.jpg" id="img6" alt="Castillo de Maqueda">
+                <img src="imagenesPueblos/castilloMolina.jpg" id="img7" alt="Castillo de Molina de Aragón">
+                <img src="imagenesPueblos/castilloOropesa.jpg" id="img8" alt="Castillo de Oropesa">
+                <img src="imagenesPueblos/castilloTorija.jpg" id="img9" alt="Castillo de Torija">
+            </div>
+            <div class="slider-nav">
+                <a href="#img1"></a>
+                <a href="#img2"></a>
+                <a href="#img3"></a>
+                <a href="#img4"></a>
+                <a href="#img5"></a>
+                <a href="#img6"></a>
+                <a href="#img7"></a>
+                <a href="#img8"></a>
+                <a href="#img9"></a>
+            </div>
         </div>
-
-        <!-- Botón de navegación -->
-         <nav class="navegacion-slider">
-          <button id="boton-anterior"><span>&#60</span></button>
-          <button id="boton-siguiente"><span>&#62</span></button>
-         </nav>
-      </section>
+    </section>
 
       <!-- GASTRONOMÍA -->
       <section class="gastronomia">
@@ -353,25 +324,6 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-      </section>
-
-      <!-- EXTRA -->
-      <section class="extra">
-        <div id="pueblos-negros">
-          <a href="https://rutapueblosnegros.com/">
-            <h3>LOS PUEBLOS NEGROS</h3>
-          </a>
-        </div>
-
-        <div id="quijote">
-          <a href="">
-            <img
-              src="imagenesPueblos/quijote.jpg"
-              alt="El Quijote"
-              id="quijote-img"
-            />
-          </a>
-        </div>
       </section>
     </main>
 
