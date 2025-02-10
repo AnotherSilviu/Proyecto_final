@@ -1,584 +1,566 @@
 /* Estilo para la página completa */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    background-color: burlywood;
-  }
-  
-  header {
-    background-image: url(imagenesPueblos/logo-fondo.jpg);
-    margin-bottom: 20px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 100%;
-  }
-  .imagen-superior {
-    position: absolute; /* Posiciona la imagen PNG encima del fondo */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra la imagen */
-    width: 45vw;
-    height: auto;
-    z-index: 2; /* Encima del fondo */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /*Barra de navegación logo*/
-#logo img{
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: burlywood;
+}
+
+header {
+  background-image: url(imagenesPueblos/logo-fondo.jpg);
+  margin-bottom: 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+.imagen-superior {
+  position: absolute; /* Posiciona la imagen PNG encima del fondo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la imagen */
+  width: 45vw;
+  height: auto;
+  z-index: 2; /* Encima del fondo */
+}
+
+/*Barra de navegación logo*/
+#logo img {
   width: auto;
   height: 50px;
   cursor: pointer;
 }
-#logo img:hover{
+#logo img:hover {
   transform: scale(1.2);
 }
 
-  /* Estilo de la barra de navegación */
+/* Estilo de la barra de navegación */
 
-  .barra-navegacion {
-    display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   padding: 0 20px;
-  }
-  
-  .barra-navegacion ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .barra-navegacion ul li a {
-    color: #fff;
-    font-size: 14.5px;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-  
-  .barra-navegacion ul li a:hover {
-    color: #f3952a;
-  }
+}
 
-  .menu{ /*Botón encondido cuando la página es "tamaño escritorio"*/
-    display: none;
-  }
-  
-  #boton-formulario,
-  .menu {
-    padding: 8px 15px; 
-    background-color: #f3952a; 
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold; 
-    transition: background-color 0.3s;
-    cursor: pointer;
-  }
-  
-  #boton-formulario:hover,
-  .menu:hover {
-    background-color: #e67e22;
-    color: #fff; 
-  }
-  
-  /*Nav JS*/
-  .barra-navegacion a {
-    text-decoration: none;
-  }
-  
-  .barra-navegacion .overlay{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: all 0.3s ease 0s;
-    display: none; 
-  }
-  
-  .barra-navegacion .overlay .overlay-content{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .barra-navegacion .overlay a{
-    padding: 15px;
-    font-size: 36px;
-    display: block;
-    transition: all 0.3s ease 0s;
-    font-weight: 700;
-    color: white;
-  }
-  
-  .barra-navegacion .overlay a:hover,
-  .barra-navegacion .overlay a:focus {
-    color: #f3952a;
-  }
-  
-  .barra-navegacion .overlay .close{
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 65px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.barra-navegacion ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
 
-  /* Estilo para el container de las secciones */
+.barra-navegacion ul li a {
+  color: #fff;
+  font-size: 14.5px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 10px auto;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  #intro h3 {
-    font-size: x-large;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2d2d2d;
-  }
-  
-  #intro p {
-    font-size: medium;
-    margin-bottom: 20px;
-    text-align: justify;
-    color: #2d2d2d;
-  }
+.barra-navegacion ul li a:hover {
+  color: #f3952a;
+}
 
-  /* Secciones */
+.menu {
+  /*Botón encondido cuando la página es "tamaño escritorio"*/
+  display: none;
+}
 
-  /* Villas históricas */
+#boton-formulario,
+.menu {
+  padding: 8px 15px;
+  background-color: #f3952a;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
 
-  .villas-historicas {
-    display: flex;
-    flex-direction:column;
-    border: 1px solid #ddd;
-    color: #2d2d2d;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    margin-top: 30px;
-    text-align: center;
-    justify-content: space-between;
-    gap: 15px;
-  }
+#boton-formulario:hover,
+.menu:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
 
-  .villas-historicas img {
-    margin: auto;
-    width: 450px;
-    max-height: 60%;
-    border-radius: 3px;
-  }
+/*Nav JS*/
+.barra-navegacion a {
+  text-decoration: none;
+}
 
-  /* Cultura */
+.barra-navegacion .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  display: none;
+}
 
-  .cultura {
-    display: flex;
-    flex-direction:column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    text-align: center;
-    margin-top: 30px;
-    gap: 10px;
-  }
+.barra-navegacion .overlay .overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .cultura img {
-    width: 450px;
-    height: 200px;
-    margin: auto;
-  }
+.barra-navegacion .overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: white;
+}
 
-  .cultura h2 {
-    font-size:x-large;
-    color: #2d2d2d;
-  }
+.barra-navegacion .overlay a:hover,
+.barra-navegacion .overlay a:focus {
+  color: #f3952a;
+}
 
-  .cultura h3 {
-    color:#2d2d2d;
-  }
+.barra-navegacion .overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-  #cultura-lista {
-    text-align: start;
-  }
+/* Estilo para el container de las secciones */
 
-  #cultura-lista li {
-    margin-left: 25px;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
-  /* Castillos */
+#intro h3 {
+  font-size: x-large;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2d2d2d;
+}
 
-  .castillos {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction:column(2);
-    background-color: #2d2d2d;
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #2d2d2d;
-    padding: 20px 5px;
-    margin-top: 30px;
-    color: #f4f4f4;
-    position: relative;
-    overflow: hidden;
-  }
+#intro p {
+  font-size: medium;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #2d2d2d;
+}
 
-  .castillos-container {
-    display: flex;
-    width: 80%;
-    transition: transform 0.5s ease-in-out;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
+/* Secciones */
 
-  .castillos-item {
-    display: flex;
-    flex-direction: column(2);
-    min-width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-  }
+/* Villas históricas */
 
-  .castillos figcaption {
-    display: flex;
-    font-size: xx-large;
-    font-weight: bold;
-    margin: auto;
-  }
+.villas-historicas {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-top: 30px;
+  text-align: center;
+  justify-content: space-between;
+  gap: 15px;
+}
 
-  .castillos figure img {
-    max-width: 200px;
-    max-height: 60%;
-    border-radius: 3px;
-  }
-  
-  /* Navegación del Slider */
-  
-  .navegacion-slider {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    transform: translateY(-50%);
-    margin: auto;
-    top: 50%;
-    left: 0;
-    pointer-events: none;
-    box-sizing: border-box;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+.villas-historicas img {
+  margin: auto;
+  width: 450px;
+  max-height: 60%;
+  border-radius: 3px;
+}
 
-  .navegacion-slider button {
-    background-color: rgba(125, 117, 117, 0.415);
-    color: #f4f4f4;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    pointer-events: auto;
-    margin: 0;
-    max-width: 40px;
-  }
-  
-  .navegacion-slider button > span {
-    font-size: 20px;
-    font-weight: bold;
-    margin: auto;
-  }
+/* Cultura */
 
-  /* Gastronomía */
+.cultura {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+  gap: 10px;
+}
 
-  .gastronomia {
-    display: flex;
-    flex-direction:column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    color: #2d2d2d;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
-  }
+.cultura img {
+  width: 450px;
+  height: 200px;
+  margin: auto;
+}
 
-  .gastronomia h2 {
-    font-size:x-large;
-  }
+.cultura h2 {
+  font-size: x-large;
+  color: #2d2d2d;
+}
 
-  .gastronomia p {
-    font-size: large;
-  }
+.cultura h3 {
+  color: #2d2d2d;
+}
 
-  .gastronomia hr {
-    background-color: #2d2d2d;
-    height: 2.5px;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 8px;
-    margin-top: 8px;
+#cultura-lista {
+  text-align: start;
+}
 
-  }
+#cultura-lista li {
+  margin-left: 25px;
+}
 
-  #gastronomia-imagenes {
-    display: flex;
-    flex-direction: column(2);
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+/* Castillos */
 
-  #gastronomia-imagenes img {
-    max-width: 50%;
-    max-height: 400px;
-  }
+#castillos-h2 {
+  margin-top: 30px;
+  color: #2d2d2d;
+  text-align: center;
+}
 
-  #platosP {
-    margin-top: 3px;
-    font-size: medium;
-  }
+.castillos {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background-color: #2d2d2d;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px #2d2d2d;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
 
-  #gastronomia-figure {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
+.slider-wrapper {
+  display: flex;
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+}
 
-  #gastronomia-figure img {
-    width: 150px;
-    height: 100px;
-    border: 3px solid #2d2d2d;
-    border-radius: 50%;
-  }
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 25 rem 0.5rem #21212126;
+  border-radius: 0.5rem;
+}
 
-  /* Naturaleza */
+.slider img {
+  width: 150px;
+  height: 100%;
+  border-radius: 3px;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
 
-  .naturaleza {
-    display: flex;
-    flex-direction:column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    color: #2d2d2d;
-    text-align:start;
-    padding: 5px;
-  }
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
 
-  .naturaleza h2 {
-    font-size:x-large;
-  }
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
 
-  .naturaleza p {
-    font-size: large;
-  }
+.slider-nav a:hover {
+  opacity: 1;
+}
 
-  #naturaleza-imagenes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-  }
+/* Gastronomía */
 
-  .box-nat {
-    position: relative;
-  }
+.gastronomia {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  color: #2d2d2d;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
 
-  .img-naturaleza {
-    width: 100%;
-    height: 180px;
-    border-radius: 5px;
-    object-fit: cover;
-    margin: auto;
-    transition: background-color 0.3s;
-    position: relative;
-  }
+.gastronomia h2 {
+  font-size: x-large;
+}
 
-  .naturaleza-texto {
-    display: none;
-    background-color: rgba(45, 45, 45, 0.7);
-    position: absolute;
-    color: #f4f4f4;
-    padding: 5px;
-    font-size: medium;
-    text-align: center;
-    left: 50%;
-    bottom: 0px;
-    transform: translateX(-50%);  /* Centrado horizontalmente */
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
+.gastronomia p {
+  font-size: large;
+}
 
-  .img-naturaleza:hover {
-    cursor: pointer;
-    background-color: #2d2d2d;
-  }
+.gastronomia hr {
+  background-color: #2d2d2d;
+  height: 2.5px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
 
-  .img-naturaleza:hover + .naturaleza-texto {
-    display: block;
-  }
+#gastronomia-imagenes {
+  display: flex;
+  flex-direction: column(2);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
-  /* Cine */
+#gastronomia-imagenes img {
+  max-width: 50%;
+  max-height: 400px;
+}
 
-  .cine {
-    display: flex;
-    flex-direction: column;
-    background-color: #2d2d2d;
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #2d2d2d;
-    padding: 5px;
-    margin-top: 30px;
-    color: #f4f4f4;
-    padding: 10px;
-  }
+#platosP {
+  margin-top: 3px;
+  font-size: medium;
+}
 
-  .cine h2 {
-    font-size:x-large;
-  }
+#gastronomia-figure {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
 
-  .cine p {
-    font-size: large;
-  }
+#gastronomia-figure img {
+  width: 150px;
+  height: 100px;
+  border: 3px solid #2d2d2d;
+  border-radius: 50%;
+}
 
-  .cine iframe {
-    display: flex;
-    width: 80%;
-    height: 500px;
-    border: 2px solid white;
-    border-radius: 3px;
-    margin: auto;
-    margin-top: 10px;
-  }
+/* Naturaleza */
 
-  /* Estilo de todo el footer */
+.naturaleza {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  color: #2d2d2d;
+  text-align: start;
+  padding: 5px;
+}
 
-  footer {
-    background-color: #2d2d2d;
-    color: white;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  
-  footer h3 {
-    margin-bottom: 15px;
-    font-size: 1;
-  }
-  
-  .derechos,
-  .redes,
-  .contacto {
-    flex: 1;
-    margin: 10px;
-  }
-  
-  .derechos p {
-    font-size: 1;
-    line-height: 1.5;
-  }
-  
-  footer .redes a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  footer .redes a:hover {
-    color: blue;
-  }
-  
-  footer .contacto {
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  #input-buscar {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .boton-buscar {
-    font-family: "Poppins", sans-serif;
-    padding: 10px;
-    background-color: #f4f4f4;
-    color: #2d2d2d;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.naturaleza h2 {
+  font-size: x-large;
+}
 
-  /*Pagina web responsive (para el menu)*/
+.naturaleza p {
+  font-size: large;
+}
+
+#naturaleza-imagenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box-nat {
+  position: relative;
+}
+
+.img-naturaleza {
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin: auto;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.naturaleza-texto {
+  display: none;
+  background-color: rgba(45, 45, 45, 0.7);
+  position: absolute;
+  color: #f4f4f4;
+  padding: 5px;
+  font-size: medium;
+  text-align: center;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%); /* Centrado horizontalmente */
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.img-naturaleza:hover {
+  cursor: pointer;
+  background-color: #2d2d2d;
+}
+
+.img-naturaleza:hover + .naturaleza-texto {
+  display: block;
+}
+
+/* Cine */
+
+.cine {
+  display: flex;
+  flex-direction: column;
+  background-color: #2d2d2d;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px #2d2d2d;
+  padding: 5px;
+  margin-top: 30px;
+  color: #f4f4f4;
+  padding: 10px;
+}
+
+.cine h2 {
+  font-size: x-large;
+}
+
+.cine p {
+  font-size: large;
+}
+
+.cine iframe {
+  display: flex;
+  width: 80%;
+  height: 500px;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Estilo de todo el footer */
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 1;
+}
+
+.derechos,
+.redes,
+.contacto {
+  flex: 1;
+  margin: 10px;
+}
+
+.derechos p {
+  font-size: 1;
+  line-height: 1.5;
+}
+
+footer .redes a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .redes a:hover {
+  color: blue;
+}
+
+footer .contacto {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#input-buscar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.boton-buscar {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Pagina web responsive (para el menu)*/
 @media screen and (max-width: 860px) {
   .barra-navegacion ul {
-      display: none; /* Oculta el menú normal */
+    display: none; /* Oculta el menú normal */
   }
 
   .menu {
-      display: block; /* Asegurar que el botón de menú aparezca */
+    display: block; /* Asegurar que el botón de menú aparezca */
   }
   #gastronomia-figure {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 450px){
-  .barra-navegacion .overlay a{
+@media screen and (max-width: 450px) {
+  .barra-navegacion .overlay a {
     font-size: 20px;
   }
 
-  .barra-navegacion .overlay .close{
+  .barra-navegacion .overlay .close {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
-@media screen and (max-width: 550px){
-  #gastronomia-figure {
-    flex-direction: column;
+  @media screen and (max-width: 550px) {
+    #gastronomia-figure {
+      flex-direction: column;
+    }
   }
-}
 }
