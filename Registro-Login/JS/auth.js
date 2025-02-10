@@ -100,7 +100,7 @@ export function logout() {
     localStorage.removeItem("token")
     localStorage.removeItem("userId")
 
-    window.location.href = "./dashboard.html"
+    window.location.href = "../bienvenida.html"
 }
 
 export function getToken() {
@@ -109,4 +109,9 @@ export function getToken() {
 
 export function getUserId() {
     return localStorage.getItem("userId")
+}
+
+const btnLogout = document.getElementById("logout");
+if (btnLogout) {
+  btnLogout.addEventListener("click", logout);
 }

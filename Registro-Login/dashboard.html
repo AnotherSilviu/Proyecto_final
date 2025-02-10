@@ -17,16 +17,20 @@
       <!-- Encabezado -->
       <header class="panel-superior">
         <div class="barra-superior">
-          <img src="../imagenes/logo-barra-navegacion.png" id="logo" alt="logo-barra-navegacion">
+          <img
+            src="../imagenes/logo-barra-navegacion.png"
+            id="logo"
+            alt="logo-barra-navegacion"
+          />
           <h2>Panel de Usuario</h2>
         </div>
         <div class="info-user">
-          <span>Bienvenido, <strong>X</strong></span>
+          <span>Bienvenido, <strong id="nombre-usuario">Cargando...</strong></span>
           <button class="logout-btn" id="logout">Cerrar Sesión</button>
         </div>
       </header>
     </div>
-      <!-- Barra lateral -->
+    <!-- Barra lateral -->
     <div class="contenedor-web">
       <aside class="barra-lateral">
         <nav>
@@ -44,7 +48,7 @@
       <main class="contenedor-principal">
         <section class="seccion-perfil">
           <h3>Mi Perfil</h3>
-          <p><strong>Correo Electrónico:</strong> X</p>
+          <p><strong>Correo Electrónico:</strong> <span id="email-usuario">Cargando...</span></p>
           <p><strong>Última actividad:</strong> Hace 2 días</p>
         </section>
 
@@ -55,7 +59,7 @@
         </section>
       </main>
     </div>
-    <script type="module" src="js/retricted.js"></script>
-    <script type="module" src="JS/product.js"></script>
+    <script type="module" src="JS/restricted.js"></script>
+    <script type="module" src="JS/auth.js"></script>
   </body>
 </html>

@@ -35,20 +35,20 @@ header {
 }
 
 /*Barra de navegación logo*/
-#logo img{
+#logo img {
   width: auto;
   height: 50px;
   cursor: pointer;
 }
-#logo img:hover{
+#logo img:hover {
   transform: scale(1.2);
 }
 
 /*Barra de navegación*/
 .barra-navegacion {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   width: 100%;
@@ -78,17 +78,18 @@ header {
   color: #f3952a;
 }
 
-.menu{ /*Botón encondido cuando la página es "tamaño escritorio"*/
+.menu {
+  /*Botón encondido cuando la página es "tamaño escritorio"*/
   display: none;
 }
 
 #boton-formulario,
 .menu {
-  padding: 8px 15px; 
-  background-color: #f3952a; 
+  padding: 8px 15px;
+  background-color: #f3952a;
   color: #fff;
   border-radius: 5px;
-  font-weight: bold; 
+  font-weight: bold;
   transition: background-color 0.3s;
   cursor: pointer;
 }
@@ -96,7 +97,7 @@ header {
 #boton-formulario:hover,
 .menu:hover {
   background-color: #e67e22;
-  color: #fff; 
+  color: #fff;
 }
 
 /*Nav JS*/
@@ -104,7 +105,7 @@ header {
   text-decoration: none;
 }
 
-.barra-navegacion .overlay{
+.barra-navegacion .overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -114,10 +115,10 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  display: none; 
+  display: none;
 }
 
-.barra-navegacion .overlay .overlay-content{
+.barra-navegacion .overlay .overlay-content {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -125,7 +126,7 @@ header {
   justify-content: center;
 }
 
-.barra-navegacion .overlay a{
+.barra-navegacion .overlay a {
   padding: 15px;
   font-size: 36px;
   display: block;
@@ -139,7 +140,7 @@ header {
   color: #f3952a;
 }
 
-.barra-navegacion .overlay .close{
+.barra-navegacion .overlay .close {
   position: absolute;
   top: 20px;
   right: 45px;
@@ -234,10 +235,10 @@ article:hover {
   z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 hr {
-  border: 0;              
-  height: 2px;              
-  background-color: #2d2d2d; 
-  margin: 20px 0;       
+  border: 0;
+  height: 2px;
+  background-color: #2d2d2d;
+  margin: 20px 0;
   margin-bottom: 40px;
 }
 footer {
@@ -297,7 +298,7 @@ footer .contacto {
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
   cursor: pointer;
-  border: none
+  border: none;
 }
 
 /*Slider de imágenes*/
@@ -334,13 +335,13 @@ footer .contacto {
 
 .slider-frame li {
   flex: 0 0 100vw;
-  height: 100%;
+  height: auto;
 }
 
 .slider-frame img {
   display: block;
-  width: 100vw;
-  height: 100%;
+  width: 95%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -409,19 +410,19 @@ footer .contacto {
 /*Pagina web responsive (para el menu)*/
 @media screen and (max-width: 860px) {
   .barra-navegacion ul {
-      display: none; /* Oculta el menú normal */
+    display: none; /* Oculta el menú normal */
   }
 
   .menu {
-      display: block; /* Asegurar que el botón de menú aparezca */
+    display: block; /* Asegurar que el botón de menú aparezca */
   }
 }
-@media screen and (max-height:450px){
-  .barra-navegacion .overlay a{
+@media screen and (max-height: 450px) {
+  .barra-navegacion .overlay a {
     font-size: 20px;
   }
 
-  .barra-navegacion .overlay .close{
+  .barra-navegacion .overlay .close {
     font-size: 40px;
     top: 15px;
     right: 35px;
