@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="name"></title>
+    <link rel="icon" href="../imagenes/quijote.png" />
+    <link rel="stylesheet" href="stylesciudadreal.css" />
+    <!--Fuente descargada-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="../bienvenida.html"
+        ><img src="imagenes/logo.png" alt="Imagen PNG" class="imagen-superior" id="logo_image"
+      /></a>
+      <nav class="barra-navegacion">
+        <div id="logo">
+          <a href="../bienvenida.html"
+            ><img
+              src="../imagenes/logo-barra-navegacion.png"
+              alt="logo pagina web"
+          /></a>
+        </div>
+        <ul>
+          <li>
+            <a href="../Agenda Eventos/agenda_eventos.html"
+              ><strong>AGENDA DE EVENTOS</strong></a
+            >
+          </li>
+          <li>
+            <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+          </li>
+          <li>
+            <a href="../CLM por Pueblos/pueblosCLM.html"
+              ><strong>CLM POR PUEBLOS</strong></a
+            >
+          </li>
+          <li>
+            <a href="../Quijote/quijote.html"
+              ><strong>LA TIERRA DEL QUIJOTE</strong></a
+            >
+          </li>
+          <li>
+            <a href="../formulario.html" target="_blank" id="boton-formulario"
+              ><strong>CONTACTO</strong></a
+            >
+          </li>
+        </ul>
+
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="../Agenda Eventos/agenda_eventos.html"
+              ><strong>AGENDA DE EVENTOS</strong></a
+            >
+            <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+            <a href="../CLM por Pueblos/pueblosCLM.html"
+              ><strong>CLM POR PUEBLOS</strong></a
+            >
+            <a href="../Quijote/quijote.html"
+              ><strong>LA TIERRA DEL QUIJOTE</strong></a
+            >
+            <a href="../formulario.html"><strong>CONTACTO</strong></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h3 id="intro_h2"></h3>
+        <p>
+          <em id="intro_p"></em>
+        </p>
+      </section>
+      <!--  HISTORIA  -->
+      <ul class="secciones">
+        <li id="historia" class="seccion">
+          <h2>Historia y Cultura</h2>
+          <p id="history_p"></p>
+        </li>
+        <!--  MONUMENTOS -->
+        <section id="monumentos" class="seccion">
+          <h2>Monumentos</h2>
+          <p>Los monumentos más destacados de la provincia</p>
+          <div class="monumentos-imagenes">
+            <div class="imagen-monumento">
+              <h3 id="monuments1_h3"></h3>
+              <a href="" id="monuments1_img"></a>
+            </div>
+            <div class="imagen-monumento">
+              <h3 id="monuments2_h3"></h3>
+              <a href="" id="monuments2_img"></a>
+            </div>
+            <div class="imagen-monumento">
+              <h3 id="monuments3_h3"></h3>
+              <a href="" id="monuments3_img"></a>
+            </div>
+          </div>
+        </section>
+        <!--  GASTRONOMIA -->
+        <li id="gastronomia" class="seccion">
+          <h2>Gastronomía</h2>
+          <p id="gastronomy_p"></p>
+          <ul>
+            <li>
+              <p><strong id="gastronomy1_li_title"></strong></p>
+              <p id="gastronomy1_li_phrase"></p>
+            </li>
+            <li>
+              <p><strong id="gastronomy2_li_title"></strong></p>
+              <p id="gastronomy2_li_phrase"></p>
+            </li>
+            <li>
+              <p><strong id="gastronomy3_li_title"></strong></p>
+              <p id="gastronomy3_li_phrase"></p>
+            </li>
+          </ul>
+        </li>
+        <!-- PARQUES NATURALES -->
+        <li id="parques-naturales" class="seccion">
+          <h2>Parques Naturales</h2>
+          <div class="parque">
+            <h3 id="naturalparks1_h3"></h3>
+            <p id="naturalparks1_p"></p>
+            <a href="" id="naturalparks1_img"> </a>
+          </div>
+          <div class="parque">
+            <h3 id="naturalparks2_h3"></h3>
+            <p id="naturalparks2_p"></p>
+            <a href="" id="naturalparks2_img"></a>
+          </div>
+        </li>
+      </ul>
+      <!--  RUTAS TURISTICAS -->
+      <section id="rutas-turisticas" class="seccion">
+        <h2>Rutas Turisticas</h2>
+        <p>
+          A través de estas rutas conoceremos la provincia y sus alrededores,
+          combinando cultura, historia y naturaleza para una experiencia única:
+        </p>
+        <div class="linea-ruta-monumental">
+          <ul>
+            <li>
+              <h3 ><strong id="turisticroutes1_h3"></strong></h3>
+              <p id="turisticroutes1_p"></p>
+              <p><strong>Puntos destacados:</strong></p>
+              <ul class="ruta-monumental-ciudad">
+                <li id="turisticroutes1_1"></li>
+                <li id="turisticroutes1_2"></li>
+                <li id="turisticroutes1_3"></li>
+                <li id="turisticroutes1_4"></li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <strong id="turisticroutes2_h3"></strong>
+              </h3>
+              <p id="turisticroutes2_p"></p>
+              <p><strong>Puntos destacados:</strong></p>
+              <ul class="ruta-monumental-ciudad">
+                <li id="turisticroutes2_1"></li>
+                <li id="turisticroutes2_2"></li>
+                <li id="turisticroutes2_3"></li>
+                <li id="turisticroutes2_4"></li>
+              </ul>
+            </li>
+            <li>
+              <h3 id="turisticroutes3_h3">
+                <strong></strong>
+              </h3>
+              <p id="turisticroutes3_p"></p>
+              <p><strong>Puntos destacados:</strong></p>
+              <ul class="ruta-monumental-ciudad">
+                <li id="turisticroutes3_1"></li>
+                <li id="turisticroutes3_2"></li>
+                <li id="turisticroutes3_3"></li>
+                <li id="turisticroutes3_4"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--  GUIA PRACTICA PARA VISITANTES -->
+      <section id="guia-visitante">
+        <h2>Guía Práctica para Visitantes</h2>
+        <p id="guide_p"></p>
+
+        <div class="contenedor-secciones">
+          <!-- Sección Clima -->
+          <div class="seccion-guia" id="clima">
+            <h3>Clima</h3>
+            <p id="guide_time_p"></p>
+            <ul>
+              <li>
+                <p><strong>Primavera:</strong></p>
+                <p id="guide_time_spring"></p>
+              </li>
+              <li>
+                <p><strong>Verano:</strong></p>
+                <p id="guide_time_summer"></p>
+              </li>
+              <li>
+                <p><strong>Otoño:</strong></p>
+                <p id="guide_time_autum"></p>
+              </li>
+              <li>
+                <p><strong>Invierno:</strong></p>
+                <p id="guide_time_winter"></p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sección Transporte -->
+          <div class="seccion-guia" id="transporte">
+            <h3>Transporte</h3>
+            <p id="guide_transport_p"></p>
+            <ul>
+              <li>
+                <strong>Autobuses:</strong> La ciudad tiene una red de autobuses
+                urbanos que conectan los puntos más importantes de la ciudad.
+              </li>
+              <li>
+                <p><strong>Trenes:</strong></p>
+                <p id="guide_transport_train"></p>
+              </li>
+              <li>
+                <strong>Bicicletas:</strong> Hay un sistema público de
+                bicicletas en la ciudad. Puedes alquilar una para moverte por la
+                ciudad de manera ecológica y rápida.
+              </li>
+              <li>
+                <strong>Taxi:</strong> También puedes optar por el servicio de
+                taxi para desplazarte con mayor comodidad.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--DONDE COMER Y DONDE DORMIR-->
+      <section id="informacion-adicional" class="seccion">
+        <div class="iconos">
+          <div class="icono">
+            <p>Donde Comer</p>
+            <a href="#" target="_blank" id="where_eat">
+              <img
+                src="imagenes/restaurante.png"
+                alt="Donde Comer"
+                class="icono-imagen"
+              />
+            </a>
+          </div>
+          <div class="icono">
+            <p>Donde Dormir</p>
+            <a href="#" target="_blank" id="where_sleep">
+              <img
+                src="imagenes/hotel.png"
+                alt="Donde Dormir"
+                class="icono-imagen"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          Página web destinada al turismo de la comunidad.
+          <br />
+          2025. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN LAS REDES</u></h3>
+        <a
+          href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
+          target="_blank"
+          ><img
+            src="../imagenes/facebook.png"
+            alt="logo-facebook"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://x.com/turismoclm" target="_blank">
+          <img src="../imagenes/x.webp" alt="logo-x" width="40" height="40" />
+        </a>
+        <a
+          href="https://www.instagram.com/turismocastillalamancha/?hl=es"
+          target="_blank"
+          ><img src="../imagenes/instagram.png" alt="logo-instagram" width="30"
+        /></a>
+      </div>
+
+      <div class="contacto">
+        <h3><u>BUSCADOR</u></h3>
+        <form method="get" id="form-buscar">
+          <input type="text" id="input-buscar" placeholder="Buscar" />
+          <input class="boton-buscar" type="submit" value="Buscar" />
+        </form>
+      </div>
+    </footer>
+    <script type="module" src="provincias.js"></script>
+    <script src="../Blog/nav.js"></script>
+  </body>
+</html>
