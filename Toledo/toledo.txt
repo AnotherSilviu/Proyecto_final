@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciudad Real</title>
+    <link rel="icon" href="../imagenes/quijote.png" />
+    <link rel="stylesheet" href="stylesciudadreal.css" />
+    <!--Fuente descargada-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="../bienvenida.html"
+        ><img src="imagenes/logo.png" alt="Imagen PNG" class="imagen-superior"
+      /></a>
+      <nav class="barra-navegacion">
+        <div id="logo">
+          <a href="../bienvenida.html"><img src="../imagenes/logo-barra-navegacion.png" alt="logo pagina web"></a>
+        </div>
+        <ul>
+          <li>
+            <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE EVENTOS</strong></a>
+          </li>
+          <li>
+            <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+          </li>
+          <li>
+            <a href="../CLM por Pueblos/pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
+          </li>
+          <li>
+            <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
+          </li>
+          <li>
+            <a href="../formulario.html" target="_blank" id="boton-formulario"
+              ><strong>CONTACTO</strong></a
+            >
+          </li>
+        </ul>
+
+        <!--Barra de navegación dinámica-->
+      <a onclick="openNav()" class="menu" href="javascript:void(0)"><strong>MENÚ</strong></a>
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="javascript:void(0)" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE
+              EVENTOS</strong></a>
+          <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+          <a href="../CLM por Pueblos/pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
+          <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
+          <a href="../formulario.html"><strong>CONTACTO</strong></a>
+        </div>
+      </div>
+
+      </nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h3>Descubre Toledo</h3>
+        <p>
+          <em
+            >La capital de nuestra tierra, que un día también lo fue de España,
+            está llena de historia por cada uno de sus rincones, no queda
+            recoveco sin albergar un pasado en ella.</em
+          >
+        </p>
+      </section>
+      <ul class="secciones">
+        <li id="historia" class="seccion">
+          <h2>Historia y Cultura</h2>
+          <p>
+            La historia de Toledo se remonta hasta la época de los romanos,
+            sin embargo, se dice que quien conoce la historia de Toledo, 
+            conoce también la de España, pues ha albergado la misma en la
+            propia ciudad. Además, por algo se la conoce como la
+            <strong>'Ciudad de las Tres Culturas'</strong>.
+          </p>
+        </li>
+        <!--  MONUMENTOS (MOVER DEBAJO DE HISTORIA Y CULTURA) -->
+        <section id="monumentos" class="seccion">
+          <h2>Monumentos</h2>
+          <p>Los monumentos más destacados de la provincia</p>
+          <div class="monumentos-imagenes">
+            <div class="imagen-monumento">
+              <h3>La Catedral Primada</h3>
+              <img src="imagenesToledo/catedralToledo.jpg" alt="Catedral de Toledo" />
+            </div>
+            <div class="imagen-monumento">
+              <h3>Alcázar</h3>
+              <img
+                src="imagenesToledo/alcazarToledo.jpg"
+                alt="Alcázar de Toledo"
+              />
+            </div>
+            <div class="imagen-monumento">
+              <h3>Puente de Alcántara</h3>
+              <img src="imagenesToledo/puenteAlcantara.jpg" alt="Puente de Alcántara" />
+            </div>
+          </div>
+        </section>
+        <!--  GASTRONOMIA -->
+        <li id="gastronomia" class="seccion">
+          <h2>Gastronomía</h2>
+          <p>
+            La gastronomía de Toledo se basa en los productos de la tierra, aquellos que
+            se preparan bajo la más estricta tradición de su historia.
+          </p>
+          <ul>
+            <li>
+              <strong>Carcamusas:</strong> Un guiso de cerdo con tomate acompañado de
+              guisantes, patatas y chorizo.
+            </li>
+            <li>
+              <strong>Perdiz toledana:</strong> Una de las carnes de ave más comunes.
+            </li>
+            <li>
+              <strong>Mazapán:</strong> Un dulce típico de almendras y azúcar que va 
+              mucho más allá de la Navidad.
+            </li>
+          </ul>
+        </li>
+        <!-- PARQUES NATURALES -->
+        <li id="parques-naturales" class="seccion">
+          <h2>Parques Naturales</h2>
+          <div class="parque">
+            <h3>Parque Nacional de Cabañeros</h3>
+            <p>
+              Un parque que se extiende por gran parte de la provincia y goza de la
+              presencia de especies protegidas.
+            </p>
+            <img src="imagenesToledo/cabanerosToledo.jpg" alt="Parque de Cabañeros" />
+          </div>
+          <div class="parque">
+            <h3>Barrancas de Burujón</h3>
+            <p>
+              A pesar de no ser parque natural, las Barrancas son un paisaje
+              increíble de mucha afluencia de visitantes.
+            </p>
+            <img src="imagenesToledo/barrancas.jpg" alt="Barrancas de Burujón" />
+          </div>
+        </li>
+      </ul>
+      <!--  RUTAS TURISTICAS -->
+      <section id="rutas-turisticas" class="seccion">
+        <h2>Rutas Turisticas</h2>
+        <p>
+          Toledo tiene una amplia gama de rutas turísticas para conocerla,
+          así que podrás elegir la que más se ajuste a tu gusto:
+        </p>
+        <div class="linea-ruta-monumental">
+          <ul>
+            <li>
+              <h3><strong>Ruta Monumental de Tres Culturas</strong></h3>
+              <p>
+                Camina por las calles más icónicas y divisa los monumentos
+                más conocidos de la ciudad. <br />
+                <strong>Puntos destacados:</strong>
+              </p>
+              <ul class="ruta-monumental-ciudad">
+                <li>📍Plaza de Zocodover</li>
+                <li>📍Catedral Primada</li>
+                <li>📍Iglesia de Santo Tomé</li>
+                <li>📍Sinagoga del Tránsito</li>
+                <li>📍Monasterio de San Juan de los Reyes</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <strong>Ruta de leyendas nocturnas</strong>
+              </h3>
+              <p>
+                En esta ruta conocerás algunas de las leyendas más misteriosas
+                de Toledo, ¡algunas te dejarán boquiabierto!
+                <br />
+                <strong>Puntos destacados:</strong>
+              </p>
+              <ul class="ruta-monumental-ciudad">
+                <li>📍El Cristo de la Calavera</li>
+                <li>📍El Callejón del Diablo</li>
+                <li>📍La leyenda del Pozo Amargo</li>
+                <li>📍La noche toledana</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <strong>Ruta de los Conventos</strong>
+              </h3>
+              <p>
+                Un agradable paseo por la zona tranquila de la ciudad, pasando
+                por los conocidos cobertizos y conociendo algunas leyendas. <br />
+                <strong>Puntos destacados:</strong>
+              </p>
+              <ul class="ruta-monumental-ciudad">
+                <li>📍El Cristo de la Luz</li>
+                <li>📍Convento de Santo Domingo el Real</li>
+                <li>📍Las Tres Fechas de Bécquer</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--  GUIA PRACTICA PARA VISITANTES -->
+      <section id="guia-visitante">
+        <h2>Guía Práctica para Visitantes a Toledo</h2>
+
+        <p>
+          Te damos algunos consejos prácticos para disfrutar de tu estancia en
+          Toledo, pues la ciudad ofrece una amplia variedad de actividades y
+          patrimonio que descubrir, así que te damos unos buenos consejos
+          para tu visita:
+        </p>
+
+        <div class="contenedor-secciones">
+          <!-- Sección Clima -->
+          <div class="seccion-guia" id="clima">
+            <h3>Clima</h3>
+            <p>
+              Toledo no goza de un excelente clima durante todo el año, así que
+              te dejamos algunos aspectos que deberías tener en cuenta para la
+              fecha de visita:
+            </p>
+            <ul>
+              <li>
+                <strong>Verano:</strong> Las temperaturas pueden superar los
+                35°C. Debes evitar las horas punta de calor y estar bien
+                hidratado.
+              </li>
+              <li>
+                <strong>Invierno:</strong> No son habituales las nevadas, pero
+                sí las heladas, por lo que es recomendable ir bien abrigado en
+                esta estación del año.
+              </li>
+              <li>
+                <strong>Primavera y Otoño:</strong> Sin duda, la mejor época
+                para visitar la ciudad, aunque eso sí, ¡no te olvides de una
+                chaquetita para la noche!
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sección Transporte -->
+          <div class="seccion-guia" id="transporte">
+            <h3>Transporte</h3>
+            <p>
+              Toledo goza de una cierta cercanía a Madrid (60km), lo cual le facilita
+              en muchos aspectos el transporte para llegar hasta ella:
+            </p>
+            <ul>
+              <li>
+                <strong>Autobuses:</strong> Además de poder llegar desde Madrid,
+                Toledo dispone de una red urbana de autobuses.
+              </li>
+              <li>
+                <strong>Tren:</strong> El AVE de Toledo la conecta con importantes
+                ciudades de España, véase Madrid, Barcelona o Sevilla.
+              </li>
+              <li>
+                <strong>Escaleras mecánicas</strong> El casco histórico de Toledo está
+                a un buen desnivel de la ciudad nueva, pero podrás acceder a él 
+                cómodamente por dos tramos diferentes de escaleras mecánicas.
+              </li>
+              <li>
+                <strong>Taxi:</strong> Por supuesto, el servicio de taxi está disponible
+                en Toledo para cualquier tipo de desplazamiento personalizado.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--DONDE COMER Y DONDE DORMIR-->
+      <section id="informacion-adicional" class="seccion">
+        <div class="iconos">
+          <div class="icono">
+            <p>Donde Comer</p>
+            <a
+              href="https://www.thefork.es/restaurantes/toledo-c109706#list0"
+              target="_blank"
+            >
+              <img
+                src="imagenes/restaurante.png"
+                alt="Donde Comer"
+                class="icono-imagen"
+              />
+            </a>
+          </div>
+          <div class="icono">
+            <p>Donde Dormir</p>
+            <a
+              href="https://www.booking.com/region/es/toledo.es.html"
+              target="_blank"
+            >
+              <img
+                src="imagenes/hotel.png"
+                alt="Donde Dormir"
+                class="icono-imagen"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="derechos">
+        <h3><u>SOBRE NOSOTROS</u></h3>
+        <p>
+          Página web destinada al turismo de la comunidad.
+          <br />
+          2025. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <div class="redes">
+        <h3><u>SÍGUENOS EN LAS REDES</u></h3>
+        <a
+          href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
+          target="_blank"
+          ><img
+            src="../imagenes/facebook.png"
+            alt="logo-facebook"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://x.com/turismoclm" target="_blank">
+          <img src="../imagenes/x.webp" alt="logo-x" width="40" height="40" />
+        </a>
+        <a
+          href="https://www.instagram.com/turismocastillalamancha/?hl=es"
+          target="_blank"
+          ><img src="../imagenes/instagram.png" alt="logo-instagram" width="30"
+        /></a>
+      </div>
+
+      <div class="contacto">
+        <h3><u>BUSCADOR</u></h3>
+        <form method="get" id="form-buscar">
+          <input type="text" id="input-buscar" placeholder="Buscar" />
+          <input class="boton-buscar" type="submit" value="Buscar" />
+        </form>
+      </div>
+    </footer>
+    <script src="../Blog/nav.js"></script>
+  </body>
+</html>
