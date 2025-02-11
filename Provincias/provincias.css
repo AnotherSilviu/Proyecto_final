@@ -1,0 +1,614 @@
+/* Estilo para la página completa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: burlywood;
+}
+
+/*Estilos para el encabezado*/
+header {
+  background-image: url(imagenes/logo-fondo.jpg);
+  margin-bottom: 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+.imagen-superior {
+  position: absolute; /* Posiciona la imagen PNG encima del fondo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la imagen */
+  width: 45vw;
+  height: auto;
+  z-index: 2; /* Encima del fondo */
+}
+
+/*Barra de navegación logo*/
+#logo img {
+  width: auto;
+  height: 50px;
+  cursor: pointer;
+}
+#logo img:hover {
+  transform: scale(1.2);
+}
+
+/*Barra de navegación*/
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  padding: 0 20px;
+}
+
+.barra-navegacion ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.barra-navegacion ul li a {
+  color: #fff;
+  font-size: 14.5px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.barra-navegacion ul li a:hover {
+  color: #f3952a;
+}
+
+.menu {
+  /*Botón encondido cuando la página es "tamaño escritorio"*/
+  display: none;
+}
+
+#boton-formulario,
+.menu {
+  padding: 8px 15px;
+  background-color: #f3952a;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#boton-formulario:hover,
+.menu:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/*Nav JS*/
+.barra-navegacion a {
+  text-decoration: none;
+}
+
+.barra-navegacion .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  display: none;
+}
+
+.barra-navegacion .overlay .overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-navegacion .overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: white;
+}
+
+.barra-navegacion .overlay a:hover,
+.barra-navegacion .overlay a:focus {
+  color: #f3952a;
+}
+
+.barra-navegacion .overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Estilos cuerpo de web*/
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+main h3 {
+  font-size: x-large;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main p {
+  font-size: medium;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/*Estilo contenido de la web*/
+.secciones {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+/*Estilo de cada seccion*/
+.seccion {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#historia,
+#parques-naturales,
+#gastronomia,
+#monumentos,
+#rutas-turisticas {
+  display: flex;
+}
+
+#historia {
+  flex-direction: left;
+}
+#parques-naturales {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#gastronomia {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+#monumentos,
+#rutas-turisticas {
+  flex-direction: column;
+  align-items: center;
+}
+
+#historia h2,
+#parques-naturales h2,
+#gastronomia h2,
+#monumentos h2,
+#rutas-turisticas h2 {
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+#historia h2 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+#parques-naturales h2 {
+  text-align: center;
+}
+
+#gastronomia h2 {
+  margin-right: 0px;
+}
+
+#monumentos h2,
+#rutas-turisticas h2 {
+  text-align: center;
+}
+
+#historia p,
+#gastronomy_p,
+#monumentos p {
+  width: 60%;
+}
+
+#historia p {
+  text-align: justify;
+  margin-left: 20px;
+}
+
+#gastronomy_p {
+  text-align: center;
+  margin-left: 20px;
+}
+#monumentos p {
+  text-align: center;
+}
+#gastronomia li {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+#gastronomy1_li_title,
+#gastronomy2_li_title,
+#gastronomy3_li_title {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+#gastronomy1_li_phrase,
+#gastronomy2_li_phrase,
+#gastronomy3_li_phrase {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.parque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parque h3 {
+  font-size: large;
+  margin-bottom: 10px;
+}
+.parque p {
+  font-size: medium;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.parque img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+.monumentos-imagenes {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+.imagen-monumento {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.monumentos-imagenes h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.monumentos-imagenes img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+#rutas-turisticas p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#rutas-turisticas ul {
+  display: flex; /* Convierte las listas en flexbox */
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margen por defecto */
+  list-style: none;
+}
+
+#rutas-turisticas li {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+/* Sección principal */
+
+.linea-ruta-monumental {
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Alinea los elementos con espacio proporcional */
+  align-items: stretch; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre las rutas */
+  flex-wrap: nowrap; /* Evita que los elementos pasen a otra línea */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  box-sizing: border-box; /* Asegura que el padding no cree scroll horizontal */
+}
+
+/* Estilo para cada ruta en la línea */
+.linea-ruta-monumental li {
+  flex: 1; /* Permite que cada ruta ocupe el mismo espacio */
+  text-align: center; /* Centra el texto dentro de cada elemento */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.linea-ruta-monumental h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.linea-ruta-monumental p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Para las sublistas (puntos destacados de cada ruta) */
+.ruta-monumental-ciudad {
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ruta-monumental-ciudad li {
+  text-align: left !important;
+  list-style-type: none;
+  width: 100%;
+}
+
+#guia-visitante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+/* Estilo para el título principal */
+#guia-visitante h2 {
+  font-size: x-large;
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilo para los párrafos */
+#guia-visitante p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-secciones {
+  display: flex; /* Activa el modelo flexbox para las secciones */
+  justify-content: space-between; /* Espacio igual entre las secciones */
+  gap: 20px; /* Espaciado entre las secciones guía */
+  flex-wrap: wrap; /* Permite que las secciones pasen a una nueva fila si no caben */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  box-sizing: border-box; /* Evita que el padding cree scroll horizontal */
+}
+
+/* Estilo para cada sección (clima, seguridad, transporte, etc.) */
+.seccion-guia {
+  flex: 1; /* Hace que todas las secciones ocupen el mismo espacio */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-guia h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seccion-guia ul {
+  padding: 10px;
+  margin: 5px;
+}
+
+.seccion-guia ul li p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#clima #nombre-guia,
+#clima #guide_time_spring,
+#clima #guide_time_summer,
+#clima #guide_time_autum,
+#clima #guide_time_winter,
+#transporte #guide_transport_train {
+  text-align: left; /* Alinea los textos a la izquierda */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para la sección de información adicional */
+#informacion-adicional {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Contenedor de los iconos */
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+/* Estilo para cada icono */
+.icono {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+}
+
+/* Estilo de las imágenes de los iconos */
+.icono-imagen {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto */
+.icono p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*Footer*/
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 1;
+}
+
+.derechos,
+.redes,
+.contacto {
+  flex: 1;
+  margin: 10px;
+}
+
+.derechos p {
+  font-size: 1;
+  line-height: 1.5;
+}
+
+footer .redes a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .redes a:hover {
+  color: blue;
+}
+
+footer .contacto {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#input-buscar {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.boton-buscar {
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/*Pagina web responsive (para el menu)*/
+@media screen and (max-width: 860px) {
+  .barra-navegacion ul {
+    display: none; /* Oculta el menú normal */
+  }
+
+  .menu {
+    display: block; /* Asegurar que el botón de menú aparezca */
+  }
+}
+@media screen and (max-height: 450px) {
+  .barra-navegacion .overlay a {
+    font-size: 20px;
+  }
+
+  .barra-navegacion .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
