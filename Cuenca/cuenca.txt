@@ -60,12 +60,12 @@
     </header>
     <main>
       <section id="intro">
-        <h3>Descubre Toledo</h3>
+        <h3>Descubre Cuenca</h3>
         <p>
           <em
-            >La capital de nuestra tierra, que un día también lo fue de España,
-            está llena de historia por cada uno de sus rincones, no queda
-            recoveco sin albergar un pasado en ella.</em
+            >Cuenca es una pequeña ciudad histórica situada en lo
+            alto de un cerro rocoso, lo que le da un emplazamiento
+            geográfico que ensalza su patrimonio.</em
           >
         </p>
       </section>
@@ -73,11 +73,11 @@
         <li id="historia" class="seccion">
           <h2>Historia y Cultura</h2>
           <p>
-            La historia de Toledo se remonta hasta la época de los romanos,
-            sin embargo, se dice que quien conoce la historia de Toledo, 
-            conoce también la de España, pues ha albergado la misma en la
-            propia ciudad. Además, por algo se la conoce como la
-            <strong>'Ciudad de las Tres Culturas'</strong>.
+            La historia de Cuenca nace en la época musulmana, cuando la
+            ciudad se construyó protegida por una fortaleza. Fue
+            reconquistada en 1177 por el rey Alfonso VIII y se convirtió
+            en uno de los fueros de Castilla. Su casco histórico es 
+            <strong>Patrimonio de la Humanidad</strong>.
           </p>
         </li>
         <!--  MONUMENTOS (MOVER DEBAJO DE HISTORIA Y CULTURA) -->
@@ -86,19 +86,19 @@
           <p>Los monumentos más destacados de la provincia</p>
           <div class="monumentos-imagenes">
             <div class="imagen-monumento">
-              <h3>La Catedral Primada</h3>
-              <img src="imagenesToledo/catedralToledo.jpg" alt="Catedral de Toledo" />
+              <h3>Las Casas Colgadas</h3>
+              <img src="imagenesCuenca/casasColgadas.jpeg" alt="Casas Colgadas" />
             </div>
             <div class="imagen-monumento">
-              <h3>Alcázar</h3>
+              <h3>Catedral</h3>
               <img
-                src="imagenesToledo/alcazarToledo.jpg"
-                alt="Alcázar de Toledo"
+                src="imagenesCuenca/catedral.jpg"
+                alt="Catedral de Santa María y San Julián"
               />
             </div>
             <div class="imagen-monumento">
-              <h3>Puente de Alcántara</h3>
-              <img src="imagenesToledo/puenteAlcantara.jpg" alt="Puente de Alcántara" />
+              <h3>Puente de San Pablo</h3>
+              <img src="imagenesCuenca/puente.jpg" alt="Puente de Alcántara" />
             </div>
           </div>
         </section>
@@ -106,20 +106,20 @@
         <li id="gastronomia" class="seccion">
           <h2>Gastronomía</h2>
           <p>
-            La gastronomía de Toledo se basa en los productos de la tierra, aquellos que
-            se preparan bajo la más estricta tradición de su historia.
+            La gastronomía conquense recoge una serie de platos muy tradicionales. Todos
+            ellos puedes degustarlos en cualquier lugar de la provincia.
           </p>
           <ul>
             <li>
-              <strong>Carcamusas:</strong> Un guiso de cerdo con tomate acompañado de
-              guisantes, patatas y chorizo.
+              <strong>Morteruelo:</strong> Una pasta de hígado de cerdo especiado con pan
+              rallado. También puede hacerse con pollo, conejo, perdiz o codorniz.
             </li>
             <li>
-              <strong>Perdiz toledana:</strong> Una de las carnes de ave más comunes.
+              <strong>Zarajos:</strong> Intestinos de cordero lechal fritos en un sarmiento.
             </li>
             <li>
-              <strong>Mazapán:</strong> Un dulce típico de almendras y azúcar que va 
-              mucho más allá de la Navidad.
+              <strong>Ajo arriero:</strong> Más que un plato, es una guarnición que se añade a
+              las comidas: una pasta de ajo, huevo, patatas y un chorrito de aceite de oliva y limón.
             </li>
           </ul>
         </li>
@@ -127,20 +127,20 @@
         <li id="parques-naturales" class="seccion">
           <h2>Parques Naturales</h2>
           <div class="parque">
-            <h3>Parque Nacional de Cabañeros</h3>
+            <h3>Ciudad Encantada</h3>
             <p>
-              Un parque que se extiende por gran parte de la provincia y goza de la
-              presencia de especies protegidas.
+              Situado en plena Serranía de Cuenca, este parque está lleno de figuras
+              esculpidas en piedra.
             </p>
-            <img src="imagenesToledo/cabanerosToledo.jpg" alt="Parque de Cabañeros" />
+            <img src="imagenesCuenca/ciudadEncantada.avif" alt="Ciudad Encantada" />
           </div>
           <div class="parque">
-            <h3>Barrancas de Burujón</h3>
+            <h3>Nacimiento del río Cuervo</h3>
             <p>
-              A pesar de no ser parque natural, las Barrancas son un paisaje
-              increíble de mucha afluencia de visitantes.
+              El nacimiento de uno de los ríos más importantes de la provincia, una 
+              serie de cascadas mágicas en un entorno natural.
             </p>
-            <img src="imagenesToledo/barrancas.jpg" alt="Barrancas de Burujón" />
+            <img src="imagenesCuenca/rioCuervo.jpg" alt="Nacimiento del Río Cuervo" />
           </div>
         </li>
       </ul>
@@ -148,56 +148,56 @@
       <section id="rutas-turisticas" class="seccion">
         <h2>Rutas Turisticas</h2>
         <p>
-          Toledo tiene una amplia gama de rutas turísticas para conocerla,
-          así que podrás elegir la que más se ajuste a tu gusto:
+          Cuenca ofrece varios tipos de rutas turísticas por toda su provincia,
+          pudiendo disfrutar de historia, cultura y naturaleza.
         </p>
         <div class="linea-ruta-monumental">
           <ul>
             <li>
-              <h3><strong>Ruta Monumental de Tres Culturas</strong></h3>
+              <h3><strong>Ruta Histórica</strong></h3>
               <p>
-                Camina por las calles más icónicas y divisa los monumentos
-                más conocidos de la ciudad. <br />
+                Patea el precioso casco histórico de Cuenca observando sus lugares
+                más importantes, incluido entrar a la Catedral. <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍Plaza de Zocodover</li>
-                <li>📍Catedral Primada</li>
-                <li>📍Iglesia de Santo Tomé</li>
-                <li>📍Sinagoga del Tránsito</li>
-                <li>📍Monasterio de San Juan de los Reyes</li>
+                <li>📍Puente de San Pablo</li>
+                <li>📍Casas Colgadas</li>
+                <li>📍Catedral</li>
+                <li>📍Plaza Mayor y Casas Consistoriales</li>
+                <li>📍Plaza de la Merced</li>
               </ul>
             </li>
             <li>
               <h3>
-                <strong>Ruta de leyendas nocturnas</strong>
+                <strong>Ruta de museos</strong>
               </h3>
               <p>
-                En esta ruta conocerás algunas de las leyendas más misteriosas
-                de Toledo, ¡algunas te dejarán boquiabierto!
+                Cuenca comprende una gran cantidad de museos a pesar de su
+                pequeño casco histórico. Aquí tienes algunos de ellos:
                 <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍El Cristo de la Calavera</li>
-                <li>📍El Callejón del Diablo</li>
-                <li>📍La leyenda del Pozo Amargo</li>
-                <li>📍La noche toledana</li>
+                <li>📍Museo de Arte Abstracto</li>
+                <li>📍Museo Provincial</li>
+                <li>📍Tesoro de la Catedral</li>
+                <li>📍Museo de Semana Santa</li>
               </ul>
             </li>
             <li>
               <h3>
-                <strong>Ruta de los Conventos</strong>
+                <strong>Ruta de los dinosaurios</strong>
               </h3>
               <p>
-                Un agradable paseo por la zona tranquila de la ciudad, pasando
-                por los conocidos cobertizos y conociendo algunas leyendas. <br />
+                ¿Te imaginas poder volver atrás en el tiempo, hasta
+                el período Mesozoico, conviviendo con dinosaruios? <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍El Cristo de la Luz</li>
-                <li>📍Convento de Santo Domingo el Real</li>
-                <li>📍Las Tres Fechas de Bécquer</li>
+                <li>📍Yacimiento de Lo Hueco (Fuentes)</li>
+                <li>📍Yacimiento de Las Hoyas (Cañada del Hoyo)</li>
+                <li>📍Museo Paleontológico</li>
               </ul>
             </li>
           </ul>
@@ -208,10 +208,9 @@
         <h2>Guía Práctica para Visitantes a Toledo</h2>
 
         <p>
-          Te damos algunos consejos prácticos para disfrutar de tu estancia en
-          Toledo, pues la ciudad ofrece una amplia variedad de actividades y
-          patrimonio que descubrir, así que te damos unos buenos consejos
-          para tu visita:
+          Cuenca es una de las ciudades más bonitas de Castilla-La Mancha,
+          sin embargo, también es algo compleja para el visitante, sobre 
+          todo por su situación geográfica. Aquí tienes algunos consejos:
         </p>
 
         <div class="contenedor-secciones">
@@ -219,25 +218,24 @@
           <div class="seccion-guia" id="clima">
             <h3>Clima</h3>
             <p>
-              Toledo no goza de un excelente clima durante todo el año, así que
-              te dejamos algunos aspectos que deberías tener en cuenta para la
-              fecha de visita:
+              El clima de Cuenca suele tirar hacia picos altos de temperaturas
+              según la estación del año, así que debemos tener en cuenta:
             </p>
             <ul>
               <li>
-                <strong>Verano:</strong> Las temperaturas pueden superar los
-                35°C. Debes evitar las horas punta de calor y estar bien
-                hidratado.
+                <strong>Verano:</strong> Los veranos son muy calurosos en Cuenca, 
+                y sumado a su complicada orografía, has de ir acompañado siempre de
+                una botella de agua.
               </li>
               <li>
-                <strong>Invierno:</strong> No son habituales las nevadas, pero
-                sí las heladas, por lo que es recomendable ir bien abrigado en
-                esta estación del año.
+                <strong>Invierno:</strong> Las temperaturas llegan a ser muy bajas
+                en ciertos meses del año, incluso la nieve hace aparición en alguna
+                ocasión, ¡revisa bien la previsión meteorológica!
               </li>
               <li>
-                <strong>Primavera y Otoño:</strong> Sin duda, la mejor época
-                para visitar la ciudad, aunque eso sí, ¡no te olvides de una
-                chaquetita para la noche!
+                <strong>Primavera y Otoño:</strong> Es la mejor época del año para
+                visitar cómodamente la ciudad. Eso sí, al estar en un paraje natural,
+                cuidado con las alergias en primavera.
               </li>
             </ul>
           </div>
@@ -246,26 +244,25 @@
           <div class="seccion-guia" id="transporte">
             <h3>Transporte</h3>
             <p>
-              Toledo goza de una cierta cercanía a Madrid (60km), lo cual le facilita
-              en muchos aspectos el transporte para llegar hasta ella:
+              Cuenca es una ciudad algo complicada en cuanto a transporte, puesto
+              que tiene una ubicación muy peculiar. Pero tranquilo, ¡siempre hay formas!
             </p>
             <ul>
               <li>
-                <strong>Autobuses:</strong> Además de poder llegar desde Madrid,
-                Toledo dispone de una red urbana de autobuses.
+                <strong>Autobuses:</strong> Dispones de una red urbana de autobuses
+                dentro de la ciudad, pero no para acceder al casco.
               </li>
               <li>
-                <strong>Tren:</strong> El AVE de Toledo la conecta con importantes
-                ciudades de España, véase Madrid, Barcelona o Sevilla.
+                <strong>Tren:</strong> Hay opciones de trenes desde las diferentes capitales
+                de la comunidad, así como disponibilidad de AVE desde Madrid o Valencia.
               </li>
               <li>
-                <strong>Escaleras mecánicas</strong> El casco histórico de Toledo está
-                a un buen desnivel de la ciudad nueva, pero podrás acceder a él 
-                cómodamente por dos tramos diferentes de escaleras mecánicas.
+                <strong>Bicicleta:</strong> No es muy común utilizar bicicleta en Cuenca,
+                ¡pero sí que es una bonita opción para recorrer sus alrededores!
               </li>
               <li>
-                <strong>Taxi:</strong> Por supuesto, el servicio de taxi está disponible
-                en Toledo para cualquier tipo de desplazamiento personalizado.
+                <strong>Taxi:</strong> El servicio de taxi está disponible en la ciudad por
+                si prefieres utilizarlo.
               </li>
             </ul>
           </div>
@@ -278,7 +275,7 @@
           <div class="icono">
             <p>Donde Comer</p>
             <a
-              href="https://www.thefork.es/restaurantes/toledo-c109706#list0"
+              href="https://www.thefork.es/restaurantes/cuenca-c109706#list0"
               target="_blank"
             >
               <img
@@ -291,7 +288,7 @@
           <div class="icono">
             <p>Donde Dormir</p>
             <a
-              href="https://www.booking.com/region/es/toledo.es.html"
+              href="https://www.booking.com/region/es/cuenca.es.html"
               target="_blank"
             >
               <img

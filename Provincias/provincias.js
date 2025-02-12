@@ -162,8 +162,23 @@ function pintarDatos(provincia) {
   //Sección Transporte
   document.getElementById("guide_transport_p").textContent =
     provincia.guide_transport_p || "Ruta turística no disponible";
-  document.getElementById("guide_transport_train").textContent =
-    provincia.guide_transport_train || "Ruta turística no disponible";
+  document.getElementById("guide_transport_1_title").textContent =
+    provincia.guide_transport_1_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_1_phrase").textContent =
+    provincia.guide_transport_1_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_2_title").textContent =
+    provincia.guide_transport_2_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_2_phrase").textContent =
+    provincia.guide_transport_2_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_3_title").textContent =
+    provincia.guide_transport_3_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_3_phrase").textContent =
+    provincia.guide_transport_3_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_4_title").textContent =
+    provincia.guide_transport_4_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_4_phrase").textContent =
+    provincia.guide_transport_4_phrase || "Ruta turística no disponible";
+
 
   //Información adicional
   document.getElementById("where_eat").textContent =

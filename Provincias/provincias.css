@@ -441,7 +441,9 @@ main p {
 }
 
 /* Estilo para los párrafos */
-#guia-visitante p {
+#guide_p,
+#guide_time_p,
+#guide_transport_p {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
@@ -480,6 +482,15 @@ main p {
 .seccion-guia ul li p {
   margin-bottom: 10px;
   text-align: left;
+}
+
+#guide_transport_1_title,
+#guide_transport_2_title,
+#guide_transport_3_title,
+#guide_transport_4_title {
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
 }
 
 #clima #nombre-guia,
