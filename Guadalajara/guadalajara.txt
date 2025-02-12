@@ -60,12 +60,12 @@
     </header>
     <main>
       <section id="intro">
-        <h3>Descubre Toledo</h3>
+        <h3>Descubre Guadalajara</h3>
         <p>
           <em
-            >La capital de nuestra tierra, que un día también lo fue de España,
-            está llena de historia por cada uno de sus rincones, no queda
-            recoveco sin albergar un pasado en ella.</em
+            >Guadalajara, conocida como la "ciudad del Henares", una tierra
+            que destaca en la comunidad por su peculiar arquitectura, su
+            amplia y variada naturaleza y sus tradiciones.</em
           >
         </p>
       </section>
@@ -73,11 +73,11 @@
         <li id="historia" class="seccion">
           <h2>Historia y Cultura</h2>
           <p>
-            La historia de Toledo se remonta hasta la época de los romanos,
-            sin embargo, se dice que quien conoce la historia de Toledo, 
-            conoce también la de España, pues ha albergado la misma en la
-            propia ciudad. Además, por algo se la conoce como la
-            <strong>'Ciudad de las Tres Culturas'</strong>.
+            Guadalajara fue fundada por los árabes, basándose en el río Henares
+            para nombrarla. Posteriormente, fue reconquistada en 1085 por el Reyes
+            Alfonso VI de León, y desde entonces, se convirtió en un lugar de
+            importancia para familias de poder por su tranquilidad y cercanía a Madrid,
+            como los <strong>Mendoza</strong>.
           </p>
         </li>
         <!--  MONUMENTOS (MOVER DEBAJO DE HISTORIA Y CULTURA) -->
@@ -86,19 +86,19 @@
           <p>Los monumentos más destacados de la provincia</p>
           <div class="monumentos-imagenes">
             <div class="imagen-monumento">
-              <h3>La Catedral Primada</h3>
-              <img src="imagenesToledo/catedralToledo.jpg" alt="Catedral de Toledo" />
+              <h3>Palacio del Infantado</h3>
+              <img src="imagenesGuada/infantado.jpg" alt="Palacio del Infantado" />
             </div>
             <div class="imagen-monumento">
-              <h3>Alcázar</h3>
+              <h3>Panteón de La Vega del Pozo</h3>
               <img
-                src="imagenesToledo/alcazarToledo.jpg"
-                alt="Alcázar de Toledo"
+                src="imagenesGuada/panteon.jpg"
+                alt="Panteón de La Vega del Pozo"
               />
             </div>
             <div class="imagen-monumento">
-              <h3>Puente de Alcántara</h3>
-              <img src="imagenesToledo/puenteAlcantara.jpg" alt="Puente de Alcántara" />
+              <h3>Catedral de Sigüenza</h3>
+              <img src="imagenesGuada/catedralSiguenza.webp" alt="Catedral de Siguenza" />
             </div>
           </div>
         </section>
@@ -106,20 +106,21 @@
         <li id="gastronomia" class="seccion">
           <h2>Gastronomía</h2>
           <p>
-            La gastronomía de Toledo se basa en los productos de la tierra, aquellos que
-            se preparan bajo la más estricta tradición de su historia.
+            La carne es la protagonista de la gastronomía caracense, bien sea carne de 
+            caza o procedente de ganadería. Aquí tienes unos ejemplos:
           </p>
           <ul>
             <li>
-              <strong>Carcamusas:</strong> Un guiso de cerdo con tomate acompañado de
-              guisantes, patatas y chorizo.
+              <strong>Cabrito o cordero asado:</strong> Deliciosa carne asada al horno en
+              cazuela de barro. ¡Pruébalo con la salsa de Jadraque!
             </li>
             <li>
-              <strong>Perdiz toledana:</strong> Una de las carnes de ave más comunes.
+              <strong>Caldereta:</strong> Una buena olla de caldereta de cordero con verduras
+              al vino blanco.
             </li>
             <li>
-              <strong>Mazapán:</strong> Un dulce típico de almendras y azúcar que va 
-              mucho más allá de la Navidad.
+              <strong>Hornazo:</strong> Una masa de pan horneada que se rellena de todo tipo de
+              carnes típicas de la zona.
             </li>
           </ul>
         </li>
@@ -127,20 +128,20 @@
         <li id="parques-naturales" class="seccion">
           <h2>Parques Naturales</h2>
           <div class="parque">
-            <h3>Parque Nacional de Cabañeros</h3>
+            <h3>El Alto Tajo</h3>
             <p>
-              Un parque que se extiende por gran parte de la provincia y goza de la
-              presencia de especies protegidas.
+              Un área preciosa del río Tajo pasando por la zona más elevada
+              de la provincia, dando lugar a paisajes increíbles.
             </p>
-            <img src="imagenesToledo/cabanerosToledo.jpg" alt="Parque de Cabañeros" />
+            <img src="imagenesGuada/altoTajo.webp" alt="Alto Tajo" />
           </div>
           <div class="parque">
-            <h3>Barrancas de Burujón</h3>
+            <h3>Sierra Norte</h3>
             <p>
-              A pesar de no ser parque natural, las Barrancas son un paisaje
-              increíble de mucha afluencia de visitantes.
+              La Sierra Norte de Guadalajara es muy tranquila, además, al no
+              ser muy elevada, la hace muy cómoda para hacer rutas de senderismo.
             </p>
-            <img src="imagenesToledo/barrancas.jpg" alt="Barrancas de Burujón" />
+            <img src="imagenesGuada/sierra.jpg" alt="Sierra Norte" />
           </div>
         </li>
       </ul>
@@ -148,56 +149,58 @@
       <section id="rutas-turisticas" class="seccion">
         <h2>Rutas Turisticas</h2>
         <p>
-          Toledo tiene una amplia gama de rutas turísticas para conocerla,
-          así que podrás elegir la que más se ajuste a tu gusto:
+          Guadalajara es, principalmente, la provincia con mayor oferta natural
+          de la comunidad. Sin embargo, también puedes disfrutar de su historia y
+          cultura.
         </p>
         <div class="linea-ruta-monumental">
           <ul>
             <li>
-              <h3><strong>Ruta Monumental de Tres Culturas</strong></h3>
+              <h3><strong>Ruta de los Pueblos Negros</strong></h3>
               <p>
-                Camina por las calles más icónicas y divisa los monumentos
-                más conocidos de la ciudad. <br />
+                La ruta más conocida de Guadalajara, aquí podrás descubrir
+                sus famosos pueblos de la llamada <strong>arquitectura negra</strong>. <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍Plaza de Zocodover</li>
-                <li>📍Catedral Primada</li>
-                <li>📍Iglesia de Santo Tomé</li>
-                <li>📍Sinagoga del Tránsito</li>
-                <li>📍Monasterio de San Juan de los Reyes</li>
+                <li>📍Umbralejo</li>
+                <li>📍Valverde de los Arroyos</li>
+                <li>📍La Vereda</li>
+                <li>📍Majaelrayo</li>
+                <li>📍Roblelacasa</li>
               </ul>
             </li>
             <li>
               <h3>
-                <strong>Ruta de leyendas nocturnas</strong>
+                <strong>Ruta del Hayedo de Tejera Negra</strong>
               </h3>
               <p>
-                En esta ruta conocerás algunas de las leyendas más misteriosas
-                de Toledo, ¡algunas te dejarán boquiabierto!
+                Una de las rutas de naturaleza más comunes de la provincia, 
+                caminando por un precioso paraje natural, sobre todo en otoño.
                 <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍El Cristo de la Calavera</li>
-                <li>📍El Callejón del Diablo</li>
-                <li>📍La leyenda del Pozo Amargo</li>
-                <li>📍La noche toledana</li>
+                <li>📍Senda de Carretas</li>
+                <li>📍Senda del Robledal</li>
+                <li>📍Pico de La Buitrera</li>
+                <li>📍Cantalojas</li>
               </ul>
             </li>
             <li>
               <h3>
-                <strong>Ruta de los Conventos</strong>
+                <strong>Ruta de Palacios y Casonas</strong>
               </h3>
               <p>
-                Un agradable paseo por la zona tranquila de la ciudad, pasando
-                por los conocidos cobertizos y conociendo algunas leyendas. <br />
+                Un paseo por la zona palaciega y noble de la ciudad de
+                Guadalajara, callejeando por el casco histórico. <br />
                 <strong>Puntos destacados:</strong>
               </p>
               <ul class="ruta-monumental-ciudad">
-                <li>📍El Cristo de la Luz</li>
-                <li>📍Convento de Santo Domingo el Real</li>
-                <li>📍Las Tres Fechas de Bécquer</li>
+                <li>📍Palacio del Infantado</li>
+                <li>📍Palacio de la Cotilla y Salón Chino</li>
+                <li>📍Palacio de Dávalos</li>
+                <li>📍Palacio y Panteón de la Condesa de La Vega del Pozo</li>
               </ul>
             </li>
           </ul>
@@ -205,13 +208,12 @@
       </section>
       <!--  GUIA PRACTICA PARA VISITANTES -->
       <section id="guia-visitante">
-        <h2>Guía Práctica para Visitantes a Toledo</h2>
+        <h2>Guía Práctica para Visitantes a Guadalajara</h2>
 
         <p>
-          Te damos algunos consejos prácticos para disfrutar de tu estancia en
-          Toledo, pues la ciudad ofrece una amplia variedad de actividades y
-          patrimonio que descubrir, así que te damos unos buenos consejos
-          para tu visita:
+          A continuación, te damos una serie de consejos para que tu visita a
+          Guadalajara sea la mejor experiencia posible. Tendrás que tener mucho
+          en cuenta el clima, al ser un área ampliamente natural.
         </p>
 
         <div class="contenedor-secciones">
@@ -219,25 +221,24 @@
           <div class="seccion-guia" id="clima">
             <h3>Clima</h3>
             <p>
-              Toledo no goza de un excelente clima durante todo el año, así que
-              te dejamos algunos aspectos que deberías tener en cuenta para la
-              fecha de visita:
+              El clima mediterráneo continentalizado de Guadalajara hace que sus
+              inviernos sean largos y fríos y sus veranos cortos y calurosos.
             </p>
             <ul>
               <li>
-                <strong>Verano:</strong> Las temperaturas pueden superar los
-                35°C. Debes evitar las horas punta de calor y estar bien
-                hidratado.
+                <strong>Verano:</strong> Las temperaturas superan los 30º C con
+                frecuencia, así que has de tenerlo en cuenta si te diriges a las
+                zonas montañosas.
               </li>
               <li>
-                <strong>Invierno:</strong> No son habituales las nevadas, pero
-                sí las heladas, por lo que es recomendable ir bien abrigado en
-                esta estación del año.
+                <strong>Invierno:</strong> Son habituales las heladas y nevadas en gran
+                parte de la provincia, por lo que debes consultar la previsión antes de
+                dirigirte a tu destino.
               </li>
               <li>
-                <strong>Primavera y Otoño:</strong> Sin duda, la mejor época
-                para visitar la ciudad, aunque eso sí, ¡no te olvides de una
-                chaquetita para la noche!
+                <strong>Primavera y Otoño:</strong> Es la época del año más recomendable
+                para ir en ruta a la sierra y a visitar los Pueblos Negros, pues es cuando
+                la naturaleza se muestra en todo su esplendor.
               </li>
             </ul>
           </div>
@@ -246,26 +247,26 @@
           <div class="seccion-guia" id="transporte">
             <h3>Transporte</h3>
             <p>
-              Toledo goza de una cierta cercanía a Madrid (60km), lo cual le facilita
-              en muchos aspectos el transporte para llegar hasta ella:
+              Guadalajara goza de una excelente comunicación, la cercanía a Madrid
+              facilita mucho las cosas al visitante, aquí tienes tus opciones:
             </p>
             <ul>
               <li>
-                <strong>Autobuses:</strong> Además de poder llegar desde Madrid,
-                Toledo dispone de una red urbana de autobuses.
+                <strong>Autobuses:</strong> Además de su red interna, puedes tomar autobuses
+                desde Madrid, que se encuentra a poco más de una hora.
               </li>
               <li>
-                <strong>Tren:</strong> El AVE de Toledo la conecta con importantes
-                ciudades de España, véase Madrid, Barcelona o Sevilla.
+                <strong>Tren:</strong> El AVE llega a Guadalajara desde ciudades como Valencia
+                o Madrid, y además, desde la capital llega una línea de cercanías de RENFE.
               </li>
               <li>
-                <strong>Escaleras mecánicas</strong> El casco histórico de Toledo está
-                a un buen desnivel de la ciudad nueva, pero podrás acceder a él 
-                cómodamente por dos tramos diferentes de escaleras mecánicas.
+                <strong>Bicicleta</strong> Las rutas en bicicleta por la zona de montaña son muy
+                recomendables para disfrutar de las rutas al máximo, pues no son
+                cumbres muy elevadas.
               </li>
               <li>
-                <strong>Taxi:</strong> Por supuesto, el servicio de taxi está disponible
-                en Toledo para cualquier tipo de desplazamiento personalizado.
+                <strong>Taxi:</strong> Podrás disponer del servicio de taxi en toda la ciudad para
+                poder desplazarte a tu antojo.
               </li>
             </ul>
           </div>
@@ -278,7 +279,7 @@
           <div class="icono">
             <p>Donde Comer</p>
             <a
-              href="https://www.thefork.es/restaurantes/toledo-c552557"
+              href="https://www.thefork.es/restaurantes/guadalajara-c197912#list0"
               target="_blank"
             >
               <img
@@ -291,7 +292,7 @@
           <div class="icono">
             <p>Donde Dormir</p>
             <a
-              href="https://www.booking.com/region/es/toledo.es.html"
+              href="https://www.booking.com/region/es/guadalajara.es.html"
               target="_blank"
             >
               <img
