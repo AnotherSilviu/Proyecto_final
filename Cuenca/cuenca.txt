@@ -275,7 +275,7 @@
           <div class="icono">
             <p>Donde Comer</p>
             <a
-              href="https://www.thefork.es/restaurantes/cuenca-c109706#list0"
+              href="https://www.thefork.es/restaurantes/cuenca-c124773#list0"
               target="_blank"
             >
               <img
