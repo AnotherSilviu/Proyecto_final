@@ -1,8 +1,3 @@
-const botonAnterior = document.getElementById("boton-anterior");
-const botonSiguiente = document.getElementById("boton-siguiente");
-const containerCastillos = document.querySelector('.castillos-container');
-const figureCastillos = document.querySelectorAll('.castillos-item');
-
 
 // NATURALEZA
 
@@ -17,5 +12,15 @@ imagenNat.forEach((imagen, index) => {
     imagen.addEventListener("mouseleave", () => {
         textoNat[index].style.display = "none"; // Oculta el texto
     });
+});
+
+
+// Evitar scroll hacia el inicio del slider
+const navLinks = document.querySelectorAll('.slider-nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (i) => {
+    i.preventDefault();  // Prohíbe el scroll hacia arriba
+  });
 });
 
