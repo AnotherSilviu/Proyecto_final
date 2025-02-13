@@ -2,6 +2,7 @@ import { APIKEY, BASE_URL } from "./config.js"
 
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
+const inputName = document.getElementById("name");
 
 // Btn de login
 const btnLogin = document.getElementById("login");
@@ -52,6 +53,7 @@ async function register() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
+            "name": inputName.value,
             "email": inputEmail.value,
             "password": inputPassword.value
         }),
