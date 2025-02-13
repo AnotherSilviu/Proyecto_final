@@ -1,3 +1,4 @@
+
 // NATURALEZA
 
 const imagenNat = document.querySelectorAll("img-naturaleza");

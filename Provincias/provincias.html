@@ -15,9 +15,13 @@
 
   <body>
     <header class="header">
-      <a href="../bienvenida.html"
-        ><img src="imagenes/logo.png" alt="Imagen PNG" class="imagen-superior" id="logo_image"
-      /></a>
+      <img
+          src="#"
+          alt="Imagen PNG"
+          class="imagen-superior"
+          id="logo_img"
+      />
+      <div id="logo-fondo" class="background-container"></div>
       <nav class="barra-navegacion">
         <div id="logo">
           <a href="../bienvenida.html"
@@ -46,8 +50,16 @@
             >
           </li>
           <li>
-            <a href="../formulario.html" target="_blank" id="boton-formulario"
+            <a href="../formulario.html" target="_blank"
               ><strong>CONTACTO</strong></a
+            >
+          </li>
+          <li>
+            <a
+              href="./Registro-Login/login.html"
+              target="_blank"
+              id="boton-formulario"
+              ><strong>LOGIN</strong></a
             >
           </li>
         </ul>
@@ -72,6 +84,12 @@
               ><strong>LA TIERRA DEL QUIJOTE</strong></a
             >
             <a href="../formulario.html"><strong>CONTACTO</strong></a>
+            <a
+              href="../Registro-Login/login.html"
+              target="_blank"
+              id="boton-formulario"
+              ><strong>LOGIN</strong></a
+            >
           </div>
         </div>
       </nav>
@@ -96,15 +114,15 @@
           <div class="monumentos-imagenes">
             <div class="imagen-monumento">
               <h3 id="monuments1_h3"></h3>
-              <a href="" id="monuments1_img"></a>
+              <img src="" alt="" id="monuments1_img">
             </div>
             <div class="imagen-monumento">
               <h3 id="monuments2_h3"></h3>
-              <a href="" id="monuments2_img"></a>
+              <img src="" alt="" id="monuments2_img">
             </div>
             <div class="imagen-monumento">
               <h3 id="monuments3_h3"></h3>
-              <a href="" id="monuments3_img"></a>
+              <img src="" alt="" id="monuments3_img">
             </div>
           </div>
         </section>
@@ -133,12 +151,12 @@
           <div class="parque">
             <h3 id="naturalparks1_h3"></h3>
             <p id="naturalparks1_p"></p>
-            <a href="" id="naturalparks1_img"> </a>
+            <img src="" id="naturalparks1_img"> </img>
           </div>
           <div class="parque">
             <h3 id="naturalparks2_h3"></h3>
             <p id="naturalparks2_p"></p>
-            <a href="" id="naturalparks2_img"></a>
+            <img src="" id="naturalparks2_img"></img>
           </div>
         </li>
       </ul>
@@ -152,7 +170,7 @@
         <div class="linea-ruta-monumental">
           <ul>
             <li>
-              <h3 ><strong id="turisticroutes1_h3"></strong></h3>
+              <h3><strong id="turisticroutes1_h3"></strong></h3>
               <p id="turisticroutes1_p"></p>
               <p><strong>Puntos destacados:</strong></p>
               <ul class="ruta-monumental-ciudad">
@@ -227,21 +245,20 @@
             <p id="guide_transport_p"></p>
             <ul>
               <li>
-                <strong>Autobuses:</strong> La ciudad tiene una red de autobuses
-                urbanos que conectan los puntos más importantes de la ciudad.
+                <p id="guide_transport_1_title"></p>
+                <p id="guide_transport_1_phrase"></p>
               </li>
               <li>
-                <p><strong>Trenes:</strong></p>
-                <p id="guide_transport_train"></p>
+                <p id="guide_transport_2_title"></p>
+                <p id="guide_transport_2_phrase"></p>
               </li>
               <li>
-                <strong>Bicicletas:</strong> Hay un sistema público de
-                bicicletas en la ciudad. Puedes alquilar una para moverte por la
-                ciudad de manera ecológica y rápida.
+                <p id="guide_transport_3_title"></p>
+                <p id="guide_transport_3_phrase"></p>
               </li>
               <li>
-                <strong>Taxi:</strong> También puedes optar por el servicio de
-                taxi para desplazarte con mayor comodidad.
+                <p id="guide_transport_4_title"></p>
+                <p id="guide_transport_4_phrase"></p>
               </li>
             </ul>
           </div>
@@ -253,21 +270,23 @@
         <div class="iconos">
           <div class="icono">
             <p>Donde Comer</p>
-            <a href="#" target="_blank" id="where_eat">
+            <a id="where_eat" href="#" target="_blank">
               <img
                 src="imagenes/restaurante.png"
                 alt="Donde Comer"
                 class="icono-imagen"
+                id="where_eat"
               />
             </a>
           </div>
           <div class="icono">
             <p>Donde Dormir</p>
-            <a href="#" target="_blank" id="where_sleep">
+            <a id="where_sleep" href="#" target="_blank">
               <img
                 src="imagenes/hotel.png"
                 alt="Donde Dormir"
                 class="icono-imagen"
+                id="where_sleep"
               />
             </a>
           </div>

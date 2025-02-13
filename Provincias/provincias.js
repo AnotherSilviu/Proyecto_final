@@ -8,6 +8,7 @@ const requestOptions = {
   },
 };
 
+
 // Función para hacer la consulta a la API según el ID
 function fetchProvinciaById(id) {
   fetch(
@@ -53,6 +54,21 @@ function pintarDatos(provincia) {
     return;
   }
 
+  // Asegurarnos de que la URL de la imagen de fondo existe
+  if (provincia.img_background) {
+    document.getElementById("logo-fondo").style.backgroundImage = `url(${provincia.img_background})`;
+  } else {
+    console.warn("No se encontró una imagen de fondo en la API.");
+  }
+
+  //Título
+  document.getElementById("name").textContent =
+  provincia.name || "name no disponible.";
+
+  //Encabezado
+  document.getElementById("logo_img").src =
+  provincia.logo_img || "Logo imagen no disponible.";
+
   //Introducción
   document.getElementById("intro_h2").textContent =
     provincia.intro_h2 || "Intro_h2 no disponible.";
@@ -66,15 +82,15 @@ function pintarDatos(provincia) {
   // Monumentos
   document.getElementById("monuments1_h3").textContent =
     provincia.monuments1_h3 || "Monumento no disponible";
-  document.getElementById("monuments1_img").scr =
+  document.getElementById("monuments1_img").src =
     provincia.monuments1_img || "Monumento no disponible";
   document.getElementById("monuments2_h3").textContent =
     provincia.monuments2_h3 || "Monumento no disponible";
-  document.getElementById("monuments2_img").scr =
+  document.getElementById("monuments2_img").src =
     provincia.monuments2_img || "Monumento no disponible";
   document.getElementById("monuments3_h3").textContent =
     provincia.monuments3_h3 || "Monumento no disponible";
-  document.getElementById("monuments3_img").scr =
+  document.getElementById("monuments3_img").src =
     provincia.monuments3_img || "Monumento no disponible";
 
   // Gastronomía
@@ -98,13 +114,13 @@ function pintarDatos(provincia) {
     provincia.naturalparks1_h3 || "Parque natural no disponible";
   document.getElementById("naturalparks1_p").textContent =
     provincia.naturalparks1_p || "Parque natural no disponible";
-  document.getElementById("naturalparks1_img").textContent =
+  document.getElementById("naturalparks1_img").src =
     provincia.naturalparks1_img || "Parque natural no disponible";
   document.getElementById("naturalparks2_h3").textContent =
     provincia.naturalparks2_h3 || "Parque natural no disponible";
   document.getElementById("naturalparks2_p").textContent =
     provincia.naturalparks2_p || "Parque natural no disponible";
-  document.getElementById("naturalparks2_img").textContent =
+  document.getElementById("naturalparks2_img").src =
     provincia.naturalparks2_img || "Parque natural no disponible";
 
   // Rutas Turísticas
@@ -162,12 +178,27 @@ function pintarDatos(provincia) {
   //Sección Transporte
   document.getElementById("guide_transport_p").textContent =
     provincia.guide_transport_p || "Ruta turística no disponible";
-  document.getElementById("guide_transport_train").textContent =
-    provincia.guide_transport_train || "Ruta turística no disponible";
+  document.getElementById("guide_transport_1_title").textContent =
+    provincia.guide_transport_1_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_1_phrase").textContent =
+    provincia.guide_transport_1_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_2_title").textContent =
+    provincia.guide_transport_2_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_2_phrase").textContent =
+    provincia.guide_transport_2_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_3_title").textContent =
+    provincia.guide_transport_3_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_3_phrase").textContent =
+    provincia.guide_transport_3_phrase || "Ruta turística no disponible";
+    document.getElementById("guide_transport_4_title").textContent =
+    provincia.guide_transport_4_title || "Ruta turística no disponible";
+    document.getElementById("guide_transport_4_phrase").textContent =
+    provincia.guide_transport_4_phrase || "Ruta turística no disponible";
+
 
   //Información adicional
-  document.getElementById("where_eat").textContent =
-    provincia.where_eat || "Ruta turística no disponible";
-  document.getElementById("where_sleep").textContent =
-    provincia.where_sleep || "Ruta turística no disponible";
+  document.getElementById("where_eat").href =
+    provincia.where_eat || "#";
+  document.getElementById("where_sleep").href =
+    provincia.where_sleep || "#";
 }
