@@ -35,17 +35,17 @@
       <aside class="barra-lateral">
         <nav>
           <ul>
-            <li><a href="#" class="active">Mi Perfil</a></li>
-            <li><a href="#">Mis Entradas de Blog</a></li>
-            <li><a href="#">Mis Comentarios</a></li>
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Ayuda</a></li>
+            <li><a href="#" class="nav-link" data-section="perfil">Mi Perfil</a></li>
+            <li><a href="#" class="nav-link" data-section="blog">Mis Entradas de Blog</a></li>
+            <li><a href="#" class="nav-link" data-section="comentarios">Mis Comentarios</a></li>
+            <li><a href="#" class="nav-link" data-section="configuracion">Configuración</a></li>
+            <li><a href="#" class="nav-link" data-section="ayuda">Ayuda</a></li>
           </ul>
         </nav>
       </aside>
 
       <!-- Contenido principal -->
-      <main class="contenedor-principal">
+      <main class="contenedor-principal" id="contenedor-principal">
         <section class="seccion-perfil">
           <h3>Mi Perfil</h3>
           <p><strong>Nombre y Apellidos:</strong></p>
@@ -56,5 +56,6 @@
     </div>
     <script type="module" src="JS/restricted.js"></script>
     <script type="module" src="JS/auth.js"></script>
+  
   </body>
 </html>
