@@ -117,3 +117,35 @@ const btnLogout = document.getElementById("logout");
 if (btnLogout) {
   btnLogout.addEventListener("click", logout);
 }
+
+
+export async function getUserRole() {
+
+    const access_token = getToken()
+    const userId = getUserId()
+
+    if(!access_token || !userId ) {
+        return null
+    }
+
+    const requestOptions = {
+        method: "GET",
+        headers: {
+            "apikey": APIKEY,
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${access_token}`
+        }
+    };
+
+    const response = await fetch(`${BASE_URL}/rest/v1/roles?user_id=eq.${userId}`, requestOptions) 
+    if(!response.ok) {
+        return null
+    }
+
+    const result = await response.json()
+    if(result[0].role) {
+        return result[0].role
+    }
+ 
+    return null
+}
