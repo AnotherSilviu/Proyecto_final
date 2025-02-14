@@ -1,4 +1,4 @@
-import { getUserRole } from "../Registro-Login/JS/auth.js";
+import { getUserRole , getToken } from "../Registro-Login/JS/auth.js";
 import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
 
 
@@ -21,16 +21,6 @@ fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
     const post = posts[0];
     pintarPost(post);
   });
-
-
-//Boton de eliminar
-function eliminarPost(postId) {
-  fetch(`${BASE_URL}/rest/v1/POST?${postId}`, {
-    method: "DELETE",
-  })
-    .then(response => { })
-
-}
 
 async function pintarPost(post) {
 
@@ -68,7 +58,28 @@ async function pintarPost(post) {
     console.log("click editar")
   })
 
-  btnEliminar.addEventListener('click', function () {
-    console.log("click btnEliminar")
-  })
+  btnEliminar.addEventListener('click', () => {
+    eliminarPost(postId);
+  });
 }
+
+//Boton de eliminar
+function eliminarPost(postId) {
+  const confirmacion = confirm("Vas a eliminar un post. ¿Estás seguro?");
+  if (!confirmacion) {
+    return;
+  }
+  fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
+    method: "DELETE",
+    headers: {
+      apikey: APIKEY,
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getToken()}`,
+  },
+})
+.then(() => {
+  window.location.href = "./blog.html"; //Redirección
+})
+};
+pintarPost()
+
