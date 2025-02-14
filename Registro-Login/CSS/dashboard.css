@@ -51,7 +51,8 @@
     margin-right: 5px;
   }
   
-  .logout-btn {
+  .logout-btn,
+  .botones button {
     padding: 8px 15px;
     background-color: #f3952a;
     color: #fff;
@@ -62,7 +63,8 @@
     transition: background-color 0.3s;
   }
   
-  .logout-btn:hover {
+  .logout-btn:hover,
+  .botones button:hover {
     background-color: #e67e22;
     color: #fff; 
   }
@@ -126,25 +128,4 @@
     font-size: 16px;
     margin-bottom: 10px;
   }
-  
-  .acciones-rapidas {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .btn-accion {
-    padding: 8px 15px;
-    background-color: #f3952a;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-accion:hover {
-    background-color: #e67e22;
-    color: #fff; 
-  }
-  
+

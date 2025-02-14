@@ -227,7 +227,30 @@
   #lista-comentarios {
     margin-top: 20px;
   }
+
+  .botones {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .botones button {
+    padding: 8px 15px;
+    background-color: #f3952a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
   
+  .botones button:hover {
+    background-color: #e67e22;
+    color: #fff; 
+  }
+
 /*Footer*/
 footer {
     background-color: #2d2d2d;
