@@ -1,4 +1,4 @@
-import { getUserRole , getToken } from "../Registro-Login/JS/auth.js";
+import { getToken, getUserRole } from "../Registro-Login/JS/auth.js";
 import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
 
 
@@ -76,10 +76,10 @@ function eliminarPost(postId) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`,
   },
-})
-.then(() => {
-  window.location.href = "./blog.html"; //Redirección
-})
-};
-pintarPost()
 
+  })
+  .then(() => {
+    window.location.href = "./blog.html"; //Redireccion
+  })
+};
+pintarPost();

@@ -23,51 +23,72 @@
       />
       <nav class="barra-navegacion">
         <div id="logo">
-          <a href="../bienvenida.html"><img src="../imagenes/logo-barra-navegacion.png" alt="logo pagina web"></a>
+          <a href="../bienvenida.html"
+            ><img
+              src="../imagenes/logo-barra-navegacion.png"
+              alt="logo pagina web"
+          /></a>
         </div>
         <ul>
           <li>
-            <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE EVENTOS</strong></a>
+            <a href="../Agenda Eventos/agenda_eventos.html"
+              ><strong>AGENDA DE EVENTOS</strong></a
+            >
           </li>
           <li>
             <a href="../Blog/blog.html"><strong>BLOG</strong></a>
           </li>
           <li>
-            <a href="../CLM por Pueblos/pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
+            <a href="../CLM por Pueblos/pueblosCLM.html"
+              ><strong>CLM POR PUEBLOS</strong></a
+            >
           </li>
           <li>
-            <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
+            <a href="../Quijote/quijote.html"
+              ><strong>LA TIERRA DEL QUIJOTE</strong></a
+            >
           </li>
           <li>
             <a href="../formulario.html"><strong>CONTACTO</strong></a>
           </li>
           <li>
-            <a href="../Registro-Login/login.html" target="_blank" id="boton-formulario"
+            <a
+              href="../Registro-Login/login.html"
+              target="_blank"
+              id="boton-formulario"
               ><strong>LOGIN</strong></a
             >
           </li>
         </ul>
 
-        
-      <!--Barra de navegación dinámica-->
-      <a onclick="openNav()" class="menu" href="javascript:void(0)"><strong>MENÚ</strong></a>
-      <div class="overlay" id="mobile-menu">
-        <a onclick="closeNav()" href="javascript:void(0)" class="close">&times;</a>
-        <div class="overlay-content">
-          <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE
-              EVENTOS</strong></a>
-          <a href="../Blog/blog.html"><strong>BLOG</strong></a>
-          <a href="pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
-          <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
-          <a href="../formulario.html"><strong>CONTACTO</strong></a>
-          <li>
-            <a href="../Registro-Login/login.html" target="_blank" id="boton-formulario"
-              ><strong>LOGIN</strong></a
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="../Agenda Eventos/agenda_eventos.html"
+              ><strong>AGENDA DE EVENTOS</strong></a
             >
-          </li>
+            <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+            <a href="pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
+            <a href="../Quijote/quijote.html"
+              ><strong>LA TIERRA DEL QUIJOTE</strong></a
+            >
+            <a href="../formulario.html"><strong>CONTACTO</strong></a>
+            <li>
+              <a
+                href="../Registro-Login/login.html"
+                target="_blank"
+                id="boton-formulario"
+                ><strong>LOGIN</strong></a
+              >
+            </li>
+          </div>
         </div>
-      </div>
-
       </nav>
     </header>
 
@@ -87,66 +108,68 @@
       <!-- VILLAS HISTÓRICAS -->
       <section class="villas-historicas">
         <h2>VILLAS HISTÓRICAS</h2>
-          <p>
-            Allí donde el arte ocupa un lugar en siglos y siglos de Historia...
-          </p>
-          <figure id="figure-villas">
-            <img src="imagenesPueblos/alcalaJucar.png" alt="Alcalá del Júcar" />
-            <figcaption>
-              <h3>Alcalá del Júcar (Albacete)</h3>
-          <p>
-            La capital del turismo de Castilla-La Mancha, un pequeño pueblo donde la
-            naturaleza, la historia y el arte se dan la mano.
-          </p>
-            </figcaption>
-          </figure>
+        <p>
+          Allí donde el arte ocupa un lugar en siglos y siglos de Historia...
+        </p>
+        <div class="villas-container">
+          <div id="villas-container-izq">
+            <figure>
+              <img src="imagenesPueblos/alcalaJucar.png" alt="Alcalá del Júcar" />
+              <figcaption>
+                <strong>ALCALÁ DEL JÚCAR</strong>
+                <br/>
+                Donde la naturaleza y la historia se dan la mano.
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <img src="imagenesPueblos/alcaraz.jpg" alt="Alcaraz" />
+              <figcaption>
+                <strong>ALCARAZ</strong>
+                <br/>
+                Una maravillosa villa renacentista.
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <img src="imagenesPueblos/carranque.jpg" alt="Carranque" />
+              <figcaption>
+                <strong>CARRANQUE</strong>
+                <br/>
+                El parque arqueológico romano.
+              </figcaption>
+            </figure>
+          </div>
 
-          <!-- <figure>
-            <img src="imagenesPueblos/alcaraz.jpg" alt="Alcaraz" />
-            <figcaption>
-              <strong>Alcaraz: </strong>una maravillosa villa renacentista.
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="imagenesPueblos/carranque.jpg" alt="Carranque" />
-            <figcaption>
-              <strong>Carranque: </strong>el parque arqueológico romano.
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="imagenesPueblos/sancarlos.jpg"
-              alt="San Carlos del Valle"
-            />
-            <figcaption>
-              <strong>San Carlos del Valle: </strong>el "Vaticano de La Mancha".
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="imagenesPueblos/sanClemente.jpg" alt="San Clemente" />
-            <figcaption>
-              <strong>San Clemente: </strong>Conjunto Histórico-Artístico desde
-              1980.
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="imagenesPueblos/siguenza.jpg" alt="Sigüenza" />
-            <figcaption>
-              <strong>Sigüenza: </strong>una preciosa ciudad plagada de
-              historia.
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="imagenesPueblos/ucles.jpg" alt="Uclés" />
-            <figcaption>
-              <strong>Uclés: </strong>un monasterio referente en la región.
-            </figcaption>
-          </figure> -->
+          <div id="villas-container-der">
+            <figure>
+              <img src="imagenesPueblos/sancarlos.jpg" alt="San Carlos del Valle" />
+              <figcaption>
+                <strong>SAN CARLOS DEL VALLE</strong>
+                <br/>
+                Conocido como el "Vaticano de La Mancha".
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <img src="imagenesPueblos/sanClemente.jpg" alt="San Clemente" />
+              <figcaption>
+                <strong>SAN CLEMENTE</strong>
+                <br/>
+                Conjunto Histórico-Artístico desde 1980.
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <img src="imagenesPueblos/siguenza.jpg" alt="Sigüenza" />
+              <figcaption>
+                <strong>SIGÜENZA</strong>
+                <br/>
+                Una preciosa ciudad plagada de historia.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <!-- CULTURA -->
@@ -169,7 +192,6 @@
             <li>
               <strong>Atienza, </strong>lugar de paso de la Ruta del Cid y del
               Quijote.
-
             </li>
             <li>
               <strong>El Toboso, </strong>localidad de Dulcinea, la amada de Don
@@ -183,7 +205,8 @@
               <strong>Hita, </strong>hogar de Juan Ruiz, el arcipreste de Hita.
             </li>
             <li>
-              <strong>Illescas, </strong>que guarda una pequeña colección de obras de El Greco.
+              <strong>Illescas, </strong>que guarda una pequeña colección de
+              obras de El Greco.
             </li>
             <li>
               <strong>Pastrana, </strong>una villa que dejó huella en el
@@ -197,65 +220,105 @@
       <h2 id="castillos-h2">LA MANCHA, TIERRA DE CASTILLOS</h2>
       <section class="castillos">
         <div class="slider-wrapper">
-            <div class="slider">
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloAlarcon.jpg" id="img1" alt="Castillo de Alarcón">
-                <p class="texto-castillos">Castillo de Alarcón (Cuenca)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloAlmansa.jpg" id="img2" alt="Castillo de Almansa">
-                <p class="texto-castillos">Castillo de Almansa (Albacete)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloBelmonte.jpg" id="img3" alt="Castillo de Belmonte">
-                <p class="texto-castillos">Castillo de Belmonte (Cuenca)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloChinchilla.webp" id="img4" alt="Castillo de Chinchilla">
-                <p class="texto-castillos">Castillo de Chinchilla de Montearagón (Albacete)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloGuadamur.jpg" id="img5" alt="Castillo de Guadamur">
-                <p class="texto-castillos">Castillo de Guadamur (Toledo)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloMaqueda.jpg" id="img6" alt="Castillo de Maqueda">
-                <p class="texto-castillos">Castillo de Maqueda (Toledo)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloMolina.jpg" id="img7" alt="Castillo de Molina de Aragón">
-                <p class="texto-castillos">Castillo de Molina de Aragón (Guadalajara)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloOropesa.jpg" id="img8" alt="Castillo de Oropesa">
-                <p class="texto-castillos">Castillo de Oropesa (Toledo)</p>
-              </div>
-
-              <div class="box-castillos">
-                <img src="imagenesPueblos/castilloTorija.jpg" id="img9" alt="Castillo de Torija">
-                <p class="texto-castillos">Castillo de Torija (Guadalajara)</p>
-              </div>
+          <div class="slider">
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloAlarcon.jpg"
+                id="img1"
+                alt="Castillo de Alarcón"
+              />
+              <p class="texto-castillos">Castillo de Alarcón (Cuenca)</p>
             </div>
-            <div class="slider-nav">
-                <a href="#img1"></a>
-                <a href="#img2"></a>
-                <a href="#img3"></a>
-                <a href="#img4"></a>
-                <a href="#img5"></a>
-                <a href="#img6"></a>
-                <a href="#img7"></a>
-                <a href="#img8"></a>
-                <a href="#img9"></a>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloAlmansa.jpg"
+                id="img2"
+                alt="Castillo de Almansa"
+              />
+              <p class="texto-castillos">Castillo de Almansa (Albacete)</p>
             </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloBelmonte.jpg"
+                id="img3"
+                alt="Castillo de Belmonte"
+              />
+              <p class="texto-castillos">Castillo de Belmonte (Cuenca)</p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloChinchilla.webp"
+                id="img4"
+                alt="Castillo de Chinchilla"
+              />
+              <p class="texto-castillos">
+                Castillo de Chinchilla de Montearagón (Albacete)
+              </p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloGuadamur.jpg"
+                id="img5"
+                alt="Castillo de Guadamur"
+              />
+              <p class="texto-castillos">Castillo de Guadamur (Toledo)</p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloMaqueda.jpg"
+                id="img6"
+                alt="Castillo de Maqueda"
+              />
+              <p class="texto-castillos">Castillo de Maqueda (Toledo)</p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloMolina.jpg"
+                id="img7"
+                alt="Castillo de Molina de Aragón"
+              />
+              <p class="texto-castillos">
+                Castillo de Molina de Aragón (Guadalajara)
+              </p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloOropesa.jpg"
+                id="img8"
+                alt="Castillo de Oropesa"
+              />
+              <p class="texto-castillos">Castillo de Oropesa (Toledo)</p>
+            </div>
+
+            <div class="box-castillos">
+              <img
+                src="imagenesPueblos/castilloTorija.jpg"
+                id="img9"
+                alt="Castillo de Torija"
+              />
+              <p class="texto-castillos">Castillo de Torija (Guadalajara)</p>
+            </div>
+          </div>
+          <div class="slider-nav">
+            <a href="#img1"></a>
+            <a href="#img2"></a>
+            <a href="#img3"></a>
+            <a href="#img4"></a>
+            <a href="#img5"></a>
+            <a href="#img6"></a>
+            <a href="#img7"></a>
+            <a href="#img8"></a>
+            <a href="#img9"></a>
+          </div>
         </div>
-    </section>
+      </section>
 
       <!-- GASTRONOMÍA -->
       <section class="gastronomia">
@@ -305,45 +368,81 @@
         </p>
         <div id="naturaleza-imagenes">
           <!-- Implementar texto en div transparente con JS -->
-           <div class="box-nat">
-            <img src="imagenesPueblos/ayna.avif" alt="Ayna" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/ayna.avif"
+              alt="Ayna"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Ayna y su "mirador del Diablo</p>
-           </div>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/brihuega.avif" alt="Brihuega" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/brihuega.avif"
+              alt="Brihuega"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Brihuega y sus campos de lavanda</p>
-           </div>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/burujon.jpg" alt="Burujón" class="img-naturaleza"/>
-            <p class="naturaleza-texto">Burujón y las Barrancas, "el oeste manchego"</p>
-           </div>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/burujon.jpg"
+              alt="Burujón"
+              class="img-naturaleza"
+            />
+            <p class="naturaleza-texto">
+              Burujón y las Barrancas, "el oeste manchego"
+            </p>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/daimiel.jpg" alt="Daimiel" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/daimiel.jpg"
+              alt="Daimiel"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Daimiel y las tablas sobre el agua</p>
-           </div>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/escalona.jpg" alt="Escalona" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/escalona.jpg"
+              alt="Escalona"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Escalona, a los pies del Alberche</p>
-           </div>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/rioparViejo.jpeg" alt="Riópar Viejo" class="img-naturaleza"/>
-            <p class="naturaleza-texto">Riópar Viejo, el nacimiento del río Mundo</p>
-           </div>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/rioparViejo.jpeg"
+              alt="Riópar Viejo"
+              class="img-naturaleza"
+            />
+            <p class="naturaleza-texto">
+              Riópar Viejo, el nacimiento del río Mundo
+            </p>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/ruidera.jpg" alt="Ruidera" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/ruidera.jpg"
+              alt="Ruidera"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Ruidera y sus lagunas de ensueño</p>
-           </div>
+          </div>
 
-           <div class="box-nat">
-            <img src="imagenesPueblos/yeste.jpg" alt="Yeste" class="img-naturaleza"/>
+          <div class="box-nat">
+            <img
+              src="imagenesPueblos/yeste.jpg"
+              alt="Yeste"
+              class="img-naturaleza"
+            />
             <p class="naturaleza-texto">Yeste y el valle del Segura</p>
-           </div>
+          </div>
         </div>
       </section>
 
@@ -402,8 +501,6 @@
         </form>
       </div>
     </footer>
-
-    <script src="pueblos.js"></script>
     <script src="../Blog/nav.js"></script>
   </body>
 </html>
