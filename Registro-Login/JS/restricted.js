@@ -57,5 +57,3 @@ function mostrarDatosUsuario(data) {
   emailElement.textContent = data.email || 'No disponible';
   nombreElement.textContent = data.user_metadata.full_name || 'No disponible';
 }
-
-console.log(data);

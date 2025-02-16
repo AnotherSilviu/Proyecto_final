@@ -76,9 +76,10 @@ function eliminarPost(postId) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`,
   },
+
   })
   .then(() => {
-    window.location.href = "./blog.html";
+    window.location.href = "./blog.html"; //Redireccion
   })
 };
 pintarPost();
