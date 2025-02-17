@@ -1,4 +1,4 @@
-import { getToken, getUserRole } from "./auth.js";
+import { getToken } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -87,7 +87,8 @@ function configurarBlog() {
       return;
     }
   
-    const userId = localStorage.getItem("user_id");
+    
+    const userId = localStorage.getItem("userId");
     const fecha = new Date().toISOString().split("T")[0];
   
     const post = {
@@ -99,13 +100,9 @@ function configurarBlog() {
     };
   
     // Publicamos el post
-    const respuesta = await añadirPost(post);
+  await añadirPost(post);
   
-    if (respuesta.success) {
-      alert("Entrada publicada correctamente.");
-      // Limpiar el formulario después de la publicación
-      vaciarFormulario();
-    } 
+    
   });
 }
 
@@ -123,9 +120,11 @@ async function añadirPost(post) {
   if (!respuesta.ok) {
     throw new Error("error en el servidor");
   }
-
-  const data = await respuesta.json();
-  return { success: true, data };
+  if (respuesta.ok) {
+    alert("Entrada publicada correctamente.");
+    // Limpiar el formulario después de la publicación
+    vaciarFormulario();
+  } 
 }
 
 function vaciarFormulario() {
