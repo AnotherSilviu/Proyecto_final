@@ -40,13 +40,13 @@ async function pintarPost(post) {
   document.getElementById("resultados").innerHTML = `
   <div class="seccion">
     <img src="${post.url_image}" alt="Imagen del post">
-    <div class="contenido">
-      <h2>${post.title}</h2>
+    <h2>${post.title}</h2>
+  </div>
+  <div class="contenido">
       <p>${post.content}</p>
       
       ${buttonsAdmin}
       
-    </div>
   </div>
   `;
 

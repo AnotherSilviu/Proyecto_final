@@ -26,8 +26,7 @@ function loadAllPosts() {
         </div>
         `;
       });
-    })
-    .catch((error) => console.error("❌ Error al cargar posts:", error));
+    });
 }
 
 loadAllPosts(); // Llamamos a la función para cargar los posts
