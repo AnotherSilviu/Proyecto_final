@@ -179,7 +179,11 @@ main {
 
 .seccion img {
   width: 150px;
+<<<<<<< HEAD
   height: 130px;
+=======
+  height: 150px;
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   border-radius: 8px;
   object-fit: cover;
 }

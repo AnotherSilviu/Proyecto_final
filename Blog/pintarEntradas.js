@@ -41,13 +41,22 @@ async function pintarPost(post) {
   <div class="seccion">
     <img src="${post.url_image}" alt="Imagen del post">
     <h2>${post.title}</h2>
+<<<<<<< HEAD
     </div>
     <div class="contenido">
+=======
+  </div>
+  <div class="contenido">
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
       <p>${post.content}</p>
       
       ${buttonsAdmin}
       
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   `;
 
   //Botones de post

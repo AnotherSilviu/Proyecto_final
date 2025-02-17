@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // dashboard-nav.js
+=======
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
 import { getToken } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
@@ -18,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     blog: `
       <section class="seccion-blog">
         <h3>Mis Entradas de Blog</h3>
+<<<<<<< HEAD
         <ul id="entradas"></ul>
+=======
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
         <button type="button" id="btn-añadir">Añadir entrada</button>
         <div id="inputs-añadir" style="display: none;">
           <label> Título
@@ -58,27 +64,46 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // Evita que el enlace recargue la página
       const section = this.getAttribute("data-section");
+<<<<<<< HEAD
       contenedor.innerHTML = secciones[section] || "<p>Sección no encontrada</p>";
 
       if (section === "blog") {
         configurarBlog(); // Configuramos el blog (formularios y botones)
         loadAllPosts();   // Cargamos los posts
+=======
+      contenedor.innerHTML =
+        secciones[section] || "<p>Sección no encontrada</p>";
+
+      if (section === "blog") {
+        configurarBlog();
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
       }
     });
   });
 });
 
 function configurarBlog() {
+<<<<<<< HEAD
+=======
+  //Botón de Añadir Post, mostrar formulario y publicar post
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   const formulario = document.getElementById("inputs-añadir");
   const btnAñadir = document.getElementById("btn-añadir");
   const btnPublicar = document.getElementById("btn-publicar");
 
+<<<<<<< HEAD
   // Mostrar el formulario al hacer clic en el botón de añadir
+=======
+  //Con esta funcion mostramos el formulario
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   btnAñadir.addEventListener("click", function () {
     formulario.style.display = "block";
   });
 
+<<<<<<< HEAD
   // Publicar el post al hacer clic en el botón de publicar
+=======
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   btnPublicar.addEventListener("click", async function () {
     const titulo = document.getElementById("input-titulo").value;
     const contenido = document.getElementById("input-texto").value;
@@ -89,6 +114,10 @@ function configurarBlog() {
       return;
     }
   
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
     const userId = localStorage.getItem("userId");
     const fecha = new Date().toISOString().split("T")[0];
   
@@ -101,7 +130,13 @@ function configurarBlog() {
     };
   
     // Publicamos el post
+<<<<<<< HEAD
     await añadirPost(post);
+=======
+  await añadirPost(post);
+  
+    
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   });
 }
 
@@ -117,12 +152,22 @@ async function añadirPost(post) {
   });
 
   if (!respuesta.ok) {
+<<<<<<< HEAD
     throw new Error("Error en el servidor");
   }
   if (respuesta.ok) {
     alert("Entrada publicada correctamente.");
     vaciarFormulario();
   }
+=======
+    throw new Error("error en el servidor");
+  }
+  if (respuesta.ok) {
+    alert("Entrada publicada correctamente.");
+    // Limpiar el formulario después de la publicación
+    vaciarFormulario();
+  } 
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
 }
 
 function vaciarFormulario() {
@@ -135,6 +180,7 @@ function vaciarFormulario() {
   const formulario = document.getElementById("inputs-añadir");
   formulario.style.display = "none";
 }
+<<<<<<< HEAD
 
 // Función para cargar todos los posts directamente aquí en el archivo dashboard-nav.js
 function loadAllPosts() {
@@ -171,3 +217,5 @@ function loadAllPosts() {
       });
     });
 }
+=======
+>>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
