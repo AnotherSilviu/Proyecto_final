@@ -169,27 +169,25 @@ main {
 /* Estilo de cada sección */
 .seccion {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   padding: 30px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .seccion img {
-  width: 100%;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 8px;
   object-fit: cover;
 }
 
 
-.contenido h2 {
+.seccion h2 {
   text-align: center;
+  margin: auto;
 }
 
 .contenido p {
