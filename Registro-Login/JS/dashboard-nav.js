@@ -1,3 +1,4 @@
+// dashboard-nav.js
 import { getToken } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     blog: `
       <section class="seccion-blog">
         <h3>Mis Entradas de Blog</h3>
+        <ul id="entradas"></ul>
         <button type="button" id="btn-añadir">Añadir entrada</button>
         <div id="inputs-añadir" style="display: none;">
           <label> Título
@@ -56,27 +58,27 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // Evita que el enlace recargue la página
       const section = this.getAttribute("data-section");
-      contenedor.innerHTML =
-        secciones[section] || "<p>Sección no encontrada</p>";
+      contenedor.innerHTML = secciones[section] || "<p>Sección no encontrada</p>";
 
       if (section === "blog") {
-        configurarBlog();
+        configurarBlog(); // Configuramos el blog (formularios y botones)
+        loadAllPosts();   // Cargamos los posts
       }
     });
   });
 });
 
 function configurarBlog() {
-  //Botón de Añadir Post, mostrar formulario y publicar post
   const formulario = document.getElementById("inputs-añadir");
   const btnAñadir = document.getElementById("btn-añadir");
   const btnPublicar = document.getElementById("btn-publicar");
 
-  //Con esta funcion mostramos el formulario
+  // Mostrar el formulario al hacer clic en el botón de añadir
   btnAñadir.addEventListener("click", function () {
     formulario.style.display = "block";
   });
 
+  // Publicar el post al hacer clic en el botón de publicar
   btnPublicar.addEventListener("click", async function () {
     const titulo = document.getElementById("input-titulo").value;
     const contenido = document.getElementById("input-texto").value;
@@ -87,7 +89,6 @@ function configurarBlog() {
       return;
     }
   
-    
     const userId = localStorage.getItem("userId");
     const fecha = new Date().toISOString().split("T")[0];
   
@@ -100,9 +101,7 @@ function configurarBlog() {
     };
   
     // Publicamos el post
-  await añadirPost(post);
-  
-    
+    await añadirPost(post);
   });
 }
 
@@ -118,13 +117,12 @@ async function añadirPost(post) {
   });
 
   if (!respuesta.ok) {
-    throw new Error("error en el servidor");
+    throw new Error("Error en el servidor");
   }
   if (respuesta.ok) {
     alert("Entrada publicada correctamente.");
-    // Limpiar el formulario después de la publicación
     vaciarFormulario();
-  } 
+  }
 }
 
 function vaciarFormulario() {
@@ -136,4 +134,40 @@ function vaciarFormulario() {
   // Ocultar el formulario
   const formulario = document.getElementById("inputs-añadir");
   formulario.style.display = "none";
+}
+
+// Función para cargar todos los posts directamente aquí en el archivo dashboard-nav.js
+function loadAllPosts() {
+  const API_URL = `${BASE_URL}/rest/v1/POST`;
+  const API_HEADERS = {
+    "Content-Type": "application/json",
+    "apikey": APIKEY,
+    "Authorization": `Bearer ${APIKEY}`,
+  };
+
+  const userId = localStorage.getItem("userId");
+
+  fetch(API_URL, { headers: API_HEADERS })
+    .then((response) => response.json())
+    .then((posts) => {
+      const postList = document.getElementById("entradas");
+      postList.innerHTML = ""; // Limpiar lista antes de mostrar los posts
+
+      // Filtrar los posts
+      const userPosts = posts.filter(post => post.user_id === userId);
+
+      // Mostrar solo por userId
+      userPosts.forEach((post) => {
+        postList.innerHTML += `
+          <li class="seccion">
+        <img src="${post.url_image}" alt="">
+        <div class="contenido">
+          <h2>${post.title}</h2>
+          <p>${post.content.substring(0, 200)}</p> 
+          <a href="../Blog/entrada.html?id=${post.id}">Leer más⇒</a>
+        </div>
+        </li>
+        `;
+      });
+    });
 }
