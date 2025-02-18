@@ -157,7 +157,6 @@ header {
   cursor: pointer;
 }
 
-
 /* Estilos del cuerpo de la web */
 main {
   padding: 20px;
@@ -169,14 +168,13 @@ main {
 }
 
 /* Estilo de cada sección */
-.seccion {
+.seccion{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 30px;
+  padding: 20px;
   background-color: #fff;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .seccion img {
@@ -186,19 +184,17 @@ main {
   object-fit: cover;
 }
 
-
 .seccion h2 {
   text-align: center;
   margin: auto;
 }
 
-.contenido p {
-  font-size: 14px;
-  color: #272727;
-  margin: 10px 0 0;
+.contenido {
+  padding: 10px;
   text-align: justify;
+  font-size: 16px;
+  color: #272727;
 }
-
 
 /* Comentarios */
 #comentarios {
@@ -317,7 +313,8 @@ footer .contacto {
   margin-top: 10px;
 }
 
-div[contenteditable="true"], h2[contenteditable="true"] {
+div[contenteditable="true"],
+h2[contenteditable="true"] {
   background: rgb(241, 241, 241);
   border: 1px solid rgb(204, 204, 204);
   padding: 20px;
@@ -345,16 +342,14 @@ div[contenteditable="true"], h2[contenteditable="true"] {
 @media screen and (max-width: 1030px) {
   .barra-navegacion ul {
     display: none;
-    /* Oculta el menú normal */
   }
 
   .menu {
     display: block;
-    /* Asegurar que el botón de menú aparezca */
   }
 }
 
-@media screen and (max-height:450px) {
+@media screen and (max-height: 450px) {
   .barra-navegacion .overlay a {
     font-size: 20px;
   }
@@ -365,4 +360,3 @@ div[contenteditable="true"], h2[contenteditable="true"] {
     right: 35px;
   }
 }
-

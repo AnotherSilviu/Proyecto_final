@@ -152,6 +152,7 @@ header {
   cursor: pointer;
 }
 
+
 main {
   padding: 20px;
   max-width: 1200px;
@@ -192,7 +193,7 @@ article:hover {
 }
 
 /* Disposición y diseño del mapa de provincias */
-.mapa-de-mierda {
+.mapa-clm {
   width: 90%;
   max-width: 418px;
   height: auto;
@@ -209,32 +210,32 @@ article:hover {
   transition: all 0.3s ease;
   position: relative;
 }
-.mapa-de-mierda path {
-  stroke: rgb(121, 74, 13); /* Color de las líneas */
-  stroke-width: 2.3px; /* Ancho de las líneas */
+.mapa-clm path {
+  stroke: rgb(121, 74, 13); 
+  stroke-width: 2.3px; 
 }
-.mapa-de-mierda path:hover {
+.mapa-clm path:hover {
   filter: brightness(0.5);
 }
-.mapa-de-mierda path:hover::after {
-  display: block; /* Muestra el tooltip al hacer hover */
+.mapa-clm path:hover::after {
+  display: block; 
 }
-.mapa-de-mierda svg {
+.mapa-clm svg {
   display: block;
   width: 100%;
   height: auto;
 }
 .tooltip {
-  position: absolute; /* Necesario para que siga al ratón */
-  display: none; /* Oculto por defecto */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 5px 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 14px; /* Tamaño de letra */
-  pointer-events: none; /* No bloquea la interacción del ratón */
-  white-space: nowrap; /* Evita saltos de línea */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  position: absolute; 
+  display: none; 
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 14px; 
+  pointer-events: none; 
+  white-space: nowrap; 
+  z-index: 1000;
 }
 hr {
   border: 0;
@@ -243,9 +244,9 @@ hr {
   margin: 20px 0;
   margin-bottom: 40px;
 }
+/*---------------------------------------------------*/
 
 /* Estilo para todo el footer */
-
 footer {
   background-color: #2d2d2d;
   color: white;
@@ -305,6 +306,7 @@ footer .contacto {
   cursor: pointer;
   border: none;
 }
+/*--------------------------------*/
 
 /*Slider de imágenes*/
 .titulo-slider {
@@ -315,6 +317,7 @@ footer .contacto {
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
+
 .parrafo-slider {
   text-align: center;
   margin-bottom: 20px;
@@ -322,41 +325,37 @@ footer .contacto {
   font-family: "Poppins", sans-serif;
 }
 
-/* Contenedor del slider */
 .slider-frame {
-  width: 100%; /* Ancho del contenedor al 100% */
-  max-width: 100%; /* Limitar el contenedor al ancho disponible */
-  height: 242px; /* Altura fija */
+  width: 100%; 
+  max-width: 100%; 
+  height: 242px; 
   margin: 0 auto;
-  overflow: hidden; /* Evitar que se desborde */
+  overflow: hidden; 
   position: relative;
 }
 
-/* Lista de imágenes */
 .slider-frame ul {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 100%; /* El ancho total es 600% para permitir la animación continua */
+  width: 100%; 
   height: 100%;
   animation: slide 50s infinite ease-in-out;
   list-style: none;
 }
 
-/* Cada imagen dentro del slider */
 .slider-frame li {
-  flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+  flex: 0 0 100%;
   height: 100%;
 }
 
-/* Estilo para las imágenes */
 .slider-frame img {
   display: block;
-  width: 100%; /* Ajustamos el ancho de las imágenes */
-  height: 100%; /* Ajustamos la altura de las imágenes */
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
 }
-
+/*-----------------------------------------------*/
 
 @keyframes slide {
   0% {
@@ -414,25 +413,22 @@ footer .contacto {
 
 /*Slider imagenes*/
 @media (max-width: 767px) {
-  /* Ajustar el tamaño del contenedor en pantallas móviles */
   .slider-frame {
-    height: auto; /* Ajustar la altura para pantallas más pequeñas */
+    height: auto;
   }
-
-  /* Para las imágenes, si quieres que se adapten al tamaño móvil */
   .slider-frame img {
-    object-fit: cover; /* Mantener la proporción y cubrir sin distorsionar */
+    object-fit: cover;
   }
 }
 
 /*Pagina web responsive (para el menu)*/
 @media screen and (max-width: 1030px) {
   .barra-navegacion ul {
-    display: none; /* Oculta el menú normal */
+    display: none; 
   }
 
   .menu {
-    display: block; /* Asegurar que el botón de menú aparezca */
+    display: block; 
   }
 }
 @media screen and (max-height: 450px) {
