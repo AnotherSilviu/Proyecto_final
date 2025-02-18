@@ -29,6 +29,7 @@ async function pintarPost() {
   if (userRole == "ADMIN") {
     buttonsAdmin = `
       <div class="botones">
+        <button id="btn-actualizar" type="button">Actualizar imagen</button>
         <button id="btn-editar" type="button">Editar Entrada</button>
         <button id="btn-eliminar" type="button">Eliminar Entrada</button>
       </div>
@@ -48,8 +49,11 @@ async function pintarPost() {
   `;
 
   //Botones de post
+  const btnActualizar = document.getElementById("btn-actualizar");
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
+  
+  btnActualizar.addEventListener("click", actualizarImagen)
 
   btnEditar.addEventListener("click", () => {
     editarPost(postId);
@@ -58,6 +62,26 @@ async function pintarPost() {
   btnEliminar.addEventListener("click", () => {
     eliminarPost(postId);
   });
+}
+
+function actualizarImagen() {
+  const imagen = document.querySelector("img");
+  const newImageUrl = prompt("Introduce la nueva URL de la imagen:");
+
+  if (newImageUrl) {
+    imagen.src = newImageUrl; 
+
+    fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
+      method: "PATCH",
+      body: JSON.stringify({ url_image: newImageUrl }),
+      headers: {
+        apikey: APIKEY,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getToken()}`,
+      },
+    })
+      savePost()
+  }
 }
 
 let isEditable = false
@@ -70,13 +94,13 @@ function setContentEditable() {
     titulo.setAttribute("contenteditable", "true");
     contenido.setAttribute("contenteditable", "true");
 
-    document.getElementById("btn-editar").innerHTML = "Guardar";
+    document.getElementById("btn-editar").innerHTML = "Guardar Cambios";
   } else {
     titulo.setAttribute("contenteditable", "false");
     contenido.setAttribute("contenteditable", "false");
 
     document.getElementById("btn-editar").innerHTML = "Editar Entrada";
-  } 
+  }
 }
 
 // Botón de editar
@@ -96,7 +120,6 @@ async function savePost(postId) {
   const post = {
     title: titulo.innerText,
     content: contenido.innerText,
-    url_image: "", // TODO con el Prompt
     user_id: getUserId(),
   };
 

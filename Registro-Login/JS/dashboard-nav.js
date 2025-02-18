@@ -1,5 +1,5 @@
 // dashboard-nav.js
-import { getToken } from "./auth.js";
+import { getToken, getUserRole } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
 const secciones = {
@@ -36,19 +36,25 @@ const secciones = {
       <p>Historial de comentarios realizados en el blog.</p>
     </section>
   `,
-  configuracion: `
-    <section class="seccion-configuracion">
-      <h3>Configuración</h3>
-      <p>Ajustes de tu cuenta y preferencias.</p>
-    </section>
-  `,
   ayuda: `
     <section class="seccion-ayuda">
       <h3>Ayuda</h3>
       <p>Ponte en contacto con soporte si tienes dudas.</p>
+      <button id="btn-contacto">
+      <a href="../formulario.html" target="_blank">Contacto</a>
+      </button>
     </section>
   `,
 };
+
+const userRole = await getUserRole();
+if (userRole !== "ADMIN") {
+  // Seleccionamos el enlace con data-section="blog" y lo ocultamos
+  let blogLink = document.querySelector('[data-section="blog"]');
+  if (blogLink) {
+      blogLink.style.display = 'block'; // Ocultamos el enlace
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav-link");
