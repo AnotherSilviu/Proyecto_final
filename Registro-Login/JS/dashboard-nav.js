@@ -1,7 +1,7 @@
-// dashboard-nav.js
-import { getToken } from "./auth.js";
+import { getToken, getUserRole } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
+// Secciones del contenido
 const secciones = {
   perfil: `
     <section class="seccion-perfil">
@@ -11,7 +11,34 @@ const secciones = {
       <p><strong>Última actividad:</strong> Hace 2 días</p>
     </section>
   `,
-  blog: `
+  blog: '',
+  comentarios: `
+    <section class="seccion-comentarios">
+      <h3>Mis Comentarios</h3>
+      <p>Historial de comentarios realizados en el blog.</p>
+    </section>
+  `,
+  ayuda: `
+    <section class="seccion-ayuda">
+      <h3>Ayuda</h3>
+      <p>Ponte en contacto con nosotros si tienes dudas.</p>
+      <button id="btn-contacto">
+        <a href="../formulario.html" target="_blank">Contacto</a>
+      </button>
+    </section>
+  `,
+};
+
+async function panelAdmin() {
+  const userRole = await getUserRole();
+  console.log("userRole", userRole);
+  const blogLink = document.querySelector('a[data-section="blog"]').parentElement;
+
+  // Si el usuario no es ADMIN, ocultamos el enlace del blog
+  if (userRole !== "ADMIN") {
+    blogLink.style.display = "none";
+  } else {
+    secciones.blog = `
     <section class="seccion-blog">
       <h3>Mis Entradas de Blog</h3>
       <ul id="entradas"></ul>
@@ -29,45 +56,32 @@ const secciones = {
         <button id="btn-publicar">Publicar post</button>
       </div>
     </section>
-  `,
-  comentarios: `
-    <section class="seccion-comentarios">
-      <h3>Mis Comentarios</h3>
-      <p>Historial de comentarios realizados en el blog.</p>
-    </section>
-  `,
-  configuracion: `
-    <section class="seccion-configuracion">
-      <h3>Configuración</h3>
-      <p>Ajustes de tu cuenta y preferencias.</p>
-    </section>
-  `,
-  ayuda: `
-    <section class="seccion-ayuda">
-      <h3>Ayuda</h3>
-      <p>Ponte en contacto con soporte si tienes dudas.</p>
-    </section>
-  `,
-};
+  `;
+  }
+}
 
+// Configuración de eventos de navegación
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav-link");
   const contenedor = document.getElementById("contenedor-principal");
 
+  panelAdmin();
+
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
-      event.preventDefault(); // Evita que el enlace recargue la página
+      event.preventDefault();
       const section = this.getAttribute("data-section");
-      contenedor.innerHTML = secciones[section] || "<p>Sección no encontrada</p>";
+      contenedor.innerHTML = secciones[section] || "<p>Sección solo disponible para Administradores</p>";
 
       if (section === "blog") {
-        configurarBlog(); // Configuramos el blog (formularios y botones)
-        loadAllPosts();   // Cargamos los posts
+        configurarBlog(); 
+        loadAllPosts(); 
       }
     });
   });
 });
 
+// Configuración del formulario de blog
 function configurarBlog() {
   const formulario = document.getElementById("inputs-añadir");
   const btnAñadir = document.getElementById("btn-añadir");
@@ -105,6 +119,7 @@ function configurarBlog() {
   });
 }
 
+// Añadir post al sistema
 async function añadirPost(post) {
   const respuesta = await fetch(`${BASE_URL}/rest/v1/POST`, {
     method: "POST",
@@ -125,18 +140,17 @@ async function añadirPost(post) {
   }
 }
 
+// Vaciar el formulario de blog
 function vaciarFormulario() {
-  // Limpiar los valores de los campos
   document.getElementById("input-titulo").value = "";
   document.getElementById("input-texto").value = "";
   document.getElementById("input-img").value = "";
 
-  // Ocultar el formulario
   const formulario = document.getElementById("inputs-añadir");
   formulario.style.display = "none";
 }
 
-// Función para cargar todos los posts directamente aquí en el archivo dashboard-nav.js
+// Función para cargar los posts
 function loadAllPosts() {
   const API_URL = `${BASE_URL}/rest/v1/POST`;
   const API_HEADERS = {
@@ -153,20 +167,20 @@ function loadAllPosts() {
       const postList = document.getElementById("entradas");
       postList.innerHTML = ""; // Limpiar lista antes de mostrar los posts
 
-      // Filtrar los posts
+      // Filtrar los posts por userId
       const userPosts = posts.filter(post => post.user_id === userId);
 
-      // Mostrar solo por userId
+      // Mostrar solo los posts del usuario
       userPosts.forEach((post) => {
         postList.innerHTML += `
           <li class="seccion">
-        <img src="${post.url_image}" alt="">
-        <div class="contenido">
-          <h2>${post.title}</h2>
-          <p>${post.content.substring(0, 200)}</p> 
-          <a href="../Blog/entrada.html?id=${post.id}">Leer más⇒</a>
-        </div>
-        </li>
+            <img src="${post.url_image}" alt="">
+            <div class="contenido">
+              <h2>${post.title}</h2>
+              <p>${post.content.substring(0, 200)}</p> 
+              <a href="../Blog/entrada.html?id=${post.id}">Leer más⇒</a>
+            </div>
+          </li>
         `;
       });
     });

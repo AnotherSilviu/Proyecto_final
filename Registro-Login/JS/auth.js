@@ -70,8 +70,6 @@ async function register() {
     localStorage.setItem("userId", result.user.id)
 
     window.location.href = "./dashboard.html"
-
-    configurarBlog(result.user.id)
 }
 
 export async function isUserLogged(access_token, userId) {

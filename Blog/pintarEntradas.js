@@ -15,8 +15,10 @@ const postId = urlParams.get("id");
 
 // Hacemos la petición para obtener los datos del post
 async function loadPost() {
-  const result = await fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
-  const posts = await result.json()
+  const result = await fetch(`${API_URL}?id=eq.${postId}`, {
+    headers: API_HEADERS,
+  });
+  const posts = await result.json();
   return posts[0];
 }
 
@@ -29,6 +31,7 @@ async function pintarPost() {
   if (userRole == "ADMIN") {
     buttonsAdmin = `
       <div class="botones">
+        <button id="btn-actualizar" type="button">Actualizar Imagen</button>
         <button id="btn-editar" type="button">Editar Entrada</button>
         <button id="btn-eliminar" type="button">Eliminar Entrada</button>
       </div>
@@ -48,8 +51,11 @@ async function pintarPost() {
   `;
 
   //Botones de post
+  const btnActualizar = document.getElementById("btn-actualizar");
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
+
+  btnActualizar.addEventListener("click", actualizarImagen);
 
   btnEditar.addEventListener("click", () => {
     editarPost(postId);
@@ -60,7 +66,27 @@ async function pintarPost() {
   });
 }
 
-let isEditable = false
+function actualizarImagen() {
+  const imagen = document.querySelector("img");
+  const newImageUrl = prompt("Introduce la nueva URL de la imagen:");
+
+  if (newImageUrl) {
+    imagen.src = newImageUrl;
+
+    fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
+      method: "PATCH",
+      body: JSON.stringify({ url_image: newImageUrl }),
+      headers: {
+        apikey: APIKEY,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getToken()}`,
+      },
+    })
+      savePost()
+  }
+}
+
+let isEditable = false;
 
 function setContentEditable() {
   const titulo = document.getElementById("titulo");
@@ -70,38 +96,23 @@ function setContentEditable() {
     titulo.setAttribute("contenteditable", "true");
     contenido.setAttribute("contenteditable", "true");
 
-    document.getElementById("btn-editar").innerHTML = "Guardar";
+    document.getElementById("btn-editar").innerHTML = "Guardar Cambios";
   } else {
     titulo.setAttribute("contenteditable", "false");
     contenido.setAttribute("contenteditable", "false");
 
     document.getElementById("btn-editar").innerHTML = "Editar Entrada";
-  } 
-}
-
-function editarNombrede(id) {
-  const name = prompt("Dime el nombre: ");
-  return fetch(`https://retoolapi.dev/GTFjhg/students/${id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-    }),
-  }).then((response) => {
-    actualizarPantalla();
-  });
+  }
 }
 
 // Botón de editar
 function editarPost(postId) {
-  isEditable = !isEditable
- setContentEditable()
- 
- if(!isEditable) { 
-  savePost(postId)
- }
+  isEditable = !isEditable;
+  setContentEditable();
+
+  if (!isEditable) {
+    savePost(postId);
+  }
 }
 
 async function savePost(postId) {
@@ -111,7 +122,6 @@ async function savePost(postId) {
   const post = {
     title: titulo.innerText,
     content: contenido.innerText,
-    url_image: "", // TODO con el Prompt
     user_id: getUserId(),
   };
 
@@ -126,8 +136,8 @@ async function savePost(postId) {
   }).then(() => {
     //Redirecciona al blog
     window.location.reload();
-    //window.location.href = "./blog.html"; 
-  })
+    //window.location.href = "./blog.html";
+  });
 }
 
 //Boton de eliminar
