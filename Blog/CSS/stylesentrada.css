@@ -179,11 +179,7 @@ main {
 
 .seccion img {
   width: 150px;
-<<<<<<< HEAD
   height: 130px;
-=======
-  height: 150px;
->>>>>>> 0269bd7294df800e9c857a520fa55ed47b5d0a3c
   border-radius: 8px;
   object-fit: cover;
 }
@@ -319,6 +315,13 @@ footer .contacto {
   margin-top: 10px;
 }
 
+div[contenteditable="true"], h2[contenteditable="true"] {
+  background: rgb(241, 241, 241);
+  border: 1px solid rgb(204, 204, 204);
+  padding: 20px;
+  border-radius: 8px;
+}
+
 #input-buscar {
   width: 80%;
   padding: 10px;
@@ -360,3 +363,4 @@ footer .contacto {
     right: 35px;
   }
 }
+
