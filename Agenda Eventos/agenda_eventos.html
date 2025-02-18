@@ -22,7 +22,11 @@
       /></a>
       <nav class="barra-navegacion">
         <div id="logo">
-          <a href="../index.html"><img src="../imagenes/logo-barra-navegacion.png" alt="logo pagina web"></a>
+          <a href="../index.html"
+            ><img
+              src="../imagenes/logo-barra-navegacion.png"
+              alt="logo pagina web"
+          /></a>
         </div>
         <ul>
           <li>
@@ -47,29 +51,43 @@
             >
           </li>
           <li>
-            <a href="../Registro-Login/login.html" target="_blank" id="boton-formulario"
+            <a
+              href="../Registro-Login/login.html"
+              target="_blank"
+              id="boton-formulario"
               ><strong>LOGIN</strong></a
             >
           </li>
         </ul>
 
-          <!--Barra de navegación dinámica-->
-        <a onclick="openNav()" class="menu" href="javascript:void(0)"><strong>MENÚ</strong></a>
-      <div class="overlay" id="mobile-menu">
-        <a onclick="closeNav()" href="javascript:void(0)" class="close">&times;</a>
-        <div class="overlay-content">
-          <a href="../Agenda Eventos/agenda_eventos.html"><strong>AGENDA DE
-              EVENTOS</strong></a>
-          <a href="blog.html"><strong>BLOG</strong></a>
-          <a href="../CLM por Pueblos/pueblosCLM.html"><strong>CLM POR PUEBLOS</strong></a>
-          <a href="../Quijote/quijote.html"><strong>LA TIERRA DEL QUIJOTE</strong></a>
-          <a href="../formulario.html"><strong>CONTACTO</strong></a>
-            <a href="../Registro-Login/login.html" target="_blank" id="boton-formulario"
+        <!--Barra de navegación dinámica-->
+        <a onclick="openNav()" class="menu" href="javascript:void(0)"
+          ><strong>MENÚ</strong></a
+        >
+        <div class="overlay" id="mobile-menu">
+          <a onclick="closeNav()" href="javascript:void(0)" class="close"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="../Agenda Eventos/agenda_eventos.html"
+              ><strong>AGENDA DE EVENTOS</strong></a
+            >
+            <a href="../Blog/blog.html"><strong>BLOG</strong></a>
+            <a href="../CLM por Pueblos/pueblosCLM.html"
+              ><strong>CLM POR PUEBLOS</strong></a
+            >
+            <a href="../Quijote/quijote.html"
+              ><strong>LA TIERRA DEL QUIJOTE</strong></a
+            >
+            <a href="../formulario.html"><strong>CONTACTO</strong></a>
+            <a
+              href="../Registro-Login/login.html"
+              target="_blank"
+              id="boton-formulario-user"
               ><strong>LOGIN</strong></a
             >
+          </div>
         </div>
-      </div>
-
       </nav>
     </header>
     <main>
@@ -109,7 +127,7 @@
         <p>
           Página web destinada al turismo de la comunidad.
           <br />
-          2025. Todos los derechos reservados.
+          &copy; 2025. Todos los derechos reservados.
         </p>
       </div>
 
@@ -118,14 +136,20 @@
         <a
           href="https://www.facebook.com/TurismoCLM/?locale=es_ES"
           target="_blank"
-          >FACEBOOK</a
-        >
-        <a href="https://x.com/turismoclm" target="_blank">X</a>
+          ><img
+            src="../imagenes/facebook.png"
+            alt="logo-facebook"
+            width="30"
+            height="30"
+        /></a>
+        <a href="https://x.com/turismoclm" target="_blank">
+          <img src="../imagenes/x.webp" alt="logo-x" width="40" height="40" />
+        </a>
         <a
           href="https://www.instagram.com/turismocastillalamancha/?hl=es"
           target="_blank"
-          >INSTAGRAM</a
-        >
+          ><img src="../imagenes/instagram.png" alt="logo-instagram" width="30"
+        /></a>
       </div>
 
       <div class="contacto">
@@ -137,13 +161,12 @@
       </div>
 
       <!-- Cambio de Fondo de Alert -->
-  <div class="custom-overlay" id="customOverlay"></div>
-  <div class="custom-alert" id="customAlert">
-    <p id="alertMessage"></p>
-    <button onclick="cerrarAlerta()">OK</button>
-  </div>
-  <button onclick="mostrarAlerta()"></button>
-
+      <div class="custom-overlay" id="customOverlay"></div>
+      <div class="custom-alert" id="customAlert">
+        <p id="alertMessage"></p>
+        <button onclick="cerrarAlerta()">OK</button>
+      </div>
+      <button onclick="mostrarAlerta()" id="btn-mostrar-alert"></button>
     </footer>
     <script src="calendario.js"></script>
     <script src="../nav.js"></script>

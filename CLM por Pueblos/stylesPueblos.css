@@ -84,6 +84,7 @@ header {
 }
 
 #boton-formulario,
+#boton-formulario-user,
 .menu {
   padding: 8px 15px;
   background-color: #f3952a;
@@ -95,6 +96,7 @@ header {
 }
 
 #boton-formulario:hover,
+#boton-formulario-user:hover,
 .menu:hover {
   background-color: #e67e22;
   color: #fff;

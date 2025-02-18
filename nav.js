@@ -19,6 +19,14 @@ function closeNav() {
   }, 300);
 }
 
+// Si un usuario está logueado, el botón cambia su texto y su destino
 if(localStorage.getItem("token")) {
-  document.getElementById("boton-formulario").innerHTML = "Panel de usuario";
+  // CAMBIO CON PANTALLA COMPLETA
+  document.getElementById("boton-formulario").innerHTML = "PANEL DE USUARIO";
+  document.getElementById("boton-formulario").setAttribute("target", "_self");
+  document.getElementById("boton-formulario").setAttribute("href", "Registro-Login/dashboard.html")
+  // CAMBIO CON PANTALLA REDUCIDA
+  document.getElementById("boton-formulario-user").innerHTML = "PANEL DE USUARIO";
+  document.getElementById("boton-formulario-user").setAttribute("target", "_self");
+  document.getElementById("boton-formulario-user").setAttribute("href", "Registro-Login/dashboard.html")
 }

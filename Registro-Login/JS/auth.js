@@ -18,7 +18,6 @@ if(btnRegister) {
 
 
 async function login() {
-
     const requestOptions = {
         method: "POST",
         headers: {
@@ -37,7 +36,6 @@ async function login() {
     }
 
     const result = await response.json()
- 
     localStorage.setItem("token", result.access_token)
     localStorage.setItem("userId", result.user.id)
 
@@ -45,7 +43,6 @@ async function login() {
 }
 
 async function register() {
-
     const requestOptions = {
         method: "POST",
         headers: {
@@ -65,7 +62,6 @@ async function register() {
     }
 
     const result = await response.json()
- 
     localStorage.setItem("token", result.access_token)
     localStorage.setItem("userId", result.user.id)
 
@@ -75,7 +71,6 @@ async function register() {
 }
 
 export async function isUserLogged(access_token, userId) {
-
     const requestOptions = {
         method: "GET",
         headers: {
@@ -92,11 +87,9 @@ export async function isUserLogged(access_token, userId) {
     }
 
     const result = await response.json()
-
     if(result.id == userId) {
         return true
     }
- 
     return false
 }
 
@@ -104,7 +97,7 @@ export function logout() {
     localStorage.removeItem("token")
     localStorage.removeItem("userId")
 
-    window.location.href = "../index.html"
+    window.location.href = "./login.html"
 }
 
 export function getToken() {
@@ -120,10 +113,7 @@ if (btnLogout) {
   btnLogout.addEventListener("click", logout);
 }
 
-
-
 export async function createUserRole(username) {
-
     const access_token = getToken()
     const userId = getUserId()
 
@@ -154,7 +144,6 @@ export async function createUserRole(username) {
 
 
 export async function getUserRole() {
-
     const access_token = getToken()
     const userId = getUserId()
 
@@ -180,7 +169,6 @@ export async function getUserRole() {
     if(result[0].role) {
         return result[0].role
     }
- 
     return null
 }
 
