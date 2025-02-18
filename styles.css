@@ -334,6 +334,7 @@ footer .contacto {
   position: relative;
 }
 
+/* Lista de imágenes */
 .slider-frame ul {
   display: flex;
   margin: 0;
@@ -344,11 +345,13 @@ footer .contacto {
   list-style: none;
 }
 
+/* Cada imagen dentro del slider */
 .slider-frame li {
   flex: 0 0 100%;
   height: 100%;
 }
 
+/* Estilo para las imágenes */
 .slider-frame img {
   display: block;
   width: 100%; 
@@ -356,6 +359,7 @@ footer .contacto {
   object-fit: cover; 
 }
 /*-----------------------------------------------*/
+
 
 @keyframes slide {
   0% {
