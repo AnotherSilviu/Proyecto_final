@@ -1,6 +1,5 @@
-import { getToken, getUserRole } from "../Registro-Login/JS/auth.js";
+import { getToken, getUserRole, getUserId } from "../Registro-Login/JS/auth.js";
 import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
-import { titulo, contenido, imagen, post } from "../Registro-Login/JS/dashboard-nav.js";
 
 const API_URL = `${BASE_URL}/rest/v1/POST`;
 
@@ -15,14 +14,14 @@ const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("id");
 
 // Hacemos la petición para obtener los datos del post
-fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
-  .then((response) => response.json())
-  .then((posts) => {
-    const post = posts[0];
-    pintarPost(post);
-  });
+async function loadPost() {
+  const result = await fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
+  const posts = await result.json()
+  return posts[0];
+}
 
-async function pintarPost(post) {
+async function pintarPost() {
+  const post = await loadPost();
   const userRole = await getUserRole();
   console.log("userRole", userRole);
 
@@ -39,14 +38,13 @@ async function pintarPost(post) {
   document.getElementById("resultados").innerHTML = `
   <div class="seccion">
     <img src="${post.url_image}" alt="Imagen del post">
-    <h2>${post.title}</h2>
+    <h2 id="titulo">${post.title}</h2>
     </div>
-    <div class="contenido">
-      <p>${post.content}</p>
-      
-      ${buttonsAdmin}
-      
+    <div id="contenido" class="contenido">
+      ${post.content}
     </div>
+
+    ${buttonsAdmin}
   `;
 
   //Botones de post
@@ -62,36 +60,73 @@ async function pintarPost(post) {
   });
 }
 
-// Leer inputs
-function leerInputs () {
-  titulo.value;
-  contenido.value;
-  imagen.value;
+let isEditable = false
 
-  return post;
+function setContentEditable() {
+  const titulo = document.getElementById("titulo");
+  const contenido = document.getElementById("contenido");
+
+  if (isEditable) {
+    titulo.setAttribute("contenteditable", "true");
+    contenido.setAttribute("contenteditable", "true");
+
+    document.getElementById("btn-editar").innerHTML = "Guardar";
+  } else {
+    titulo.setAttribute("contenteditable", "false");
+    contenido.setAttribute("contenteditable", "false");
+
+    document.getElementById("btn-editar").innerHTML = "Editar Entrada";
+  } 
+}
+
+function editarNombrede(id) {
+  const name = prompt("Dime el nombre: ");
+  return fetch(`https://retoolapi.dev/GTFjhg/students/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: name,
+    }),
+  }).then((response) => {
+    actualizarPantalla();
+  });
 }
 
 // Botón de editar
 function editarPost(postId) {
-  leerInputs();
-  fetch(`${BASE_URL}/rest/v1/PATCH?id=eq.${postId}`, {
-    method: "PUT",
-    body: JSON.stringify({
-      id: ${postId},
-      title: "PRUEBA",
-      content: "He editado la entrada",
-      url_image: "",
-      userId: ${userId},
-    }),
+  isEditable = !isEditable
+ setContentEditable()
+ 
+ if(!isEditable) { 
+  savePost(postId)
+ }
+}
+
+async function savePost(postId) {
+  const titulo = document.getElementById("titulo");
+  const contenido = document.getElementById("contenido");
+
+  const post = {
+    title: titulo.innerText,
+    content: contenido.innerText,
+    url_image: "", // TODO con el Prompt
+    user_id: getUserId(),
+  };
+
+  fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
+    method: "PATCH",
+    body: JSON.stringify(post),
     headers: {
       apikey: APIKEY,
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`,
     },
-  }).then((response) => response.json());
-  .then((json) => console.log(json));
-  .then(() => {
-    window.location.href = "./blog.html"; //Redirecciona al blog
+  }).then(() => {
+    //Redirecciona al blog
+    window.location.reload();
+    //window.location.href = "./blog.html"; 
   })
 }
 
