@@ -1,6 +1,6 @@
 import { getToken, getUserRole } from "../Registro-Login/JS/auth.js";
 import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
-
+import { titulo, contenido, imagen, post } from "../Registro-Login/JS/dashboard-nav.js";
 
 const API_URL = `${BASE_URL}/rest/v1/POST`;
 
@@ -23,44 +23,76 @@ fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
   });
 
 async function pintarPost(post) {
+  const userRole = await getUserRole();
+  console.log("userRole", userRole);
 
-  const userRole = await getUserRole()
-  console.log("userRole", userRole)
-
-  let buttonsAdmin = ""
+  let buttonsAdmin = "";
   if (userRole == "ADMIN") {
     buttonsAdmin = `
       <div class="botones">
         <button id="btn-editar" type="button">Editar Entrada</button>
         <button id="btn-eliminar" type="button">Eliminar Entrada</button>
       </div>
-      `
+      `;
   }
 
   document.getElementById("resultados").innerHTML = `
   <div class="seccion">
     <img src="${post.url_image}" alt="Imagen del post">
     <h2>${post.title}</h2>
-  </div>
-  <div class="contenido">
+    </div>
+    <div class="contenido">
       <p>${post.content}</p>
       
       ${buttonsAdmin}
       
-  </div>
+    </div>
   `;
 
   //Botones de post
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
 
-  btnEditar.addEventListener('click', function () {
-    console.log("click editar")
-  })
+  btnEditar.addEventListener("click", () => {
+    editarPost(postId);
+  });
 
-  btnEliminar.addEventListener('click', () => {
+  btnEliminar.addEventListener("click", () => {
     eliminarPost(postId);
   });
+}
+
+// Leer inputs
+function leerInputs () {
+  titulo.value;
+  contenido.value;
+  imagen.value;
+
+  return post;
+}
+
+// Botón de editar
+function editarPost(postId) {
+  leerInputs();
+  fetch(`${BASE_URL}/rest/v1/PATCH?id=eq.${postId}`, {
+    method: "PUT",
+    body: JSON.stringify({
+      id: ${postId},
+      title: "PRUEBA",
+      content: "He editado la entrada",
+      url_image: "",
+      userId: ${userId},
+    }),
+    headers: {
+      apikey: APIKEY,
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getToken()}`,
+    },
+  }).then((response) => response.json());
+  .then((json) => console.log(json));
+  .then(() => {
+    window.location.href = "./blog.html"; //Redirecciona al blog
+  })
 }
 
 //Boton de eliminar
@@ -75,11 +107,9 @@ function eliminarPost(postId) {
       apikey: APIKEY,
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`,
-  },
-
-  })
-  .then(() => {
+    },
+  }).then(() => {
     window.location.href = "./blog.html"; //Redireccion
-  })
-};
+  });
+}
 pintarPost();
