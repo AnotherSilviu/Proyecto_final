@@ -74,24 +74,23 @@ function leerInputs () {
 // Botón de editar
 function editarPost(postId) {
   leerInputs();
-  fetch(`${BASE_URL}/rest/v1/PATCH?id=eq.${postId}`, {
-    method: "PUT",
+  fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
+    method: "PATCH",
     body: JSON.stringify({
-      id: ${postId},
       title: "PRUEBA",
       content: "He editado la entrada",
       url_image: "",
-      userId: ${userId},
+      userId: userId,
     }),
     headers: {
       apikey: APIKEY,
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`,
     },
-  }).then((response) => response.json());
-  .then((json) => console.log(json));
-  .then(() => {
+  }).then((response) => response.json())
+  .then((json) => {
     window.location.href = "./blog.html"; //Redirecciona al blog
+    console.log(json)
   })
 }
 
