@@ -69,7 +69,6 @@ async function register() {
     localStorage.setItem("token", result.access_token)
     localStorage.setItem("userId", result.user.id)
 
-
     await createUserRole(inputName.value)
 
     window.location.href = "./dashboard.html"
@@ -105,7 +104,7 @@ export function logout() {
     localStorage.removeItem("token")
     localStorage.removeItem("userId")
 
-    window.location.href = "../bienvenida.html"
+    window.location.href = "../index.html"
 }
 
 export function getToken() {

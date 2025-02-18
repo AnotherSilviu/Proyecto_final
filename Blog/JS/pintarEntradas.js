@@ -1,5 +1,5 @@
-import { getToken, getUserRole, getUserId } from "../Registro-Login/JS/auth.js";
-import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
+import { getToken, getUserRole, getUserId } from "../../Registro-Login/JS/auth.js";
+import { APIKEY, BASE_URL } from "../../Registro-Login/JS/config.js";
 
 const API_URL = `${BASE_URL}/rest/v1/POST`;
 
@@ -15,8 +15,10 @@ const postId = urlParams.get("id");
 
 // Hacemos la petición para obtener los datos del post
 async function loadPost() {
-  const result = await fetch(`${API_URL}?id=eq.${postId}`, { headers: API_HEADERS })
-  const posts = await result.json()
+  const result = await fetch(`${API_URL}?id=eq.${postId}`, {
+    headers: API_HEADERS,
+  });
+  const posts = await result.json();
   return posts[0];
 }
 
@@ -54,6 +56,8 @@ async function pintarPost() {
   const btnEliminar = document.getElementById("btn-eliminar");
   
   btnActualizar.addEventListener("click", actualizarImagen)
+
+  btnActualizar.addEventListener("click", actualizarImagen);
 
   btnEditar.addEventListener("click", () => {
     editarPost(postId);
@@ -105,12 +109,12 @@ function setContentEditable() {
 
 // Botón de editar
 function editarPost(postId) {
-  isEditable = !isEditable
- setContentEditable()
- 
- if(!isEditable) { 
-  savePost(postId)
- }
+  isEditable = !isEditable;
+  setContentEditable();
+
+  if (!isEditable) {
+    savePost(postId);
+  }
 }
 
 async function savePost(postId) {
@@ -134,8 +138,8 @@ async function savePost(postId) {
   }).then(() => {
     //Redirecciona al blog
     window.location.reload();
-    //window.location.href = "./blog.html"; 
-  })
+    //window.location.href = "./blog.html";
+  });
 }
 
 //Boton de eliminar

@@ -348,12 +348,12 @@ main p {
 }
 
 #rutas-turisticas ul {
-  display: flex; /* Convierte las listas en flexbox */
-  justify-content: center; /* Centra los elementos dentro del contenedor */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
-  gap: 20px; /* Espacio entre los elementos */
-  padding: 0; /* Elimina el padding por defecto */
-  margin: 0; /* Elimina el margen por defecto */
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  padding: 0; 
+  margin: 0; 
   list-style: none;
 }
 
@@ -365,25 +365,25 @@ main p {
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   list-style: none;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  box-sizing: border-box; 
 }
-/* Sección principal */
 
+/* Sección principal */
 .linea-ruta-monumental {
-  display: flex; /* Activa Flexbox */
-  justify-content: space-between; /* Alinea los elementos con espacio proporcional */
-  align-items: stretch; /* Centra verticalmente los elementos */
-  gap: 20px; /* Espacio entre las rutas */
-  flex-wrap: nowrap; /* Evita que los elementos pasen a otra línea */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  box-sizing: border-box; /* Asegura que el padding no cree scroll horizontal */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: stretch;
+  gap: 20px; 
+  flex-wrap: nowrap; 
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 /* Estilo para cada ruta en la línea */
 .linea-ruta-monumental li {
-  flex: 1; /* Permite que cada ruta ocupe el mismo espacio */
-  text-align: center; /* Centra el texto dentro de cada elemento */
-  padding: 20px; /* Espaciado interno */
+  flex: 1; 
+  text-align: center; 
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -452,17 +452,17 @@ main p {
 }
 
 .contenedor-secciones {
-  display: flex; /* Activa el modelo flexbox para las secciones */
-  justify-content: space-between; /* Espacio igual entre las secciones */
-  gap: 20px; /* Espaciado entre las secciones guía */
-  flex-wrap: wrap; /* Permite que las secciones pasen a una nueva fila si no caben */
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  box-sizing: border-box; /* Evita que el padding cree scroll horizontal */
+  display: flex; 
+  justify-content: space-between; 
+  gap: 20px; 
+  flex-wrap: wrap;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 /* Estilo para cada sección (clima, seguridad, transporte, etc.) */
 .seccion-guia {
-  flex: 1; /* Hace que todas las secciones ocupen el mismo espacio */
+  flex: 1;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -610,7 +610,7 @@ footer .contacto {
 }
 
 /*Pagina web responsive (para el menu)*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1030px) {
   .barra-navegacion ul {
     display: none; /* Oculta el menú normal */
   }
