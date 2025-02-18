@@ -316,95 +316,108 @@ footer .contacto {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
+
+/* Contenedor del slider */
 .slider-frame {
-  height: calc(100vw * 0.3125);
+  width: 100%; /* Ancho del contenedor al 100% */
+  max-width: 100%; /* Limitar el contenedor al ancho disponible */
+  height: 242px; /* Altura fija */
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /* Evitar que se desborde */
   position: relative;
 }
 
+/* Lista de imágenes */
 .slider-frame ul {
   display: flex;
   margin: 0;
   padding: 0;
-  width: calc(100vw * 10);
+  width: 100%; /* El ancho total es 600% para permitir la animación continua */
   height: 100%;
   animation: slide 50s infinite ease-in-out;
   list-style: none;
 }
 
+/* Cada imagen dentro del slider */
 .slider-frame li {
-  flex: 0 0 100vw;
-  height: auto;
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+  height: 100%;
 }
 
+/* Estilo para las imágenes */
 .slider-frame img {
   display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100%; /* Ajustamos el ancho de las imágenes */
+  height: 100%; /* Ajustamos la altura de las imágenes */
+  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
 }
+
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
-  } /* Primera imagen */
+    transform: translateX(0); /* Empieza con la primera imagen */
+  }
   10% {
     transform: translateX(0);
   }
-
   20% {
-    transform: translateX(-100vw);
-  } /* Segunda imagen */
+    transform: translateX(-100%); /* Mueve a la segunda imagen */
+  }
   30% {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
-
   40% {
-    transform: translateX(-200vw);
-  } /* Tercera imagen */
+    transform: translateX(-200%); /* Mueve a la tercera imagen */
+  }
   50% {
-    transform: translateX(-200vw);
+    transform: translateX(-200%);
   }
-
   60% {
-    transform: translateX(-300vw);
-  } /* Cuarta imagen */
+    transform: translateX(-300%); /* Mueve a la cuarta imagen */
+  }
   70% {
-    transform: translateX(-300vw);
+    transform: translateX(-300%);
   }
-
   80% {
-    transform: translateX(-400vw);
-  } /* Quinta imagen */
+    transform: translateX(-400%); /* Mueve a la quinta imagen */
+  }
   90% {
-    transform: translateX(-400vw);
+    transform: translateX(-400%);
   }
-
   100% {
-    transform: translateX(-500vw);
-  } /* Duplicada (Primera imagen) */
+    transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
+  }
   110% {
-    transform: translateX(-500vw);
+    transform: translateX(-500%);
   }
-
   120% {
-    transform: translateX(-600vw);
-  } /* Segunda vez, vuelve a la primera imagen */
+    transform: translateX(0); /* Regresa a la primera imagen */
+  }
   130% {
-    transform: translateX(-600vw);
-  }
-
-  140% {
-    transform: translateX(-700vw);
-  } /* Y así sucesivamente... */
-  150% {
-    transform: translateX(-700vw);
-  }
-
-  200% {
     transform: translateX(0);
-  } /* Reinicio al principio (ciclo continuo) */
+  }
+  140% {
+    transform: translateX(-100%); /* Y así sucesivamente... */
+  }
+  150% {
+    transform: translateX(-100%);
+  }
+  200% {
+    transform: translateX(0); /* Regresa al principio */
+  }
+}
+
+/*Slider imagenes*/
+@media (max-width: 767px) {
+  /* Ajustar el tamaño del contenedor en pantallas móviles */
+  .slider-frame {
+    height: auto; /* Ajustar la altura para pantallas más pequeñas */
+  }
+
+  /* Para las imágenes, si quieres que se adapten al tamaño móvil */
+  .slider-frame img {
+    object-fit: cover; /* Mantener la proporción y cubrir sin distorsionar */
+  }
 }
 
 /*Pagina web responsive (para el menu)*/
