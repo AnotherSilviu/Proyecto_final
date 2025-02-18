@@ -31,7 +31,7 @@ async function pintarPost() {
   if (userRole == "ADMIN") {
     buttonsAdmin = `
       <div class="botones">
-        <button id="btn-actualizar" type="button">Actualizar Imagen</button>
+        <button id="btn-actualizar" type="button">Actualizar imagen</button>
         <button id="btn-editar" type="button">Editar Entrada</button>
         <button id="btn-eliminar" type="button">Eliminar Entrada</button>
       </div>
@@ -54,6 +54,8 @@ async function pintarPost() {
   const btnActualizar = document.getElementById("btn-actualizar");
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
+  
+  btnActualizar.addEventListener("click", actualizarImagen)
 
   btnActualizar.addEventListener("click", actualizarImagen);
 
@@ -71,7 +73,7 @@ function actualizarImagen() {
   const newImageUrl = prompt("Introduce la nueva URL de la imagen:");
 
   if (newImageUrl) {
-    imagen.src = newImageUrl;
+    imagen.src = newImageUrl; 
 
     fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
       method: "PATCH",
@@ -86,7 +88,7 @@ function actualizarImagen() {
   }
 }
 
-let isEditable = false;
+let isEditable = false
 
 function setContentEditable() {
   const titulo = document.getElementById("titulo");
