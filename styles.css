@@ -152,6 +152,7 @@ header {
   cursor: pointer;
 }
 
+
 main {
   padding: 20px;
   max-width: 1200px;
@@ -192,7 +193,7 @@ article:hover {
 }
 
 /* Disposición y diseño del mapa de provincias */
-.mapa-de-mierda {
+.mapa-clm {
   width: 90%;
   max-width: 418px;
   height: auto;
@@ -209,32 +210,32 @@ article:hover {
   transition: all 0.3s ease;
   position: relative;
 }
-.mapa-de-mierda path {
-  stroke: rgb(121, 74, 13); /* Color de las líneas */
-  stroke-width: 2.3px; /* Ancho de las líneas */
+.mapa-clm path {
+  stroke: rgb(121, 74, 13); 
+  stroke-width: 2.3px; 
 }
-.mapa-de-mierda path:hover {
+.mapa-clm path:hover {
   filter: brightness(0.5);
 }
-.mapa-de-mierda path:hover::after {
-  display: block; /* Muestra el tooltip al hacer hover */
+.mapa-clm path:hover::after {
+  display: block; 
 }
-.mapa-de-mierda svg {
+.mapa-clm svg {
   display: block;
   width: 100%;
   height: auto;
 }
 .tooltip {
-  position: absolute; /* Necesario para que siga al ratón */
-  display: none; /* Oculto por defecto */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 5px 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 14px; /* Tamaño de letra */
-  pointer-events: none; /* No bloquea la interacción del ratón */
-  white-space: nowrap; /* Evita saltos de línea */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  position: absolute; 
+  display: none; 
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 14px; 
+  pointer-events: none; 
+  white-space: nowrap; 
+  z-index: 1000;
 }
 hr {
   border: 0;
@@ -243,9 +244,9 @@ hr {
   margin: 20px 0;
   margin-bottom: 40px;
 }
+/*---------------------------------------------------*/
 
 /* Estilo para todo el footer */
-
 footer {
   background-color: #2d2d2d;
   color: white;
@@ -305,6 +306,7 @@ footer .contacto {
   cursor: pointer;
   border: none;
 }
+/*--------------------------------*/
 
 /*Slider de imágenes*/
 .titulo-slider {
@@ -315,98 +317,123 @@ footer .contacto {
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
+
 .parrafo-slider {
   text-align: center;
   margin-bottom: 20px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
+
+
+/* Contenedor del slider */
 .slider-frame {
-  height: calc(100vw * 0.3125);
+  width: 100%; 
+  max-width: 100%; 
+  height: 242px; 
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /* Evitar que se desborde */
   position: relative;
 }
 
+/* Lista de imágenes */
 .slider-frame ul {
   display: flex;
   margin: 0;
   padding: 0;
-  width: calc(100vw * 10);
+  width: 100%; 
   height: 100%;
   animation: slide 50s infinite ease-in-out;
   list-style: none;
 }
 
+/* Cada imagen dentro del slider */
 .slider-frame li {
-  flex: 0 0 100vw;
-  height: auto;
+  flex: 0 0 100%;
+  height: 100%;
 }
 
+/* Estilo para las imágenes */
 .slider-frame img {
   display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
 }
+/*-----------------------------------------------*/
+
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
-  } /* Primera imagen */
+    transform: translateX(0); /* Empieza con la primera imagen */
+  }
+    transform: translateX(0); /* Empieza con la primera imagen */
+  }
   10% {
     transform: translateX(0);
   }
-
   20% {
-    transform: translateX(-100vw);
-  } /* Segunda imagen */
+    transform: translateX(-100%); /* Mueve a la segunda imagen */
+  }
+    transform: translateX(-100%); /* Mueve a la segunda imagen */
+  }
   30% {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
+    transform: translateX(-100%);
   }
-
   40% {
-    transform: translateX(-200vw);
-  } /* Tercera imagen */
+    transform: translateX(-200%); /* Mueve a la tercera imagen */
+  }
+    transform: translateX(-200%); /* Mueve a la tercera imagen */
+  }
   50% {
-    transform: translateX(-200vw);
+    transform: translateX(-200%);
+    transform: translateX(-200%);
   }
-
   60% {
-    transform: translateX(-300vw);
-  } /* Cuarta imagen */
+    transform: translateX(-300%); /* Mueve a la cuarta imagen */
+  }
+    transform: translateX(-300%); /* Mueve a la cuarta imagen */
+  }
   70% {
-    transform: translateX(-300vw);
+    transform: translateX(-300%);
+    transform: translateX(-300%);
   }
-
   80% {
-    transform: translateX(-400vw);
-  } /* Quinta imagen */
+    transform: translateX(-400%); /* Mueve a la quinta imagen */
+  }
+    transform: translateX(-400%); /* Mueve a la quinta imagen */
+  }
   90% {
-    transform: translateX(-400vw);
+    transform: translateX(-400%);
+    transform: translateX(-400%);
   }
-
   100% {
-    transform: translateX(-500vw);
-  } /* Duplicada (Primera imagen) */
+    transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
+  }
+    transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
+  }
   110% {
-    transform: translateX(-500vw);
+    transform: translateX(-500%);
+    transform: translateX(-500%);
   }
-
   120% {
-    transform: translateX(-600vw);
-  } /* Segunda vez, vuelve a la primera imagen */
+    transform: translateX(0); /* Regresa a la primera imagen */
+  }
+    transform: translateX(0); /* Regresa a la primera imagen */
+  }
   130% {
-    transform: translateX(-600vw);
+    transform: translateX(0);
+    transform: translateX(0);
   }
-
   140% {
-    transform: translateX(-700vw);
-  } /* Y así sucesivamente... */
-  150% {
-    transform: translateX(-700vw);
+    transform: translateX(-100%); /* Y así sucesivamente... */
   }
-
+    transform: translateX(-100%); /* Y así sucesivamente... */
+  }
+  150% {
+    transform: translateX(-100%);
+  }
   200% {
     transform: translateX(0);
   } /* Reinicio al principio (ciclo continuo) */
@@ -415,11 +442,11 @@ footer .contacto {
 /*Pagina web responsive (para el menu)*/
 @media screen and (max-width: 1030px) {
   .barra-navegacion ul {
-    display: none; /* Oculta el menú normal */
+    display: none; 
   }
 
   .menu {
-    display: block; /* Asegurar que el botón de menú aparezca */
+    display: block; 
   }
 }
 @media screen and (max-height: 450px) {

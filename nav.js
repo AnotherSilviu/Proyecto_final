@@ -1,6 +1,4 @@
 // Funciones para abrir y cerrar el menú de navegación
-
-
 function openNav() {
   console.log("Abrir menú");
   let menu = document.getElementById("mobile-menu");
@@ -24,9 +22,9 @@ if(localStorage.getItem("token")) {
   // CAMBIO CON PANTALLA COMPLETA
   document.getElementById("boton-formulario").innerHTML = "PANEL DE USUARIO";
   document.getElementById("boton-formulario").setAttribute("target", "_self");
-  document.getElementById("boton-formulario").setAttribute("href", "Registro-Login/dashboard.html")
+  document.getElementById("boton-formulario").setAttribute("href", "../Registro-Login/dashboard.html")
   // CAMBIO CON PANTALLA REDUCIDA
   document.getElementById("boton-formulario-user").innerHTML = "PANEL DE USUARIO";
   document.getElementById("boton-formulario-user").setAttribute("target", "_self");
-  document.getElementById("boton-formulario-user").setAttribute("href", "Registro-Login/dashboard.html")
+  document.getElementById("boton-formulario-user").setAttribute("href", "../Registro-Login/dashboard.html")
 }

@@ -1,4 +1,4 @@
-//Script del mapa 
+//Script del mapa-clm 
 const paths = document.querySelectorAll("path");
 const tooltip = document.querySelector(".tooltip");
 
