@@ -2,57 +2,57 @@
 import { getToken } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
+const secciones = {
+  perfil: `
+    <section class="seccion-perfil">
+      <h3>Mi Perfil</h3>
+      <p><strong>Nombre y Apellidos:</strong> Juan Pérez</p>
+      <p><strong>Correo Electrónico:</strong> juanperez@email.com</p>
+      <p><strong>Última actividad:</strong> Hace 2 días</p>
+    </section>
+  `,
+  blog: `
+    <section class="seccion-blog">
+      <h3>Mis Entradas de Blog</h3>
+      <ul id="entradas"></ul>
+      <button type="button" id="btn-añadir">Añadir entrada</button>
+      <div id="inputs-añadir" style="display: none;">
+        <label> Título
+          <input type="text" id="input-titulo" placeholder="Añade el título del post">
+        </label>
+        <label> Contenido
+          <textarea id="input-texto" placeholder="Redacta tu post"></textarea>
+        </label>
+        <label> Imagen del post
+          <input type="text" id="input-img" placeholder="Añade la URL de la imagen">
+        </label>
+        <button id="btn-publicar">Publicar post</button>
+      </div>
+    </section>
+  `,
+  comentarios: `
+    <section class="seccion-comentarios">
+      <h3>Mis Comentarios</h3>
+      <p>Historial de comentarios realizados en el blog.</p>
+    </section>
+  `,
+  configuracion: `
+    <section class="seccion-configuracion">
+      <h3>Configuración</h3>
+      <p>Ajustes de tu cuenta y preferencias.</p>
+    </section>
+  `,
+  ayuda: `
+    <section class="seccion-ayuda">
+      <h3>Ayuda</h3>
+      <p>Ponte en contacto con soporte si tienes dudas.</p>
+    </section>
+  `,
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav-link");
   const contenedor = document.getElementById("contenedor-principal");
-
-  const secciones = {
-    perfil: `
-      <section class="seccion-perfil">
-        <h3>Mi Perfil</h3>
-        <p><strong>Nombre y Apellidos:</strong> Juan Pérez</p>
-        <p><strong>Correo Electrónico:</strong> juanperez@email.com</p>
-        <p><strong>Última actividad:</strong> Hace 2 días</p>
-      </section>
-    `,
-    blog: `
-      <section class="seccion-blog">
-        <h3>Mis Entradas de Blog</h3>
-        <ul id="entradas"></ul>
-        <button type="button" id="btn-añadir">Añadir entrada</button>
-        <div id="inputs-añadir" style="display: none;">
-          <label> Título
-            <input type="text" id="input-titulo" placeholder="Añade el título del post">
-          </label>
-          <label> Contenido
-            <textarea id="input-texto" placeholder="Redacta tu post"></textarea>
-          </label>
-          <label> Imagen del post
-            <input type="text" id="input-img" placeholder="Añade la URL de la imagen">
-          </label>
-          <button id="btn-publicar">Publicar post</button>
-        </div>
-      </section>
-    `,
-    comentarios: `
-      <section class="seccion-comentarios">
-        <h3>Mis Comentarios</h3>
-        <p>Historial de comentarios realizados en el blog.</p>
-      </section>
-    `,
-    configuracion: `
-      <section class="seccion-configuracion">
-        <h3>Configuración</h3>
-        <p>Ajustes de tu cuenta y preferencias.</p>
-      </section>
-    `,
-    ayuda: `
-      <section class="seccion-ayuda">
-        <h3>Ayuda</h3>
-        <p>Ponte en contacto con soporte si tienes dudas.</p>
-      </section>
-    `,
-  };
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {

@@ -151,3 +151,9 @@ export async function getUserRole() {
  
     return null
 }
+
+const tok = getToken()
+const url = window.location.href
+if(tok && isUserLogged(tok, getUserId()) && url.includes("login.html")) {
+    window.location.href = "./dashboard.html"
+}
