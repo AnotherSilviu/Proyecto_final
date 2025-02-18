@@ -1,5 +1,6 @@
 // Funciones para abrir y cerrar el menú de navegación
 
+
 function openNav() {
   console.log("Abrir menú");
   let menu = document.getElementById("mobile-menu");
@@ -16,4 +17,8 @@ function closeNav() {
   setTimeout(() => {
     menu.style.display = "none";
   }, 300);
+}
+
+if(localStorage.getItem("token")) {
+  document.getElementById("boton-formulario").innerHTML = "Panel de usuario";
 }
