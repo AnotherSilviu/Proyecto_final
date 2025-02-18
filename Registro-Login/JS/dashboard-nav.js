@@ -1,4 +1,4 @@
-import { getToken, getUserRole } from "./auth.js";
+import { getToken } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
 // Secciones del contenido
@@ -6,9 +6,6 @@ const secciones = {
   perfil: `
     <section class="seccion-perfil">
       <h3>Mi Perfil</h3>
-      <p><strong>Nombre y Apellidos:</strong> Juan Pérez</p>
-      <p><strong>Correo Electrónico:</strong> juanperez@email.com</p>
-      <p><strong>Última actividad:</strong> Hace 2 días</p>
     </section>
   `,
   blog: '',
@@ -23,14 +20,85 @@ const secciones = {
       <h3>Ayuda</h3>
       <p>Ponte en contacto con nosotros si tienes dudas.</p>
       <button id="btn-contacto">
-        <a href="../formulario.html" target="_blank">Contacto</a>
+        <a href="../formulario.html" target="_blank">CONTACTO</a>
       </button>
     </section>
   `,
 };
 
+// Obtener datos del usuario
+async function obtenerInfoUsuario(userId) {
+  try {
+    const response = await fetch(`${BASE_URL}/rest/v1/roles?user_id=eq.${userId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": APIKEY,
+        "Authorization": `Bearer ${APIKEY}`
+      }
+    });
+
+    const data = await response.json();
+    return data.length > 0 ? data[0] : null;
+  } catch (error) {
+    console.error("Error al obtener datos del usuario:", error);
+    return null;
+  }
+}
+
+// Actualizar el nombre del usuario en la interfaz
+async function actualizarNombreUsuario() {
+  const userId = localStorage.getItem("userId");
+
+  if (!userId) {
+    console.error("No hay usuario logueado.");
+    return;
+  }
+
+  const userData = await obtenerInfoUsuario(userId);
+  
+  if (!userData) {
+    console.error("No se pudo obtener la información del usuario.");
+    return;
+  }
+
+  const nombreUsuario = userData.user_name || "Usuario desconocido";
+  document.getElementById("nombre-usuario").textContent = nombreUsuario;
+}
+
+// Mostrar perfil del usuario
+async function mostrarPerfil() {
+  const userId = localStorage.getItem("userId");
+
+  if (!userId) {
+    console.error("No hay usuario logueado.");
+    return;
+  }
+
+  const userData = await obtenerInfoUsuario(userId);
+
+  if (!userData) {
+    console.error("No se pudo obtener la información del usuario.");
+    return;
+  }
+
+  secciones.perfil = `
+    <section class="seccion-perfil">
+      <h3>Mi Perfil</h3>
+      <p><strong>Nombre y Apellidos:</strong> ${userData.user_name || "Desconocido"}</p>
+      <p><strong>Correo Electrónico:</strong> ${userData.email || "No disponible"}</p>
+      <p><strong>Rol:</strong> ${userData.role || "Usuario"}</p>
+    </section>
+  `; //DEJO EL ROL PARA GUIARNOS
+
+  document.getElementById("contenedor-principal").innerHTML = secciones.perfil;
+}
+
+//Ocultar blog para los USER
 async function panelAdmin() {
-  const userRole = await getUserRole();
+  const userId = localStorage.getItem("userId");
+  const userData = await obtenerInfoUsuario(userId);
+  const userRole = userData ? userData.role : null;
   console.log("userRole", userRole);
   const blogLink = document.querySelector('a[data-section="blog"]').parentElement;
 
@@ -42,7 +110,7 @@ async function panelAdmin() {
     <section class="seccion-blog">
       <h3>Mis Entradas de Blog</h3>
       <ul id="entradas"></ul>
-      <button type="button" id="btn-añadir">Añadir entrada</button>
+      <button type="button" id="btn-añadir">AÑADIR ENTRADA</button>
       <div id="inputs-añadir" style="display: none;">
         <label> Título
           <input type="text" id="input-titulo" placeholder="Añade el título del post">
@@ -53,25 +121,27 @@ async function panelAdmin() {
         <label> Imagen del post
           <input type="text" id="input-img" placeholder="Añade la URL de la imagen">
         </label>
-        <button id="btn-publicar">Publicar post</button>
+        <button id="btn-publicar">PUBLICAR POST</button>
       </div>
     </section>
   `;
   }
 }
 
-// Configuración de eventos de navegación
+// Configuración de la navegación
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav-link");
   const contenedor = document.getElementById("contenedor-principal");
 
   panelAdmin();
+  mostrarPerfil();
+  actualizarNombreUsuario();
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       const section = this.getAttribute("data-section");
-      contenedor.innerHTML = secciones[section] || "<p>Sección solo disponible para Administradores</p>";
+      contenedor.innerHTML = secciones[section] || "<p>Sección no disponible</p>";
 
       if (section === "blog") {
         configurarBlog(); 
@@ -87,12 +157,12 @@ function configurarBlog() {
   const btnAñadir = document.getElementById("btn-añadir");
   const btnPublicar = document.getElementById("btn-publicar");
 
-  // Mostrar el formulario al hacer clic en el botón de añadir
+  // Mostrar el formulario al hacer clic en el botón añadir
   btnAñadir.addEventListener("click", function () {
     formulario.style.display = "block";
   });
 
-  // Publicar el post al hacer clic en el botón de publicar
+  // Publicar el post al hacer clic en el botón publicar
   btnPublicar.addEventListener("click", async function () {
     const titulo = document.getElementById("input-titulo").value;
     const contenido = document.getElementById("input-texto").value;
@@ -113,8 +183,7 @@ function configurarBlog() {
       date: fecha,
       content: contenido,
     };
-  
-    // Publicamos el post
+
     await añadirPost(post);
   });
 }

@@ -348,7 +348,7 @@ padding: 0 20px;
   }
 
     /*Pagina web responsive (para el menu)*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1030px) {
   .barra-navegacion ul {
       display: none; /* Oculta el menú normal */
   }

@@ -1,5 +1,5 @@
-import { getToken, getUserRole, getUserId } from "../Registro-Login/JS/auth.js";
-import { APIKEY, BASE_URL } from "../Registro-Login/JS/config.js";
+import { getToken, getUserRole, getUserId } from "../../Registro-Login/JS/auth.js";
+import { APIKEY, BASE_URL } from "../../Registro-Login/JS/config.js";
 
 const API_URL = `${BASE_URL}/rest/v1/POST`;
 

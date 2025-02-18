@@ -78,6 +78,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Poppins';
   }
   
   .submit-group button:hover {

@@ -104,7 +104,7 @@ export function logout() {
     localStorage.removeItem("token")
     localStorage.removeItem("userId")
 
-    window.location.href = "../bienvenida.html"
+    window.location.href = "../index.html"
 }
 
 export function getToken() {
