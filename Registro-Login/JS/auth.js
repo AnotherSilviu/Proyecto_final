@@ -69,9 +69,10 @@ async function register() {
     localStorage.setItem("token", result.access_token)
     localStorage.setItem("userId", result.user.id)
 
-    window.location.href = "./dashboard.html"
 
-    configurarBlog(result.user.id)
+    await createUserRole(inputName.value)
+
+    window.location.href = "./dashboard.html"
 }
 
 export async function isUserLogged(access_token, userId) {
@@ -118,6 +119,38 @@ export function getUserId() {
 const btnLogout = document.getElementById("logout");
 if (btnLogout) {
   btnLogout.addEventListener("click", logout);
+}
+
+
+
+export async function createUserRole(username) {
+
+    const access_token = getToken()
+    const userId = getUserId()
+
+    if(!access_token || !userId ) {
+        return null
+    }
+
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "apikey": APIKEY,
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${access_token}`
+        },
+        body: JSON.stringify({
+            "username": username, 
+            "user_id": userId,
+            "role": "USER"
+        }),
+    };
+
+    const response = await fetch(`${BASE_URL}/rest/v1/roles`, requestOptions) 
+    if(!response.ok) {
+        return
+    }
+
 }
 
 
