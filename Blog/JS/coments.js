@@ -12,25 +12,35 @@ const API_HEADERS = {
 //Obtenemos el id del post desde la URL
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("id");
-const user_name = urlParams.get("user_name")
 
 async function loadComents() {
-  const result = await fetch(`${API_URL}?post_id=eq.${postId}`, {
-    headers: API_HEADERS,
-  });
-  const coments = await result.json();
-  return coments;
+    const result = await fetch(`${API_URL}?post_id=eq.${postId}`, {
+        headers: API_HEADERS,
+        });
+
+        const coments = await result.json();
+        return coments;
 }
 
 async function pintarComents() {
-  const coments = await loadComents();
-
-  document.getElementById("lista-comentarios").innerHTML = `
-  <div class="coments">
-    <h3 id="name">${user_name}</h3>
-    <p id="date">${coments.date}</p>
-    <p id="review">${coments.review}</p>
-    </div>
-  `;
-}
+    const comments = await loadComents();
+    const comentariosContainer = document.getElementById("lista-comentarios");
+    //Le decimos que si no hay comentarios, pinte que no hay nada
+    if (comments.length === 0) {
+      comentariosContainer.innerHTML = "<p>No hay comentarios aún.</p>";
+      return;
+    }
+    //Estructura de los comentarios
+    comentariosContainer.innerHTML = comments
+      .map(
+        (comment) => `
+        <div class="coments">
+          <h3 id="name">${comment.user_name}</h3>
+          <p id="date">${comment.date}</p> 
+          <p id="review">${comment.review}</p>
+        </div>
+      `
+      )
+      .join("");
+  }
 pintarComents()
