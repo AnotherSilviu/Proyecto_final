@@ -364,18 +364,20 @@ footer .contacto {
   margin-top: 10px;
 }
 
-#input-buscar {
+#buscador {
   width: 80%;
   padding: 10px;
   font-size: 16px;
 }
 
-.boton-buscar {
+#boton-buscar {
   padding: 10px;
   background-color: #f4f4f4;
   color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
 /*Pagina web responsive (para el menu)*/

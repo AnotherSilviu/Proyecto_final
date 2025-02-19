@@ -165,7 +165,6 @@ export async function getUserRole() {
 
     const result = await response.json()
     if(result.length > 0) {
-        console.log(result[0])
         return result[0]
     }
     return null

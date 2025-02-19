@@ -26,8 +26,6 @@ async function pintarPost() {
   const post = await loadPost();
   const uRole = await getUserRole();
   const userRole = uRole.role
-
-  console.log("userRole", userRole);
   let buttonsAdmin = "";
   if (userRole == "ADMIN") {
     buttonsAdmin = `
@@ -46,6 +44,10 @@ async function pintarPost() {
     </div>
     <div id="contenido" class="contenido">
       ${post.content}
+    </div>
+    <div class="datos">
+      <p id="usuario">Redactado por: ${post.user_name}</p>
+      <p id="fecha">${post.date}</p>
     </div>
 
     ${buttonsAdmin}
@@ -126,11 +128,14 @@ function editarPost(postId) {
 async function savePost(postId) {
   const titulo = document.getElementById("titulo");
   const contenido = document.getElementById("contenido");
+  const uRole = await getUserRole();
+  const userName = uRole.user_name;
 
   const post = {
     title: titulo.innerText,
     content: contenido.innerText,
     user_id: getUserId(),
+    user_name: userName
   };
 
   fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
