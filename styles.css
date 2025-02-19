@@ -325,12 +325,14 @@ footer .contacto {
   font-family: "Poppins", sans-serif;
 }
 
+
+/* Contenedor del slider */
 .slider-frame {
   width: 100%; 
   max-width: 100%; 
   height: 242px; 
   margin: 0 auto;
-  overflow: hidden; 
+  overflow: hidden; /* Evitar que se desborde */
   position: relative;
 }
 
@@ -377,6 +379,7 @@ footer .contacto {
   40% {
     transform: translateX(-200%); /* Mueve a la tercera imagen */
   }
+
   50% {
     transform: translateX(-200%);
   }
@@ -411,18 +414,8 @@ footer .contacto {
     transform: translateX(-100%);
   }
   200% {
-    transform: translateX(0); /* Regresa al principio */
-  }
-}
-
-/*Slider imagenes*/
-@media (max-width: 767px) {
-  .slider-frame {
-    height: auto;
-  }
-  .slider-frame img {
-    object-fit: cover;
-  }
+    transform: translateX(0);
+  } /* Reinicio al principio (ciclo continuo) */
 }
 
 /*Pagina web responsive (para el menu)*/
