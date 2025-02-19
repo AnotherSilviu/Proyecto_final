@@ -152,7 +152,6 @@ header {
   cursor: pointer;
 }
 
-
 main {
   padding: 20px;
   max-width: 1200px;
@@ -211,14 +210,14 @@ article:hover {
   position: relative;
 }
 .mapa-clm path {
-  stroke: rgb(121, 74, 13); 
-  stroke-width: 2.3px; 
+  stroke: rgb(121, 74, 13);
+  stroke-width: 2.3px;
 }
 .mapa-clm path:hover {
   filter: brightness(0.5);
 }
 .mapa-clm path:hover::after {
-  display: block; 
+  display: block;
 }
 .mapa-clm svg {
   display: block;
@@ -226,15 +225,15 @@ article:hover {
   height: auto;
 }
 .tooltip {
-  position: absolute; 
-  display: none; 
+  position: absolute;
+  display: none;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 14px; 
-  pointer-events: none; 
-  white-space: nowrap; 
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  pointer-events: none;
+  white-space: nowrap;
   z-index: 1000;
 }
 hr {
@@ -325,12 +324,11 @@ footer .contacto {
   font-family: "Poppins", sans-serif;
 }
 
-
 /* Contenedor del slider */
 .slider-frame {
-  width: 100%; 
-  max-width: 100%; 
-  height: 242px; 
+  width: 100%;
+  max-width: 100%;
+  height: 242px;
   margin: 0 auto;
   overflow: hidden; /* Evitar que se desborde */
   position: relative;
@@ -341,7 +339,7 @@ footer .contacto {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   animation: slide 50s infinite ease-in-out;
   list-style: none;
@@ -356,99 +354,93 @@ footer .contacto {
 /* Estilo para las imágenes */
 .slider-frame img {
   display: block;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 /*-----------------------------------------------*/
-
 
 @keyframes slide {
   0% {
     transform: translateX(0); /* Empieza con la primera imagen */
   }
-    transform: translateX(0); /* Empieza con la primera imagen */
-  }
+
   10% {
     transform: translateX(0);
   }
+
   20% {
     transform: translateX(-100%); /* Mueve a la segunda imagen */
   }
-    transform: translateX(-100%); /* Mueve a la segunda imagen */
-  }
+
   30% {
     transform: translateX(-100%);
-    transform: translateX(-100%);
   }
+
   40% {
     transform: translateX(-200%); /* Mueve a la tercera imagen */
   }
-    transform: translateX(-200%); /* Mueve a la tercera imagen */
-  }
+
   50% {
     transform: translateX(-200%);
-    transform: translateX(-200%);
   }
+
   60% {
     transform: translateX(-300%); /* Mueve a la cuarta imagen */
   }
-    transform: translateX(-300%); /* Mueve a la cuarta imagen */
-  }
+
   70% {
     transform: translateX(-300%);
-    transform: translateX(-300%);
   }
+
   80% {
     transform: translateX(-400%); /* Mueve a la quinta imagen */
   }
-    transform: translateX(-400%); /* Mueve a la quinta imagen */
-  }
+
   90% {
     transform: translateX(-400%);
-    transform: translateX(-400%);
   }
+
   100% {
     transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
   }
-    transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
-  }
+
   110% {
     transform: translateX(-500%);
-    transform: translateX(-500%);
   }
+
   120% {
     transform: translateX(0); /* Regresa a la primera imagen */
   }
-    transform: translateX(0); /* Regresa a la primera imagen */
-  }
+
   130% {
     transform: translateX(0);
-    transform: translateX(0);
   }
+
   140% {
     transform: translateX(-100%); /* Y así sucesivamente... */
   }
-    transform: translateX(-100%); /* Y así sucesivamente... */
-  }
+
   150% {
     transform: translateX(-100%);
   }
+
   200% {
     transform: translateX(0);
   } /* Reinicio al principio (ciclo continuo) */
 }
 
 /*Pagina web responsive (para el menu)*/
+
 @media screen and (max-width: 1030px) {
   .barra-navegacion ul {
-    display: none; 
+    display: none;
   }
-
   .menu {
-    display: block; 
+    display: block;
   }
 }
+
 @media screen and (max-height: 450px) {
   .barra-navegacion .overlay a {
     font-size: 20px;
