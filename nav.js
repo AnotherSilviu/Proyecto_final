@@ -23,6 +23,7 @@ if(localStorage.getItem("token")) {
   document.getElementById("boton-formulario").innerHTML = "PANEL DE USUARIO";
   document.getElementById("boton-formulario").setAttribute("target", "_self");
   document.getElementById("boton-formulario").setAttribute("href", "../Registro-Login/dashboard.html")
+
   // CAMBIO CON PANTALLA REDUCIDA
   document.getElementById("boton-formulario-user").innerHTML = "PANEL DE USUARIO";
   document.getElementById("boton-formulario-user").setAttribute("target", "_self");
