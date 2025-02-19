@@ -139,9 +139,7 @@ export async function createUserRole(username) {
     if(!response.ok) {
         return
     }
-
 }
-
 
 export async function getUserRole() {
     const access_token = getToken()
@@ -166,8 +164,9 @@ export async function getUserRole() {
     }
 
     const result = await response.json()
-    if(result[0].role) {
-        return result[0].role
+    if(result.length > 0) {
+        console.log(result[0])
+        return result[0]
     }
     return null
 }

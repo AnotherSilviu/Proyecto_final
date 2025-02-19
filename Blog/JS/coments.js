@@ -1,4 +1,4 @@
-import { getToken, getUserId } from "../../Registro-Login/JS/auth.js";
+import { getUserId , getToken , getUserRole } from "../../Registro-Login/JS/auth.js";
 import { APIKEY, BASE_URL } from "../../Registro-Login/JS/config.js";
 
 const API_URL = `${BASE_URL}/rest/v1/COMENTS`;
@@ -45,39 +45,49 @@ async function pintarComents() {
     )
     .join("");
 }
-
 pintarComents();
 
-//Escribir comentarios 
-async function añadirComents(comment) {
-    const cajaComentarios = document.getElementById("texto-comentario").value;
+const formComment = document.getElementById("form-comentario");
 
-    const userId = localStorage.getItem("userId") || getUserId();
-    const fecha = new Date().toISOString().split("T")[0];
+formComment.addEventListener("submit", async (event) => {
+    event.preventDefault(); //Para que la página no se recargue
 
-    await fetch(API_URL, {
-      method: "POST",
-      headers: API_HEADERS,
-      body: JSON.stringify({
-        user_id: userId,
-        user_name: userId,
-        post_id: postId,     
-        date: fecha,
-        review: cajaComentarios
-      }),
-    });
-    pintarComents();
-    vaciarComment();
-  }
- 
-function vaciarComment () {
-    document.getElementById("texto.comentario").value = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const btnEnviar = document.getElementById("enviar-comentario");
-    if (btnEnviar) {
-        btnEnviar.addEventListener("click", añadirComents);
+    const textComment = document.getElementById("texto-comentario").value;
+    if(!textComment.trim()) {
+        alert("por favor, ingresa un comentario antes de enviarlo");
+        return;
     }
-    pintarComents();
+
+    const userId = getUserId();
+    const userName = await getUserRole().user_name;
+    const date = new Date().toISOString().split("T")[0];
+
+    const newComment = {
+        user_id: userId,
+        user_name: userName,
+        post_id: postId, 
+        date: date,
+        review: textComment,
+    };
+
+    await fetch(`${BASE_URL}/rest/v1/COMENTS`, {
+        method: "POST",
+        headers: {
+            apikey: APIKEY,
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getToken()}`, 
+        },
+        body: JSON.stringify(newComment),
+    })
+    .then(data => {
+      if (data.error) {
+        console.error("Error de servidor:", data.error);
+      } else {
+        console.log("Comentario agregado:", data);
+        pintarComents();
+      }
+    })
+    document.getElementById("texto-comentario").value = "";
+    
 })
+pintarComents();

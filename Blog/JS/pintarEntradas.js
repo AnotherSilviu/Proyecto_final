@@ -24,7 +24,7 @@ async function loadPost() {
 
 async function pintarPost() {
   const post = await loadPost();
-  const userRole = await getUserRole();
+  const userRole = await getUserRole().role;
   console.log("userRole", userRole);
 
   let buttonsAdmin = "";
@@ -54,10 +54,8 @@ async function pintarPost() {
   const btnActualizar = document.getElementById("btn-actualizar");
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
-  
-  btnActualizar.addEventListener("click", actualizarImagen)
 
-  btnActualizar.addEventListener("click", actualizarImagen);
+  if (btnActualizar) {btnActualizar.addEventListener("click", actualizarImagen)}
 
   btnEditar.addEventListener("click", () => {
     editarPost(postId);
