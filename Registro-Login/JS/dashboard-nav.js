@@ -13,6 +13,7 @@ const secciones = {
     <section class="seccion-comentarios">
       <h3>Mis Comentarios</h3>
       <p>Historial de comentarios realizados en el blog.</p>
+      <div id="comments-user"></div>
     </section>
   `,
   ayuda: `
@@ -147,6 +148,10 @@ document.addEventListener("DOMContentLoaded", function () {
         configurarBlog(); 
         loadAllPosts(); 
       }
+
+      if (section === "comentarios") {
+        loadComments();
+      }
     });
   });
 });
@@ -250,6 +255,39 @@ function loadAllPosts() {
               <a href="../Blog/entrada.html?id=${post.id}">Leer más⇒</a>
             </div>
           </li>
+        `;
+      });
+    });
+}
+
+// Función para cargar los comentarios
+function loadComments() {
+  const API_URL = `${BASE_URL}/rest/v1/COMENTS`;
+  const API_HEADERS = {
+    "Content-Type": "application/json",
+    "apikey": APIKEY,
+    "Authorization": `Bearer ${APIKEY}`,
+  };
+
+  const userId = localStorage.getItem("userId");
+
+  fetch(API_URL, { headers: API_HEADERS })
+    .then((response) => response.json())
+    .then((comments) => {
+      const commentsList = document.getElementById("comments-user");
+      commentsList.innerHTML = ""; // Limpiar lista antes de mostrar los comentarios
+
+      // Filtrar los comentarios por usuario (userId)
+      const userComments = comments.filter(comment => comment.user_id === userId);
+
+      // Mostrar solo los posts del usuario
+      userComments.forEach((comment) => {
+        commentsList.innerHTML += `
+          <div class="coments">
+          <h3 id="name">${comment.user_name}</h3>
+          <p id="date">${comment.date || new Date().toLocaleDateString()}</p> 
+          <p id="review">${comment.review}</p>
+        </div>
         `;
       });
     });

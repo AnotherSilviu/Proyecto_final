@@ -7,6 +7,7 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="stylesForm.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <h2>FORMULARIO DE CONTACTO</h2>
@@ -58,6 +59,42 @@
         <button id="boton-limpiar" type="reset">Limpiar</button>
         <button id="boton-enviar" href="destino.html">Enviar</button>
     </form>
+
+    <script>
+        (function() {
+            emailjs.init('omuOFmoFDpLa0mNQ8');
+        })();
+        
+        function enviarCorreo(event) {
+            event.preventDefault();  // Prevenir el comportamiento por defecto del formulario (recargar la página)
+            
+            let nombre = document.getElementById("nombre").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let telefono = document.getElementById("telefono").value;
+            let email = document.getElementById("email").value;
+            let asunto = document.getElementById("asunto").value;
+            let mensaje = document.getElementById("mensaje").value;
+
+            let templateParams = {
+                nombre: nombre,
+                apellidos: apellidos,
+                telefono: telefono,
+                email: email,
+                asunto: asunto,
+                mensaje: mensaje
+            };
+
+            emailjs.send('service_ugmqwp8', 'template_bn9d69r', templateParams)
+                .then(function(response) {
+                    console.log('Correo enviado exitosamente:', response);
+                    alert('¡Tu mensaje ha sido enviado!');
+                    document.getElementById("formulario-contacto").reset();
+                }, function(error) {
+                    console.log('Error al enviar el correo:', error);
+                    alert('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
+                });
+        }
+    </script>
     
 </body>
 </html>
