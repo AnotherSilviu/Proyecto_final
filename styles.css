@@ -368,12 +368,14 @@ footer .contacto {
   10% {
     transform: translateX(0);
   }
+
   20% {
     transform: translateX(-100%); /* Mueve a la segunda imagen */
   }
   30% {
     transform: translateX(-100%);
   }
+
   40% {
     transform: translateX(-200%); /* Mueve a la tercera imagen */
   }
@@ -381,51 +383,58 @@ footer .contacto {
   50% {
     transform: translateX(-200%);
   }
+
   60% {
     transform: translateX(-300%); /* Mueve a la cuarta imagen */
   }
   70% {
     transform: translateX(-300%);
   }
+
   80% {
     transform: translateX(-400%); /* Mueve a la quinta imagen */
   }
   90% {
     transform: translateX(-400%);
   }
+
   100% {
     transform: translateX(-500%); /* Mueve a la sexta imagen (duplicada) */
   }
   110% {
     transform: translateX(-500%);
   }
+
   120% {
     transform: translateX(0); /* Regresa a la primera imagen */
   }
   130% {
     transform: translateX(0);
   }
+
   140% {
     transform: translateX(-100%); /* Y así sucesivamente... */
   }
   150% {
     transform: translateX(-100%);
   }
+
   200% {
     transform: translateX(0);
   } /* Reinicio al principio (ciclo continuo) */
 }
 
 /*Pagina web responsive (para el menu)*/
+
 @media screen and (max-width: 1030px) {
   .barra-navegacion ul {
     display: none;
   }
-
   .menu {
     display: block;
   }
 }
+
 @media screen and (max-height: 450px) {
   .barra-navegacion .overlay a {
     font-size: 20px;

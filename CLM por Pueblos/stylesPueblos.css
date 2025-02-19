@@ -294,7 +294,6 @@ main {
 .texto-castillos {
   visibility: hidden;
   opacity: 0;
-  /*Lo de arriba hace que el texto no sea visible y no tenga opacidad, para que aparezca invisible*/
   background-color: rgba(45, 45, 45, 0.7);
   position: absolute;
   color: #f4f4f4;
@@ -305,14 +304,13 @@ main {
   left: 50%;
   bottom: 0px;
   transform: translateX(-50%);
-  width: 100%;
+  width: 550px;
   height: 100%;
   border-radius: 5px;
   box-sizing: border-box;
-  /*transition: opacity 0.3s ease, visibility 0s 0.3s;  Transición suave si la quieres*/
+  /* transition: opacity 0.3s ease, visibility 0s 0.3s; */
 }
 
-/* Para que funcione el hover tiene que funcionar en el contenedor .box-nat*/
 .box-castillos:hover .texto-castillos {
   visibility: visible;
   opacity: 1;
@@ -338,7 +336,7 @@ main {
 }
 
 .slider img {
-  width: 100%;
+  width: 550px;
   height: 100%;
   border-radius: 3px;
   flex: 1 0 100%;
@@ -354,7 +352,7 @@ main {
   position: relative;
 }
 
-.slider img:hover {
+.box-castillos:hover {
   cursor: pointer;
   background-color: #2d2d2d;
 }
@@ -478,6 +476,8 @@ main {
 
 .box-nat {
   position: relative;
+  overflow: hidden;
+  height: 180px;
 }
 
 .img-naturaleza {
@@ -514,13 +514,13 @@ main {
 /* Para que funcione el hover tiene que funcionar en el contenedor .box-nat*/
 .box-nat:hover
 .naturaleza-texto {
+  cursor: pointer;
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
 }
 
 .img-naturaleza:hover {
-  cursor: pointer;
   background-color: #2d2d2d;
 }
 
