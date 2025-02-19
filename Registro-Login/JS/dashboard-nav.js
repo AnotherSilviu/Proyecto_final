@@ -8,7 +8,7 @@ const secciones = {
       <h3>Mi Perfil</h3>
     </section>
   `,
-  blog: '',
+  blog: "",
   comentarios: `
     <section class="seccion-comentarios">
       <h3>Mis Comentarios</h3>
@@ -30,20 +30,59 @@ const secciones = {
 // Obtener datos del usuario
 async function obtenerInfoUsuario(userId) {
   try {
-    const response = await fetch(`${BASE_URL}/rest/v1/roles?user_id=eq.${userId}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "apikey": APIKEY,
-        "Authorization": `Bearer ${APIKEY}`
+    const response = await fetch(
+      `${BASE_URL}/rest/v1/roles?user_id=eq.${userId}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: APIKEY,
+          Authorization: `Bearer ${APIKEY}`,
+        },
       }
-    });
+    );
 
     const data = await response.json();
     return data.length > 0 ? data[0] : null;
   } catch (error) {
     console.error("Error al obtener datos del usuario:", error);
     return null;
+  }
+}
+
+// Función para editar el nombre del usuario
+async function editarNombrede(id) {
+  // Pedir al usuario el nuevo nombre a través de un prompt
+  const nuevoNombre = prompt("Dime tu nuevo nombre y apellidos:");
+
+  if (nuevoNombre) {
+    // Si el usuario ha proporcionado un nombre, hacemos una solicitud para actualizarlo
+    try {
+      const respuesta = await fetch(`${BASE_URL}/rest/v1/roles?id=eq.${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: APIKEY,
+          Authorization: `Bearer ${APIKEY}`,
+        },
+        body: JSON.stringify({
+          user_name: nuevoNombre, // Actualizamos el campo user_name
+        }),
+      });
+
+      if (respuesta.ok) {
+        // Si la respuesta es exitosa, actualizamos la interfaz
+        alert("Nombre actualizado correctamente.");
+        actualizarNombreUsuario(); // Llamamos a la función para actualizar el nombre en la interfaz
+      } else {
+        alert("Error al actualizar el nombre.");
+      }
+    } catch (error) {
+      console.error("Error al actualizar el nombre:", error);
+      alert("Hubo un problema al actualizar el nombre.");
+    }
+  } else {
+    alert("No se ingresó un nombre válido.");
   }
 }
 
@@ -57,7 +96,7 @@ async function actualizarNombreUsuario() {
   }
 
   const userData = await obtenerInfoUsuario(userId);
-  
+
   if (!userData) {
     console.error("No se pudo obtener la información del usuario.");
     return;
@@ -65,6 +104,8 @@ async function actualizarNombreUsuario() {
 
   const nombreUsuario = userData.user_name || "Usuario desconocido";
   document.getElementById("nombre-usuario").textContent = nombreUsuario;
+
+  mostrarPerfil();
 }
 
 // Mostrar perfil del usuario
@@ -86,13 +127,23 @@ async function mostrarPerfil() {
   secciones.perfil = `
     <section class="seccion-perfil">
       <h3>Mi Perfil</h3>
-      <p><strong>Nombre y Apellidos:</strong> ${userData.user_name || "Desconocido"}</p>
-      <p><strong>Correo Electrónico:</strong> ${userData.email || "No disponible"}</p>
+      <p><strong>Nombre y Apellidos:</strong> <span id="editar-nombre" style="cursor:pointer" onclick="editarNombrede(${userData.id})">${
+        userData.user_name || "Desconocido"
+      }</span></p>
+      <p><strong>Correo Electrónico:</strong> ${
+        userData.email || "No disponible"
+      }</p>
       <p><strong>Rol:</strong> ${userData.role || "Usuario"}</p>
     </section>
   `; //DEJO EL ROL PARA GUIARNOS
 
   document.getElementById("contenedor-principal").innerHTML = secciones.perfil;
+
+  // Añadir eventListener al span de editar nombre
+  const spanEditarNombre = document.getElementById("editar-nombre");
+  if (spanEditarNombre) {
+    spanEditarNombre.addEventListener("click", () => editarNombrede(userData.id));
+  }
 }
 
 //Ocultar blog para los USER
@@ -101,7 +152,9 @@ async function panelAdmin() {
   const userData = await obtenerInfoUsuario(userId);
   const userRole = userData ? userData.role : null;
   console.log("userRole", userRole);
-  const blogLink = document.querySelector('a[data-section="blog"]').parentElement;
+  const blogLink = document.querySelector(
+    'a[data-section="blog"]'
+  ).parentElement;
 
   // Si el usuario no es ADMIN, ocultamos el enlace del blog
   if (userRole !== "ADMIN") {
@@ -142,11 +195,12 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       const section = this.getAttribute("data-section");
-      contenedor.innerHTML = secciones[section] || "<p>Sección no disponible</p>";
+      contenedor.innerHTML =
+        secciones[section] || "<p>Sección no disponible</p>";
 
       if (section === "blog") {
-        configurarBlog(); 
-        loadAllPosts(); 
+        configurarBlog();
+        loadAllPosts();
       }
 
       if (section === "comentarios") {
@@ -172,17 +226,17 @@ function configurarBlog() {
     const titulo = document.getElementById("input-titulo").value;
     const contenido = document.getElementById("input-texto").value;
     const imagen = document.getElementById("input-img").value;
-  
+
     if (!titulo || !contenido || !imagen) {
       alert("Rellena todos los campos");
       return;
     }
-  
+
     const userId = localStorage.getItem("userId");
     const fecha = new Date().toISOString().split("T")[0];
-  
+
     const post = {
-      user_id: userId,     
+      user_id: userId,
       title: titulo,
       url_image: imagen,
       date: fecha,
@@ -229,8 +283,8 @@ function loadAllPosts() {
   const API_URL = `${BASE_URL}/rest/v1/POST`;
   const API_HEADERS = {
     "Content-Type": "application/json",
-    "apikey": APIKEY,
-    "Authorization": `Bearer ${APIKEY}`,
+    apikey: APIKEY,
+    Authorization: `Bearer ${APIKEY}`,
   };
 
   const userId = localStorage.getItem("userId");
@@ -242,7 +296,7 @@ function loadAllPosts() {
       postList.innerHTML = ""; // Limpiar lista antes de mostrar los posts
 
       // Filtrar los posts por userId
-      const userPosts = posts.filter(post => post.user_id === userId);
+      const userPosts = posts.filter((post) => post.user_id === userId);
 
       // Mostrar solo los posts del usuario
       userPosts.forEach((post) => {
@@ -265,8 +319,8 @@ function loadComments() {
   const API_URL = `${BASE_URL}/rest/v1/COMENTS`;
   const API_HEADERS = {
     "Content-Type": "application/json",
-    "apikey": APIKEY,
-    "Authorization": `Bearer ${APIKEY}`,
+    apikey: APIKEY,
+    Authorization: `Bearer ${APIKEY}`,
   };
 
   const userId = localStorage.getItem("userId");
@@ -278,15 +332,20 @@ function loadComments() {
       commentsList.innerHTML = ""; // Limpiar lista antes de mostrar los comentarios
 
       // Filtrar los comentarios por usuario (userId)
-      const userComments = comments.filter(comment => comment.user_id === userId);
+      const userComments = comments.filter(
+        (comment) => comment.user_id === userId
+      );
 
       // Mostrar solo los posts del usuario
       userComments.forEach((comment) => {
         commentsList.innerHTML += `
-          <div class="coments">
+          <div class="comentariosContainer"  data-id="${comment.id}">
+        <div class="coments">
           <h3 id="name">${comment.user_name}</h3>
           <p id="date">${comment.date || new Date().toLocaleDateString()}</p> 
-          <p id="review">${comment.review}</p>
+        </div>
+        <div><p id="review">${comment.review}</p></div> 
+        <a href="../Blog/entrada.html?post.id=${comment.id}">Ir al comentario=></a>
         </div>
         `;
       });
