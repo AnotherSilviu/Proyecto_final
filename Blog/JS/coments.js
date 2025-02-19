@@ -59,7 +59,8 @@ formComment.addEventListener("submit", async (event) => {
     }
 
     const userId = getUserId();
-    const userName = await getUserRole().user_name;
+    const uRole = await getUserRole();
+    const userName = uRole.user_name
     const date = new Date().toISOString().split("T")[0];
 
     const newComment = {

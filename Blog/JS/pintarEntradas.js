@@ -24,9 +24,10 @@ async function loadPost() {
 
 async function pintarPost() {
   const post = await loadPost();
-  const userRole = await getUserRole().role;
-  console.log("userRole", userRole);
+  const uRole = await getUserRole();
+  const userRole = uRole.role
 
+  console.log("userRole", userRole);
   let buttonsAdmin = "";
   if (userRole == "ADMIN") {
     buttonsAdmin = `
@@ -55,15 +56,22 @@ async function pintarPost() {
   const btnEditar = document.getElementById("btn-editar");
   const btnEliminar = document.getElementById("btn-eliminar");
 
-  if (btnActualizar) {btnActualizar.addEventListener("click", actualizarImagen)}
+  if (btnActualizar) {
+    btnActualizar.addEventListener("click", actualizarImagen)
+  }
 
-  btnEditar.addEventListener("click", () => {
-    editarPost(postId);
-  });
+  if (btnEditar) {
+    btnEditar.addEventListener("click", () => {
+      editarPost(postId);
+    });
+  }
 
-  btnEliminar.addEventListener("click", () => {
-    eliminarPost(postId);
-  });
+  if (btnEliminar) {
+    btnEliminar.addEventListener("click", () => {
+      eliminarPost(postId);
+    });
+  }
+
 }
 
 function actualizarImagen() {
@@ -71,7 +79,7 @@ function actualizarImagen() {
   const newImageUrl = prompt("Introduce la nueva URL de la imagen:");
 
   if (newImageUrl) {
-    imagen.src = newImageUrl; 
+    imagen.src = newImageUrl;
 
     fetch(`${BASE_URL}/rest/v1/POST?id=eq.${postId}`, {
       method: "PATCH",
@@ -82,7 +90,7 @@ function actualizarImagen() {
         Authorization: `Bearer ${getToken()}`,
       },
     })
-      savePost()
+    savePost()
   }
 }
 
