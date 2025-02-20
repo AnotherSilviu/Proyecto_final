@@ -43,6 +43,7 @@ async function login() {
 }
 
 async function register() {
+
     const requestOptions = {
         method: "POST",
         headers: {
@@ -65,7 +66,7 @@ async function register() {
     localStorage.setItem("token", result.access_token)
     localStorage.setItem("userId", result.user.id)
 
-    await createUserRole(inputName.value)
+    await createUserRole(inputName.value, inputEmail.value);
 
     window.location.href = "./dashboard.html"
 }
@@ -113,11 +114,11 @@ if (btnLogout) {
   btnLogout.addEventListener("click", logout);
 }
 
-export async function createUserRole(username) {
+export async function createUserRole(username, email) {
     const access_token = getToken()
     const userId = getUserId()
 
-    if(!access_token || !userId ) {
+    if(!access_token || !userId  || !email || !username ) {
         return null
     }
 
@@ -129,9 +130,10 @@ export async function createUserRole(username) {
             "Authorization": `Bearer ${access_token}`
         },
         body: JSON.stringify({
-            "username": username, 
             "user_id": userId,
-            "role": "USER"
+            "role": "USER",
+            "user_name": username,
+            "email": email
         }),
     };
 
@@ -139,6 +141,8 @@ export async function createUserRole(username) {
     if(!response.ok) {
         return
     }
+
+    console.log("Rol creado correctamente")
 }
 
 export async function getUserRole() {

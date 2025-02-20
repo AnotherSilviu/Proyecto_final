@@ -1,4 +1,4 @@
-import { getToken } from "./auth.js";
+import { getToken , getUserId , getUserRole } from "./auth.js";
 import { APIKEY, BASE_URL } from "./config.js";
 
 // Secciones del contenido
@@ -47,42 +47,6 @@ async function obtenerInfoUsuario(userId) {
   } catch (error) {
     console.error("Error al obtener datos del usuario:", error);
     return null;
-  }
-}
-
-// Función para editar el nombre del usuario
-async function editarNombrede(id) {
-  // Pedir al usuario el nuevo nombre a través de un prompt
-  const nuevoNombre = prompt("Dime tu nuevo nombre y apellidos:");
-
-  if (nuevoNombre) {
-    // Si el usuario ha proporcionado un nombre, hacemos una solicitud para actualizarlo
-    try {
-      const respuesta = await fetch(`${BASE_URL}/rest/v1/roles?id=eq.${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          apikey: APIKEY,
-          Authorization: `Bearer ${APIKEY}`,
-        },
-        body: JSON.stringify({
-          user_name: nuevoNombre, // Actualizamos el campo user_name
-        }),
-      });
-
-      if (respuesta.ok) {
-        // Si la respuesta es exitosa, actualizamos la interfaz
-        alert("Nombre actualizado correctamente.");
-        actualizarNombreUsuario(); // Llamamos a la función para actualizar el nombre en la interfaz
-      } else {
-        alert("Error al actualizar el nombre.");
-      }
-    } catch (error) {
-      console.error("Error al actualizar el nombre:", error);
-      alert("Hubo un problema al actualizar el nombre.");
-    }
-  } else {
-    alert("No se ingresó un nombre válido.");
   }
 }
 
@@ -138,12 +102,6 @@ async function mostrarPerfil() {
   `; //DEJO EL ROL PARA GUIARNOS
 
   document.getElementById("contenedor-principal").innerHTML = secciones.perfil;
-
-  // Añadir eventListener al span de editar nombre
-  const spanEditarNombre = document.getElementById("editar-nombre");
-  if (spanEditarNombre) {
-    spanEditarNombre.addEventListener("click", () => editarNombrede(userData.id));
-  }
 }
 
 //Ocultar blog para los USER
@@ -194,6 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
+      links.forEach((link) => link.classList.remove("active"));
+      this.classList.add("active");
       const section = this.getAttribute("data-section");
       contenedor.innerHTML =
         secciones[section] || "<p>Sección no disponible</p>";
@@ -345,7 +305,7 @@ function loadComments() {
           <p id="date">${comment.date || new Date().toLocaleDateString()}</p> 
         </div>
         <div><p id="review">${comment.review}</p></div> 
-        <a href="../Blog/entrada.html?post.id=${comment.id}">Ir al comentario=></a>
+        <a href="../Blog/entrada.html?id=${comment.post_id}">Ir al comentario=></a>
         </div>
         `;
       });

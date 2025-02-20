@@ -27,20 +27,17 @@ async function pintarComents() {
   const comments = await loadComents();
   const comentariosContainer = document.getElementById("lista-comentarios");
 
-  // Le decimos que si no hay comentarios, pinte que no hay nada
   if (comments.length === 0) {
     comentariosContainer.innerHTML = "<p>No hay comentarios aún.</p>";
     return;
   }
 
-  const userRole = await getUserRole();
-  let buttonAdmin = "";
-  if (userRole.role === "ADMIN") {
-    buttonAdmin = `
-      <div class="boton">
-        <button id="btn-eliminarcomment" type="button">Eliminar</button>
-      </div>
-    `;
+  let userRole = null; // Inicializa como null por defecto
+  try {
+    const uRole = await getUserRole();
+    userRole = uRole?.role || null; // Si getUserRole() falla, userRole será null
+  } catch (error) {
+    console.error("Error obteniendo el rol del usuario:", error);
   }
 
   // Estructura de los comentarios
@@ -53,21 +50,28 @@ async function pintarComents() {
           <p id="date">${comment.date || new Date().toLocaleDateString()}</p> 
         </div>
         <div><p id="review">${comment.review}</p></div> 
-        ${buttonAdmin}
+        ${
+          userRole === "ADMIN"
+            ? `<div class="boton">
+                <button class="btn-eliminarcomment" data-id="${comment.id}" type="button">Eliminar</button>
+              </div>`
+            : ""
+        }
       </div>
       `
     )
     .join("");
 
-  // Agregar el evento para el botón de eliminar
-  const deleteButtons = document.querySelectorAll("#btn-eliminarcomment");
-  deleteButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const commentId = e.target.closest(".comentariosContainer").getAttribute("data-id");
-      eliminarComentario(commentId); // Pasamos el id del comentario a eliminar
-    });
-  });
-}
+    if (userRole === "ADMIN") {
+      document.querySelectorAll(".btn-eliminarcomment").forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+          const commentId = event.target.getAttribute("data-id");
+          eliminarComentario(commentId);
+        });
+      });
+    }
+  }
+pintarComents();
 
 async function eliminarComentario(commentId) {
   const confirmacion = confirm("Vas a eliminar un comentario. ¿Estás seguro?");
@@ -100,6 +104,12 @@ formComment.addEventListener("submit", async (event) => {
   }
 
   const userId = getUserId();
+  if (!userId) {
+    alert("Debes iniciar sesión para comentar.");
+    return;
+  }
+
+    
   const uRole = await getUserRole();
   const userName = uRole.user_name;
   const date = new Date().toISOString().split("T")[0];

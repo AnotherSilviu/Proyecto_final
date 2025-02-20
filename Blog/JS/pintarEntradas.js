@@ -24,8 +24,15 @@ async function loadPost() {
 
 async function pintarPost() {
   const post = await loadPost();
-  const uRole = await getUserRole();
-  const userRole = uRole.role
+  
+  let userRole = null; 
+  try {
+    const uRole = await getUserRole();
+    userRole = uRole?.role || null; 
+  } catch (error) {
+    console.error("Error obteniendo el rol del usuario:", error);
+  }
+
   let buttonsAdmin = "";
   if (userRole == "ADMIN") {
     buttonsAdmin = `

@@ -318,7 +318,7 @@ textarea::placeholder {
   transition: background-color 0.3s ease;
 }
 
-#btn-eliminarcomment {
+.btn-eliminarcomment {
   background-color: #e74c3c; 
   color: white;
   padding: 8px 15px;
@@ -329,7 +329,7 @@ textarea::placeholder {
   transition: background-color 0.3s;
 }
 
-#btn-eliminarcomment:hover {
+.btn-eliminarcomment:hover {
   background-color: #c0392b; 
 }
 
