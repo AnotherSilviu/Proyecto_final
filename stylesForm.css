@@ -7,7 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background:  burlywood;
+  background: burlywood;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,6 +105,7 @@ input[type="radio"] + label {
 /* Botones */
 button {
   padding: 12px 20px;
+  margin-bottom: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -143,18 +144,24 @@ button:active {
   align-items: center;
 }
 
+#destino-p {
+  display: none;
+  color: #2d2d2d;
+  text-align: center;
+}
+
 /* Responsividad */
 @media (max-width: 600px) {
   form {
-      padding: 15px;
+    padding: 15px;
   }
 
   .boton-container {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   button {
-      width: 100%;
+    width: 100%;
   }
 }

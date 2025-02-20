@@ -1,100 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="imagenes/quijote.png" />
     <title>Contacto</title>
-    <link rel="stylesheet" href="stylesForm.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="stylesForm.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
     <h2>FORMULARIO DE CONTACTO</h2>
-    <form action="destino.html">
-        <fieldset class="datos">
-            <legend>DATOS PERSONALES</legend>
+    <form id="formulario-contacto">
+      <fieldset class="datos">
+        <legend>DATOS PERSONALES</legend>
 
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" name="apellidos">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" />
 
-            <label>Edad</label>
-            <input type="radio" id="menor" name="edad" value="menor">
-            <label for="menor">Menor de 18 años</label>
+        <label>Edad</label>
+        <input type="radio" id="menor" name="edad" value="menor" />
+        <label for="menor">Menor de 18 años</label>
 
-            <input type="radio" id="adulto" name="edad" value="adulto">
-            <label for="adulto">Entre 18 y 65 años</label>
+        <input type="radio" id="adulto" name="edad" value="adulto" />
+        <label for="adulto">Entre 18 y 65 años</label>
 
-            <input type="radio" id="mayor" name="edad" value="mayor">
-            <label for="mayor">Mayor de 65 años</label>
+        <input type="radio" id="mayor" name="edad" value="mayor" />
+        <label for="mayor">Mayor de 65 años</label>
 
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" title="Debe contener 9 dígitos numéricos">
-            <label for="Name">Correo electrónico</label>
-            <input type="text" id="email" name="Email" maxlength="40" size="40" placeholder="Ejemplo: carlos_2104@gmail.com" required>
-        </fieldset>
+        <label for="telefono">Teléfono</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+          pattern="[0-9]{9}"
+          title="Debe contener 9 dígitos numéricos"
+        />
+        <label for="Name">Correo electrónico</label>
+        <input
+          type="text"
+          id="email"
+          name="Email"
+          maxlength="40"
+          size="40"
+          placeholder="Ejemplo: carlos_2104@gmail.com"
+          required
+        />
+      </fieldset>
 
-        <fieldset class="consulta">
-            <legend>TU CONSULTA</legend>
+      <fieldset class="consulta">
+        <legend>TU CONSULTA</legend>
 
-            <label for="select">Asunto</label>
-            <select id="asunto" name="asunto" required>
-                <option value="" disabled selected>Selecciona un asunto</option>
-                <option value="ocio">Viaje de ocio</option>
-                <option value="negocios">Viaje de negocios</option>
-                <option value="colaboraciones">Colaboraciones</option>
-                <option value="alojamientos">Alojamientos</option>
-                <option value="otros">Otros</option>
-            </select>
+        <label for="select">Asunto</label>
+        <select id="asunto" name="asunto" required>
+          <option value="" disabled selected>Selecciona un asunto</option>
+          <option value="ocio">Viaje de ocio</option>
+          <option value="negocios">Viaje de negocios</option>
+          <option value="colaboraciones">Colaboraciones</option>
+          <option value="alojamientos">Alojamientos</option>
+          <option value="otros">Otros</option>
+        </select>
 
-            <label for="text">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe algo..." required></textarea>
+        <label for="text">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="5"
+          cols="50"
+          placeholder="Escribe algo..."
+          required
+        ></textarea>
 
-            <input type="checkbox" id="privacidad" name="privacidad" required>
-            <label for="privacidad">He leído y acepto la política de privacidad.</label>
-        </fieldset>
+        <input type="checkbox" id="privacidad" name="privacidad" required />
+        <label for="privacidad"
+          >He leído y acepto la política de privacidad.</label
+        >
+      </fieldset>
 
-        <button id="boton-limpiar" type="reset">Limpiar</button>
-        <button id="boton-enviar" href="destino.html">Enviar</button>
+      <button id="boton-limpiar" type="reset">Limpiar</button>
+      <!-- <button id="boton-enviar">Enviar</button> -->
+      <button type="submit" id="boton-enviar">Enviar</button>
+      <p id="destino-p">
+        ¡Gracias por rellenar el formulario! Por favor, revisa la bandeja de
+        entrada de tu correo electrónico.
+      </p>
     </form>
 
-    <script>
-        (function() {
-            emailjs.init('omuOFmoFDpLa0mNQ8');
-        })();
-        
-        function enviarCorreo(event) {
-            event.preventDefault();  // Prevenir el comportamiento por defecto del formulario (recargar la página)
-            
-            let nombre = document.getElementById("nombre").value;
-            let apellidos = document.getElementById("apellidos").value;
-            let telefono = document.getElementById("telefono").value;
-            let email = document.getElementById("email").value;
-            let asunto = document.getElementById("asunto").value;
-            let mensaje = document.getElementById("mensaje").value;
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
 
-            let templateParams = {
-                nombre: nombre,
-                apellidos: apellidos,
-                telefono: telefono,
-                email: email,
-                asunto: asunto,
-                mensaje: mensaje
-            };
-
-            emailjs.send('service_ugmqwp8', 'template_bn9d69r', templateParams)
-                .then(function(response) {
-                    console.log('Correo enviado exitosamente:', response);
-                    alert('¡Tu mensaje ha sido enviado!');
-                    document.getElementById("formulario-contacto").reset();
-                }, function(error) {
-                    console.log('Error al enviar el correo:', error);
-                    alert('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
-                });
-        }
+    <script type="text/javascript">
+      emailjs.init("omuOFmoFDpLa0mNQ8");
     </script>
-    
-</body>
+
+    <script src="formulario.js"></script>
+  </body>
 </html>
