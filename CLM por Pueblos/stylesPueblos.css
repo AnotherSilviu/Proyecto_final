@@ -377,7 +377,15 @@ main {
 }
 
 .slider-nav a:hover {
-  opacity: 1;
+  color: #f4f4f4;
+}
+
+.slider-nav a.active {
+  opacity: 2;
+}
+
+.slider-nav a.active:hover {
+  color: #f4f4f4; /*Mantiene el color del hover cuando está pulsado*/
 }
 
 /* Gastronomía */
